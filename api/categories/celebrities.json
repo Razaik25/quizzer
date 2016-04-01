@@ -2,7 +2,7 @@
       {
           "id": "1",
           "question":"You should know this one: Which island nation is popstar Rihanna from?",
-          "image": "celebrity1.jpg",
+          "image": "./images/celebrity1",
           "correct": 2,
           "answers": [
               {
@@ -26,7 +26,7 @@
       {
           "id": "2",
           "question":"Really Easy: How many Hemsworth brothers are there?",
-          "image": "celebrity2.jpg",
+          "image": "./images/celebrity2.jpg",
           "correct": 3,
           "answers": [
               {
@@ -50,7 +50,7 @@
       {
           "id": "3",
           "question": "In which year did Angelina Jolie and Brad Pitt get together?",
-          "image": "celebrity3.jpg",
+          "image": "./images/celebrity3.jpg",
           "correct": 2,
           "answers": [
               {
@@ -73,7 +73,7 @@
       },
       {
           "id": "4",
-          "image": "celebrity4.jpg",
+          "image": "./images/celebrity4.jpg",
           "question": "What is Miley Cyrus's birth name?",
           "correct": 2,
           "answers": [

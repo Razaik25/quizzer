@@ -7,9 +7,9 @@ var app = express();
 
 app.use('/images/', express.static(path.join(__dirname, 'images')));
 
-app.get('/api/:data', function(req, res) {
+app.get('/api/:category', function(req, res) {
 
-    var file = path.join(__dirname, 'categories/' + req.params.data + '.json');
+    var file = path.join(__dirname, 'categories/' + req.params.category + '.json');
     // fs allows to read the contents of the file
     fs.readFile(file, 'utf8',function(err, data) {
         if (err) {
