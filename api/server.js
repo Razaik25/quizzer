@@ -4,7 +4,7 @@ var express = require('express');
 // invoking express
 var app = express();
 
-
+// able to access images directory publically
 app.use('/images/', express.static(path.join(__dirname, 'images')));
 
 app.get('/api/:category', function(req, res) {
