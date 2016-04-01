@@ -2,6 +2,7 @@
 
 var React = require('react-native');
 var api = require('../network/api');
+var Quiz = require('./Quiz');
 
 var {
   Text,
@@ -69,7 +70,7 @@ class Category extends React.Component{
     this.setState({
       isLoading: true,
     });
-    console.log('insubmit', category);
+
     // Make a request to api to get all the data for the choosen category
     api.getCategory(category)
        .then((res) =>{
@@ -77,10 +78,14 @@ class Category extends React.Component{
          this.props.navigator.push({
            title: `${category} Quiz`,
            component: Quiz,
-           passProps: {quizdata: res}
+           passProps: {
+             username: this.props.username,
+             quizdata: res
+           }
          });
        })
        .catch((err) => {
+         console.log('inside err', err);
          this.setState({
            isLoading: false,
            error: `There was an error: ${err}`

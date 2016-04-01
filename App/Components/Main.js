@@ -62,10 +62,12 @@ var styles = StyleSheet.create({
     marginTop: 10,
     alignSelf: 'stretch',
     justifyContent: 'center'
-  },
+  }
+
 })
 
 class Main extends React.Component{
+  // ed6 equivalent of get initialState
   constructor(props){
     super(props);
     this.state = {
@@ -73,9 +75,6 @@ class Main extends React.Component{
       isLoading: false,
       error: false
     }
-  }
-  componentDidMount(){
-
   }
 
   handleChange(event){
@@ -106,7 +105,7 @@ class Main extends React.Component{
   }
   render(){
     var error = (this.state.error);
-    console.log(error);
+
     return (
 
         <View style={styles.mainContainer}>
