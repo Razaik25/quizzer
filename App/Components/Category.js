@@ -74,6 +74,7 @@ class Category extends React.Component{
     // Make a request to api to get all the data for the choosen category
     api.getCategory(category)
        .then((res) =>{
+         console.log('data in api',res);
          // passing the data from the api to quiz component
          this.props.navigator.push({
            title: `${category} Quiz`,
@@ -104,9 +105,9 @@ class Category extends React.Component{
 
           <TouchableHighlight
           style={styles.button}
-          onPress={this.handleSubmit.bind(this)}
+          onPress={this.handleSubmit.bind(this, 'canada')}
           underlayColor="#FFC300">
-            <Text style={styles.buttonText}> Canada </Text>
+            <Text style={styles.buttonText}> Canada eh?</Text>
           </TouchableHighlight>
 
           <TouchableHighlight

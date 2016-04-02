@@ -2,12 +2,13 @@
 var React = require('react-native');
 var _ = require('underscore');
 
-var {
+const {
   View,
   Text,
   StyleSheet,
   TextInput,
   TouchableHighlight,
+  TouchableOpacity,
   Image,
 } = React;
 
@@ -106,7 +107,8 @@ answerBackground(btn){
             <TouchableHighlight
              key={index}
              style={that.answerBackground(index)}
-             onPress={that.handleSubmit}
+
+             onPress={that.handleAnswers.bind(that, answers.id)}
              underlayColor="#FFC300">
              <Text style={styles.text}>{answers.answer}</Text>
             </TouchableHighlight>
@@ -118,11 +120,31 @@ answerBackground(btn){
 
   }
 
-
   checkforAnswer(){
+   console.log('props', this.props.quizdata);
+   console.log(this.props.quizdata[this.state.questioncount]);
+
+
 
   }
 
+  handleAnswers(answerid){
+
+    // compare the answer id for to the correct answer
+    var currentobj = this.props.quizdata[this.state.questioncount];
+    // if the user gives correct answer
+    if(currentobj.correct === parseInt(answerid) ){
+    // increment the score and the question count and set the state
+      this.setState({
+        score: this.state.score + 1,
+        questioncount: this.state.questioncount + 1
+
+      })
+      console.log(this.state.score);
+    }
+
+    // if the question does not match ???????
+  }
 
   render(){
     return (
