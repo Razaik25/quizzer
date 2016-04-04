@@ -3,7 +3,7 @@
 var React = require('react-native');
 var api = require('../network/api');
 var Quiz = require('./Quiz');
-
+var Animatable = require('react-native-animatable');
 var {
   Text,
   View,
@@ -18,7 +18,6 @@ var styles = StyleSheet.create ({
   container: {
     flex: 1,
     padding: 20,
-    marginTop: 10,
     flexDirection: 'column',
     justifyContent: 'center',
     backgroundColor: '#48BBEC'
@@ -32,7 +31,7 @@ var styles = StyleSheet.create ({
     alignSelf: 'center'
   },
   title: {
-    marginBottom: 20,
+    marginBottom: 30,
     fontSize: 25,
     textAlign: 'center',
     color: '#fff'
@@ -66,11 +65,17 @@ class Category extends React.Component{
       error: false
     }
   }
+
+  getCurrentRoute(){
+    // getting the current category route object
+    var currentRoute  = this.props.navigator.navigationContext._currentRoute;
+    return currentRoute;
+  }
+
   handleSubmit(category){
     this.setState({
       isLoading: true,
     });
-
     // Make a request to api to get all the data for the choosen category
     api.getCategory(category)
        .then((res) =>{
@@ -81,7 +86,8 @@ class Category extends React.Component{
            component: Quiz,
            passProps: {
              username: this.props.username,
-             quizdata: res
+             quizdata: res,
+             startAgainRoute: this.getCurrentRoute()
            }
          });
        })
@@ -100,71 +106,91 @@ class Category extends React.Component{
     return (
       <View style={styles.container}>
        <ScrollView>
+      <Animatable.View animation="bounceIn">
         <Text style={styles.title}>Choose Categories to start</Text>
         <Text style={styles.title}>{username}</Text>
+       </Animatable.View>
 
+      <Animatable.View animation="bounceIn">
           <TouchableHighlight
           style={styles.button}
           onPress={this.handleSubmit.bind(this, 'canada')}
           underlayColor="#FFC300">
-            <Text style={styles.buttonText}> Canada eh?</Text>
+            <Text style={styles.buttonText}> Canada eh...</Text>
           </TouchableHighlight>
+       </Animatable.View>
 
+       <Animatable.View animation="bounceIn">
           <TouchableHighlight
           style={styles.button}
           onPress={this.handleSubmit.bind(this, 'celebrities')}
           underlayColor="#FFC300">
             <Text style={styles.buttonText}> Celebrities </Text>
           </TouchableHighlight>
+        </Animatable.View>
 
+        <Animatable.View animation="bounceIn">
           <TouchableHighlight
           style={styles.button}
           onPress={this.handleSubmit.bind(this, 'coding')}
           underlayColor="#FFC300">
             <Text style={styles.buttonText}> Coding </Text>
           </TouchableHighlight>
+        </Animatable.View>
 
+        <Animatable.View animation="bounceIn">
           <TouchableHighlight
           style={styles.button}
           onPress={this.handleSubmit.bind(this, 'friendstvshow')}
           underlayColor="#FFC300">
             <Text style={styles.buttonText}> Friends-Tv Show </Text>
           </TouchableHighlight>
+        </Animatable.View>
 
+        <Animatable.View animation="bounceIn">
           <TouchableHighlight
           style={styles.button}
           onPress={this.handleSubmit.bind(this, 'generalknowledge')}
           underlayColor="#FFC300">
             <Text style={styles.buttonText}> General Knowledge </Text>
           </TouchableHighlight>
+        </Animatable.View>
 
+        <Animatable.View animation="bounceIn">
           <TouchableHighlight
           style={styles.button}
           onPress={this.handleSubmit.bind(this, 'harrypotter')}
           underlayColor="#FFC300">
             <Text style={styles.buttonText}> Harry Potter </Text>
           </TouchableHighlight>
+        </Animatable.View>
 
+        <Animatable.View animation="bounceIn">
           <TouchableHighlight
           style={styles.button}
           onPress={this.handleSubmit.bind(this, 'math')}
           underlayColor="#FFC300">
             <Text style={styles.buttonText}> Math </Text>
           </TouchableHighlight>
+        </Animatable.View>
 
+        <Animatable.View animation="bounceIn">
           <TouchableHighlight
           style={styles.button}
           onPress={this.handleSubmit.bind(this, 'random')}
           underlayColor="#FFC300">
             <Text style={styles.buttonText}> Random </Text>
           </TouchableHighlight>
+        </Animatable.View>
 
-          <TouchableHighlight
-          style={styles.button}
-          onPress={this.handleSubmit.bind(this, 'trivia')}
-          underlayColor="#FFC300">
-            <Text style={styles.buttonText}> Trivia </Text>
-          </TouchableHighlight>
+        <Animatable.View animation="bounceIn">
+            <TouchableHighlight
+              style={styles.button}
+              onPress={this.handleSubmit.bind(this, 'superheroes')}
+              underlayColor="#FFC300">
+              <Text style={styles.buttonText}> Super Heros </Text>
+            </TouchableHighlight>
+        </Animatable.View>
 
         </ScrollView>
       </View>

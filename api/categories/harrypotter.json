@@ -1,0 +1,172 @@
+[
+      {
+        "id": "1",
+        "question":"Which house did Severus Snape belong whilst he was studying at hogwarts?",
+        "image": "hp1.jpg",
+        "correct": 4,
+        "answers": [
+            {
+              "id": "1",
+              "answer": "Gryffindor"
+            },
+            {
+              "id": "2",
+              "answer": "Hufflepuff"
+            },
+            {
+              "id": "3",
+              "answer": "Ravenclaw"
+            },
+            {
+              "id": "4",
+              "answer": "Slytherin"
+            }
+          ]
+      },
+      {
+          "id": "2",
+          "question":"Which creatures guard Prison of Azkaban?",
+          "image": "hp2.jpg",
+          "correct": 2,
+          "answers": [
+
+              {
+                  "id": "1",
+                  "answer": "Goblins"
+              },
+              {
+                  "id": "2",
+                  "answer": "Dementors"
+              },
+              {
+                  "id": "3",
+                  "answer": "Werewolves"
+              },
+              {
+                  "id": "4",
+                  "answer": "Centaurs"
+              }
+          ]
+      },
+      {
+          "id": "3",
+          "question": "Hermione Granger was sorted into________House",
+          "image": "hp3.jpg",
+          "correct": 4,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Mud Blood House"
+              },
+              {
+                  "id": "2",
+                  "answer": "Hufflepuff"
+              },
+              {
+                  "id": "3",
+                  "answer": "Ravenclaw"
+              },
+              {
+                  "id": "4",
+                  "answer": "Gryffindor"
+              }
+          ]
+      },
+      {
+          "id": "4",
+          "image": "hp4.jpg",
+          "question": "Complete the quote:'If there is one thing Voldemort cannot understand it is ____'?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Compassion"
+              },
+              {
+                  "id": "2",
+                  "answer": "Love"
+              },
+              {
+                  "id": "3",
+                  "answer": "How to bake a pie"
+              },
+              {
+                  "id": "4",
+                  "answer": "Magic"
+              }
+          ]
+      },
+      {
+          "id": "5",
+          "image": "hp5.jpg",
+          "question": "What is the name of Harry's Owl?",
+          "correct": 1,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Hedwig"
+              },
+              {
+                  "id": "2",
+                  "answer": "Hagrid"
+              },
+              {
+                  "id": "3",
+                  "answer": "Dobby"
+              },
+              {
+                  "id": "4",
+                  "answer": "Beatrix"
+              }
+          ]
+      },
+      {
+          "id": "6",
+          "image": "hp6.jpg",
+          "question": "Correct order of Weasley siblings by age?",
+          "correct": 3,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Charlie,Bill,Fred&George,Percy,Ron,Ginny"
+              },
+              {
+                  "id": "2",
+                  "answer": "Bill,Charlie,Fred&George,Percy,Ron,Ginny"
+              },
+              {
+                  "id": "3",
+                  "answer": "Bill,Charlie,Percy,Fred&George,Ron,Ginny"
+              },
+              {
+                  "id": "4",
+                  "answer": "Bill,Charlie,Percy,Fred&George,Ginny,Ron"
+              }
+          ]
+      },
+      {
+          "id": "7",
+          "image": "hp7.jpg",
+          "question": "What does Homenum Revelio spell do?",
+          "correct": 3,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Ties someone up"
+              },
+              {
+                  "id": "2",
+                  "answer": "Starts a fire"
+              },
+              {
+                  "id": "3",
+                  "answer": "Reveals humans nearby"
+              },
+              {
+                  "id": "4",
+                  "answer": "Reveals invisible ink"
+              }
+          ]
+      }
+
+]

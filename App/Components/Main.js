@@ -99,7 +99,7 @@ class Main extends React.Component{
         isLoading: false,
         error: true
       });
-      Alert.alert('Quizzer', 'Please enter your username to begin');
+      Alert.alert('Quizzer', 'Please enter your Name to begin');
     }
 
   }

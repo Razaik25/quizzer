@@ -10,6 +10,8 @@
     "lodash": "^4.7.0",
     "react": "^0.14.8",
     "react-native": "^0.22.2",
+    "react-native-animatable": "^0.5.2",
+    "react-native-button": "^1.4.2",
     "underscore": "^1.8.3",
     "watchman": "^0.1.8"
   }

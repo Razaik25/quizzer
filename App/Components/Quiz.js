@@ -1,6 +1,8 @@
 'use strict';
 var React = require('react-native');
+var Result = require('./Result');
 var _ = require('underscore');
+var Animatable = require('react-native-animatable');
 
 const {
   View,
@@ -8,8 +10,7 @@ const {
   StyleSheet,
   TextInput,
   TouchableHighlight,
-  TouchableOpacity,
-  Image,
+  Image
 } = React;
 
 var styles = StyleSheet.create({
@@ -17,24 +18,25 @@ var styles = StyleSheet.create({
     flex: 1
   },
   image: {
-    height: 300
+    height: 300,
   },
   text: {
       color: '#fff',
       alignSelf: 'center',
       fontFamily: 'Helvetica',
-      fontSize: 16
+      fontSize: 16,
+
   },
   question: {
     backgroundColor: '#4daf51',
     fontFamily: 'Helvetica',
     flexDirection: 'row',
     alignSelf: 'stretch',
-    justifyContent: 'center',
     fontSize: 18,
     color: '#fff',
-    flex: 1
-
+    flex: 1,
+    paddingLeft: 10,
+    textAlign: 'center'
   },
 
 })
@@ -44,7 +46,8 @@ class Quiz extends React.Component{
     super(props);
     this.state ={
       questioncount: 0,
-      score: 0
+      score: 0,
+      isCorrect: false
     };
   }
 
@@ -53,7 +56,7 @@ answerBackground(btn){
       flexDirection: 'row',
       alignSelf: 'stretch',
       justifyContent: 'center',
-      flex: 1
+      flex: 1,
     }
     if(btn === 0){
       obj.backgroundColor = '#9e4d83';
@@ -65,11 +68,6 @@ answerBackground(btn){
       obj.backgroundColor = '#3079ab';
     }
     return obj;
-  }
-
-  componentDidMount(){
-
-
   }
 
   renderQuestion(){
@@ -107,10 +105,9 @@ answerBackground(btn){
             <TouchableHighlight
              key={index}
              style={that.answerBackground(index)}
-
              onPress={that.handleAnswers.bind(that, answers.id)}
              underlayColor="#FFC300">
-             <Text style={styles.text}>{answers.answer}</Text>
+             <Animatable.Text animation="wobble" style={styles.text}>{answers.answer}</Animatable.Text>
             </TouchableHighlight>
           )
         });
@@ -120,16 +117,31 @@ answerBackground(btn){
 
   }
 
-  checkforAnswer(){
-   console.log('props', this.props.quizdata);
-   console.log(this.props.quizdata[this.state.questioncount]);
+  pushResultPage(){
+    this.props.navigator.push({
+      title: 'Results',
+      component: Result,
+      passProps: {
+        username: this.props.username,
+        score: this.state.score,
+        startAgainRoute: this.props.startAgainRoute
+      }
+    });
+  }
+
+  animateWrongAnswer(){
+
+
+  }
+
+  animateRighAnswer(){
 
 
 
   }
 
-  handleAnswers(answerid){
 
+  handleAnswers(answerid){
     // compare the answer id for to the correct answer
     var currentobj = this.props.quizdata[this.state.questioncount];
     // if the user gives correct answer
@@ -137,26 +149,41 @@ answerBackground(btn){
     // increment the score and the question count and set the state
       this.setState({
         score: this.state.score + 1,
-        questioncount: this.state.questioncount + 1
+        questioncount: this.state.questioncount + 1,
+        isCorrect: true
 
       })
       console.log(this.state.score);
+      // animate the right answer as green and make other buttons disappear
+
+    } else {  // if the answer does not match, move to the next question
+      // animate the wrong answer as red and make other answers disapper
+      this.setState({
+        questioncount: this.state.questioncount + 1,
+        isCorrect: false
+      })
     }
 
-    // if the question does not match ???????
+    // check if the question count is 7 then pass the data to the result component
+    // call the pushResultPage function
+    if(this.state.questioncount === 7){
+      this.pushResultPage();
+    }
+
   }
 
   render(){
     return (
       <View style={styles.mainContainer}>
-      <Image source ={{uri: this.renderImage()}} style={styles.image}/>
-      <Text style ={styles.question}>{this.renderQuestion()}</Text>
-      {this.renderAnswers()}
+        <Image source ={{uri: this.renderImage()}} style={styles.image}/>
+        <Text style ={styles.question}>{this.renderQuestion()}</Text>
+        {this.renderAnswers()}
       </View>
     );
   }
 
 }
+
 
 
 
