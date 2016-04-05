@@ -1,5 +1,7 @@
+
+'use strict';
 var React = require('react-native');
-// var api = require('../helper/api')
+var Category = require('./Category');
 
 
 var {
@@ -8,6 +10,7 @@ var {
   StyleSheet,
   TextInput,
   TouchableHighlight,
+  Alert,
 } = React;
 
 
@@ -25,6 +28,14 @@ var styles = StyleSheet.create({
     fontSize: 25,
     textAlign: 'center',
     color: '#fff'
+  },
+  error:{
+    flex: 1,
+    margin: 10,
+    borderRadius: 10,
+    height: 60,
+    backgroundColor: '#e15258'
+
   },
   searchInput: {
     height: 50,
@@ -52,14 +63,16 @@ var styles = StyleSheet.create({
     marginTop: 10,
     alignSelf: 'stretch',
     justifyContent: 'center'
-  },
+  }
+
 })
 
 class Main extends React.Component{
+  // ed6 equivalent of get initialState
   constructor(props){
     super(props);
     this.state = {
-      userinput: '',
+      username: '',
       isLoading: false,
       error: false
     }
@@ -67,38 +80,51 @@ class Main extends React.Component{
 
   handleChange(event){
     this.setState({
-      userinput: event.nativeEvent.text
+      username: event.nativeEvent.text
     })
   }
 
   handleSubmit(){
-    console.log(this.state.userinput)
+    console.log(this.state.username)
     this.setState({
       isLoading: true,
     });
+    if(this.state.username){
+      this.props.navigator.push({
+        title: 'Choose Category',
+        component: Category,
+        passProps:{username: this.state.username}
+      });
+    } else {
+      this.setState({
+        isLoading: false,
+        error: true
+      });
+      Alert.alert('Quizzer', 'Please enter your Name to begin');
+    }
 
   }
-
   render(){
+    var error = (this.state.error);
+
     return (
-      <View style={styles.mainContainer}>
-        <Text style={styles.title}> Welcome to Quizzer </Text>
 
-        <TextInput
-        style={styles.searchInput}
-        value={this.state.userinput}
-        onChange={this.handleChange.bind(this)}
-        placeholder="Enter Your Name"
-         />
+        <View style={styles.mainContainer}>
+          <Text style={styles.title}> Welcome to Quizzer </Text>
+          <TextInput
+            style={styles.searchInput}
+            value={this.state.username}
+            onChange={this.handleChange.bind(this)}
+            placeholder="Enter Your Name"
+          />
 
-        <TouchableHighlight
-        style={styles.button}
-        onPress={this.handleSubmit.bind(this)}
-        underlayColor="white">
-          <Text style={styles.buttonText}> Start the Game </Text>
-        </TouchableHighlight>
-
-      </View>
+          <TouchableHighlight
+            style={styles.button}
+            onPress={this.handleSubmit.bind(this)}
+            underlayColor="#FFC300">
+            <Text style={styles.buttonText}> Start the Game </Text>
+          </TouchableHighlight>
+        </View>
     )
   }
 

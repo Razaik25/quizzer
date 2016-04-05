@@ -2,7 +2,7 @@
       {
           "id": "1",
           "question":"You should know this one: Which island nation is popstar Rihanna from?",
-          "image": "celebrity1.jpg",
+          "image": "c1.jpg",
           "correct": 2,
           "answers": [
               {
@@ -26,7 +26,7 @@
       {
           "id": "2",
           "question":"Really Easy: How many Hemsworth brothers are there?",
-          "image": "celebrity2.jpg",
+          "image": "c2.jpg",
           "correct": 3,
           "answers": [
               {
@@ -50,7 +50,7 @@
       {
           "id": "3",
           "question": "In which year did Angelina Jolie and Brad Pitt get together?",
-          "image": "celebrity3.jpg",
+          "image": "c3.jpg",
           "correct": 2,
           "answers": [
               {
@@ -73,7 +73,7 @@
       },
       {
           "id": "4",
-          "image": "celebrity4.jpg",
+          "image": "c4.jpg",
           "question": "What is Miley Cyrus's birth name?",
           "correct": 2,
           "answers": [
@@ -94,5 +94,78 @@
                   "answer": "Ellender Cyrus"
               }
           ]
+      },
+      {
+          "id": "5",
+          "image": "c5.jpg",
+          "question": "What is the name of Neil Patrick Harris' husband?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Ricky Martin"
+              },
+              {
+                  "id": "2",
+                  "answer": "David Burtka"
+              },
+              {
+                  "id": "3",
+                  "answer": "David Spade"
+              },
+              {
+                  "id": "4",
+                  "answer": "Sean Hayes"
+              }
+          ]
+      },
+      {
+          "id": "6",
+          "image": "c6.jpg",
+          "question": "What is the name of the space movie staring Goerge Clooney and Sandra Bullock?",
+          "correct": 3,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Gravitation"
+              },
+              {
+                  "id": "2",
+                  "answer": "Specific Gravity"
+              },
+              {
+                  "id": "3",
+                  "answer": "Gravity"
+              },
+              {
+                  "id": "4",
+                  "answer": "Gradient"
+              }
+          ]
+      },
+      {
+          "id": "7",
+          "image": "c7.jpg",
+          "question": "Actress Jada Pinkett is married to which actor?",
+          "correct": 3,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Daniel Day Lewis"
+              },
+              {
+                  "id": "2",
+                  "answer": "Chris Rock"
+              },
+              {
+                  "id": "3",
+                  "answer": "Will Smith"
+              },
+              {
+                  "id": "4",
+                  "answer": "Jamie Foxx"
+              }
+          ]
       }
+
 ]

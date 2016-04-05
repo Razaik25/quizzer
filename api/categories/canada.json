@@ -1,0 +1,171 @@
+[
+      {
+        "id": "1",
+        "question":"What is Canada's National Animal?",
+        "image": "canadaa1.jpg",
+        "correct": 1,
+        "answers": [
+            {
+              "id": "1",
+              "answer": "Beaver"
+            },
+            {
+              "id": "2",
+              "answer": "Canadian Geese"
+            },
+            {
+              "id": "3",
+              "answer": "Honey Badger"
+            },
+            {
+              "id": "4",
+              "answer": "Moose"
+            }
+          ]
+      },
+      {
+          "id": "2",
+          "question":"Which of these sports was invented in Canada?",
+          "image": "canada2.jpg",
+          "correct": 3,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Baseball"
+              },
+              {
+                  "id": "2",
+                  "answer": "Soccer"
+              },
+              {
+                  "id": "3",
+                  "answer": "Basketball"
+              },
+              {
+                  "id": "4",
+                  "answer": "Hockey"
+              }
+          ]
+      },
+      {
+          "id": "3",
+          "question": "Toronto is a city in which Canadian Province?",
+          "image": "canadaa3.jpg",
+          "correct": 4,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Quebec"
+              },
+              {
+                  "id": "2",
+                  "answer": "Alberta"
+              },
+              {
+                  "id": "3",
+                  "answer": "British Columbia"
+              },
+              {
+                  "id": "4",
+                  "answer": "Ontario"
+              }
+          ]
+      },
+      {
+          "id": "4",
+          "image": "canada4.jpg",
+          "question": "What is the color of $20 dollar bill?",
+          "correct": 3,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Blue"
+              },
+              {
+                  "id": "2",
+                  "answer": "White"
+              },
+              {
+                  "id": "3",
+                  "answer": "Green"
+              },
+              {
+                  "id": "4",
+                  "answer": "Red"
+              }
+          ]
+      },
+      {
+          "id": "5",
+          "image": "canada5.jpg",
+          "question": "What does CN stand for in CN tower?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Corporate National"
+              },
+              {
+                  "id": "2",
+                  "answer": "Canadian National"
+              },
+              {
+                  "id": "3",
+                  "answer": "Canadian Network"
+              },
+              {
+                  "id": "4",
+                  "answer": "Canadian Native"
+              }
+          ]
+      },
+      {
+          "id": "6",
+          "image": "canadaa6.jpg",
+          "question": "Which Canadian Province produces most oil?",
+          "correct": 1,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Alberta"
+              },
+              {
+                  "id": "2",
+                  "answer": "Nothwest Territories"
+              },
+              {
+                  "id": "3",
+                  "answer": "Manitoba"
+              },
+              {
+                  "id": "4",
+                  "answer": "New Brunswick"
+              }
+          ]
+      },
+      {
+          "id": "7",
+          "image": "canadaa7.jpg",
+          "question": "Which city is refered as 'The City of Hundred Bell Towers'?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Vancouver"
+              },
+              {
+                  "id": "2",
+                  "answer": "Montreal"
+              },
+              {
+                  "id": "3",
+                  "answer": "Ottawa"
+              },
+              {
+                  "id": "4",
+                  "answer": "Edmonton"
+              }
+          ]
+      }
+
+]

@@ -7,18 +7,24 @@ var {
   StyleSheet,
   Text,
   NavigatorIOS,
+  Navigator,
   View
 } = React;
 
 class quizzer extends Component {
   render() {
     return (
-      <NavigatorIOS
-        style={styles.container}
-        initialRoute={{
-          title: 'Quiz App',
-          component: Main,
+      <Navigator
+        initialRoute={{ name: 'Quiz App', component: Main }}
+        configureScene={(route) => ({
+          ...Navigator.SceneConfigs.FloatFromRight
+        })}
+        renderScene={(route, navigator) => {
+          if (route.component) {
+            return <route.component navigator={navigator} {...route.passProps} />;
+          }
         }}
+
       />
     );
   }
@@ -27,7 +33,7 @@ class quizzer extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#111111',
+    backgroundColor: '#F6F6EF',
   }
 });
 

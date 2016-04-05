@@ -1,170 +1,170 @@
 [
       {
         "id": "1",
-        "question":"How would you write a function in JS?",
-        "image": "coding1.jpg",
-        "correct": 3,
+        "question":"3458 - 1458?",
+        "image": "math1.jpg",
+        "correct": 2,
         "answers": [
             {
               "id": "1",
-              "answer": "def doSomething"
+              "answer": "1999"
             },
             {
               "id": "2",
-              "answer": "public function doSomething()"
+              "answer": "2000"
             },
             {
               "id": "3",
-              "answer": "function doSomething()"
+              "answer": "2001"
             },
             {
               "id": "4",
-              "answer": "public void doSomething()"
+              "answer": "2004"
             }
           ]
       },
       {
           "id": "2",
-          "question":"How do you add links in html?",
-          "image": "coding2.jpg",
-          "correct": 2,
+          "question":"Which number when multipied by itself gives 144?",
+          "image": "math2.jpg",
+          "correct": 3,
           "answers": [
 
               {
                   "id": "1",
-                  "answer": "<div></div>"
+                  "answer": "15"
               },
               {
                   "id": "2",
-                  "answer": "<a href=' '></a>"
+                  "answer": "11"
               },
               {
                   "id": "3",
-                  "answer": "You can't-read the docs ¯\\_(ツ)_/¯"
+                  "answer": "12"
               },
               {
                   "id": "4",
-                  "answer": "<link href=' '></link>"
+                  "answer": "14"
               }
           ]
       },
       {
           "id": "3",
-          "question": "what does css stand for?",
-          "image": "coding3.jpg",
-          "correct": 3,
+          "question": "( 7 - 4 ) - ( 206 - 203) = ?",
+          "image": "math3.jpg",
+          "correct": 4,
           "answers": [
               {
                   "id": "1",
-                  "answer": "Computer Science Sheets"
+                  "answer": "8"
               },
               {
                   "id": "2",
-                  "answer": "Cascading Science Sheets"
+                  "answer": "4"
               },
               {
                   "id": "3",
-                  "answer": "Cascading Style Sheets"
+                  "answer": "7"
               },
               {
                   "id": "4",
-                  "answer": "Coding Style Sheets"
+                  "answer": "0"
               }
           ]
       },
       {
           "id": "4",
-          "image": "coding4.jpg",
-          "question": "corazvofdjsf?",
-          "correct": 4,
+          "image": "math4.jpg",
+          "question": "685x2 ??",
+          "correct": 3,
           "answers": [
               {
                   "id": "1",
-                  "answer": "@#@#@# "
+                  "answer": "1344"
               },
               {
                   "id": "2",
-                  "answer": "/exec"
+                  "answer": "1364"
               },
               {
                   "id": "3",
-                  "answer": "/#!!hfdjhfd"
+                  "answer": "1370"
               },
               {
                   "id": "4",
-                  "answer": "You are trolling ಠ_ಠ "
+                  "answer": "1342"
               }
           ]
       },
       {
           "id": "5",
-          "image": "coding5.jpg",
-          "question": "How would you convert a 3 to string in JS?",
-          "correct": 3,
+          "image": "math5.jpg",
+          "question": "What is the only even prime number?",
+          "correct": 2,
           "answers": [
               {
                   "id": "1",
-                  "answer": "Number(3) "
+                  "answer": "4"
               },
               {
                   "id": "2",
-                  "answer": "parseInt(3)"
+                  "answer": "2"
               },
               {
                   "id": "3",
-                  "answer": "3.toString()"
+                  "answer": "8"
               },
               {
                   "id": "4",
-                  "answer": "parseFloat(3)"
+                  "answer": "6"
               }
           ]
       },
       {
           "id": "6",
-          "image": "coding6.jpg",
-          "question": "Is NaN an number in JS?",
+          "image": "math6.jpg",
+          "question": "(a^5)x(b^5)?",
           "correct": 1,
           "answers": [
               {
                   "id": "1",
-                  "answer": "Yeah, its a type of number"
+                  "answer": "(ab)^5"
               },
               {
                   "id": "2",
-                  "answer": "No, NaN is not equal to anything..duh"
+                  "answer": "ab^5"
               },
               {
                   "id": "3",
-                  "answer": "NaN does not exist in JS"
+                  "answer": "ba^5"
               },
               {
                   "id": "4",
-                  "answer": "NaN is undefined"
+                  "answer": "(ab)^10"
               }
           ]
       },
       {
           "id": "7",
-          "image": "coding7.jpg",
-          "question": "Which of these is NOT a HTML attribute?",
-          "correct": 4,
+          "image": "math7.jpg",
+          "question": "When you have two parametric equations, what's the name of the rule you can use to work out dy/dx?",
+          "correct": 2,
           "answers": [
               {
                   "id": "1",
-                  "answer": "<body color='yyyy'>"
+                  "answer": "Use PEMDAS rule"
               },
               {
                   "id": "2",
-                  "answer": "<font-weight='normal'>"
+                  "answer": "Chain Rule"
               },
               {
                   "id": "3",
-                  "answer": "<bg color='yyy'>"
+                  "answer": "Substitution Rule"
               },
               {
                   "id": "4",
-                  "answer": "<font colour='yyyy'>"
+                  "answer": "I don't Know ( ._.)"
               }
           ]
       }

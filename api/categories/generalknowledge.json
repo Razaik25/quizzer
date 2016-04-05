@@ -1,170 +1,170 @@
 [
       {
         "id": "1",
-        "question":"How would you write a function in JS?",
-        "image": "coding1.jpg",
-        "correct": 3,
+        "question":"What is added to iron to make it steel?",
+        "image": "gk1.jpg",
+        "correct": 4,
         "answers": [
             {
               "id": "1",
-              "answer": "def doSomething"
+              "answer": "Aluminium"
             },
             {
               "id": "2",
-              "answer": "public function doSomething()"
+              "answer": "Cooper"
             },
             {
               "id": "3",
-              "answer": "function doSomething()"
+              "answer": "Zinc"
             },
             {
               "id": "4",
-              "answer": "public void doSomething()"
+              "answer": "Carbon"
             }
           ]
       },
       {
           "id": "2",
-          "question":"How do you add links in html?",
-          "image": "coding2.jpg",
-          "correct": 2,
+          "question":"What is the word missing the title of famous novel 'Love in the time of _____'?",
+          "image": "gk2.jpg",
+          "correct": 3,
           "answers": [
 
               {
                   "id": "1",
-                  "answer": "<div></div>"
+                  "answer": "Malaria"
               },
               {
                   "id": "2",
-                  "answer": "<a href=' '></a>"
+                  "answer": "Typhoid"
               },
               {
                   "id": "3",
-                  "answer": "You can't-read the docs ¯\\_(ツ)_/¯"
+                  "answer": "Cholera"
               },
               {
                   "id": "4",
-                  "answer": "<link href=' '></link>"
+                  "answer": "Polio"
               }
           ]
       },
       {
           "id": "3",
-          "question": "what does css stand for?",
-          "image": "coding3.jpg",
-          "correct": 3,
+          "question": "What's the name of the triangle with no equal sides?",
+          "image": "gk3.jpg",
+          "correct": 2,
           "answers": [
               {
                   "id": "1",
-                  "answer": "Computer Science Sheets"
+                  "answer": "Equilateral"
               },
               {
                   "id": "2",
-                  "answer": "Cascading Science Sheets"
+                  "answer": "Scalene"
               },
               {
                   "id": "3",
-                  "answer": "Cascading Style Sheets"
+                  "answer": "Isosceles"
               },
               {
                   "id": "4",
-                  "answer": "Coding Style Sheets"
+                  "answer": "Right Triangle"
               }
           ]
       },
       {
           "id": "4",
-          "image": "coding4.jpg",
-          "question": "corazvofdjsf?",
-          "correct": 4,
+          "image": "gk4.jpg",
+          "question": "This is the flag of which country?",
+          "correct": 1,
           "answers": [
               {
                   "id": "1",
-                  "answer": "@#@#@# "
+                  "answer": "Ireland "
               },
               {
                   "id": "2",
-                  "answer": "/exec"
+                  "answer": "Cote d'Ivoire"
               },
               {
                   "id": "3",
-                  "answer": "/#!!hfdjhfd"
+                  "answer": "Hungary"
               },
               {
                   "id": "4",
-                  "answer": "You are trolling ಠ_ಠ "
+                  "answer": "Costa Rica"
               }
           ]
       },
       {
           "id": "5",
-          "image": "coding5.jpg",
-          "question": "How would you convert a 3 to string in JS?",
-          "correct": 3,
+          "image": "gk5.jpg",
+          "question": "Grand Central Terminal in  New York is the world's?",
+          "correct": 1,
           "answers": [
               {
                   "id": "1",
-                  "answer": "Number(3) "
+                  "answer": "Largest railway station"
               },
               {
                   "id": "2",
-                  "answer": "parseInt(3)"
+                  "answer": "Busiest railway station"
               },
               {
                   "id": "3",
-                  "answer": "3.toString()"
+                  "answer": "Highest railway station"
               },
               {
                   "id": "4",
-                  "answer": "parseFloat(3)"
+                  "answer": "Oldest railway station"
               }
           ]
       },
       {
           "id": "6",
-          "image": "coding6.jpg",
-          "question": "Is NaN an number in JS?",
-          "correct": 1,
+          "image": "gk6.jpg",
+          "question": "What is the currency of India and Pakistan as well as a few other Asian countries?",
+          "correct": 2,
           "answers": [
               {
                   "id": "1",
-                  "answer": "Yeah, its a type of number"
+                  "answer": "Yen"
               },
               {
                   "id": "2",
-                  "answer": "No, NaN is not equal to anything..duh"
+                  "answer": "Rupee"
               },
               {
                   "id": "3",
-                  "answer": "NaN does not exist in JS"
+                  "answer": "Taka"
               },
               {
                   "id": "4",
-                  "answer": "NaN is undefined"
+                  "answer": "Peso"
               }
           ]
       },
       {
           "id": "7",
-          "image": "coding7.jpg",
-          "question": "Which of these is NOT a HTML attribute?",
+          "image": "gk7.png",
+          "question": "In a standard deck of cards, which king is the only one to not have a moustache?",
           "correct": 4,
           "answers": [
               {
                   "id": "1",
-                  "answer": "<body color='yyyy'>"
+                  "answer": "King of Spades"
               },
               {
                   "id": "2",
-                  "answer": "<font-weight='normal'>"
+                  "answer": "King of Clubs"
               },
               {
                   "id": "3",
-                  "answer": "<bg color='yyy'>"
+                  "answer": "King of Diamonds"
               },
               {
                   "id": "4",
-                  "answer": "<font colour='yyyy'>"
+                  "answer": "King of hearts"
               }
           ]
       }
