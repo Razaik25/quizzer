@@ -106,12 +106,12 @@ class Category extends React.Component{
     return (
       <View style={styles.container}>
        <ScrollView>
-      <Animatable.View animation="bounceIn">
+      <Animatable.View animation="bounceInLeft" easing="ease-in">
         <Text style={styles.title}>Choose Categories to start</Text>
         <Text style={styles.title}>{username}</Text>
        </Animatable.View>
 
-      <Animatable.View animation="bounceIn">
+      <Animatable.View animation="bounceInRight" easing="ease-in">
           <TouchableHighlight
           style={styles.button}
           onPress={this.handleSubmit.bind(this, 'canada')}
@@ -120,7 +120,7 @@ class Category extends React.Component{
           </TouchableHighlight>
        </Animatable.View>
 
-       <Animatable.View animation="bounceIn">
+       <Animatable.View animation="bounceInLeft" easing="ease-in">
           <TouchableHighlight
           style={styles.button}
           onPress={this.handleSubmit.bind(this, 'celebrities')}
@@ -129,7 +129,7 @@ class Category extends React.Component{
           </TouchableHighlight>
         </Animatable.View>
 
-        <Animatable.View animation="bounceIn">
+        <Animatable.View animation="bounceInRight" easing="ease-in">
           <TouchableHighlight
           style={styles.button}
           onPress={this.handleSubmit.bind(this, 'coding')}
@@ -138,7 +138,7 @@ class Category extends React.Component{
           </TouchableHighlight>
         </Animatable.View>
 
-        <Animatable.View animation="bounceIn">
+        <Animatable.View animation="bounceInLeft" easing="ease-in">
           <TouchableHighlight
           style={styles.button}
           onPress={this.handleSubmit.bind(this, 'friendstvshow')}
@@ -147,7 +147,7 @@ class Category extends React.Component{
           </TouchableHighlight>
         </Animatable.View>
 
-        <Animatable.View animation="bounceIn">
+        <Animatable.View animation="bounceInRight" easing="ease-in">
           <TouchableHighlight
           style={styles.button}
           onPress={this.handleSubmit.bind(this, 'generalknowledge')}
@@ -156,7 +156,7 @@ class Category extends React.Component{
           </TouchableHighlight>
         </Animatable.View>
 
-        <Animatable.View animation="bounceIn">
+        <Animatable.View animation="bounceInLeft" easing="ease-in">
           <TouchableHighlight
           style={styles.button}
           onPress={this.handleSubmit.bind(this, 'harrypotter')}
@@ -165,7 +165,7 @@ class Category extends React.Component{
           </TouchableHighlight>
         </Animatable.View>
 
-        <Animatable.View animation="bounceIn">
+        <Animatable.View animation="bounceInRight" easing="ease-in">
           <TouchableHighlight
           style={styles.button}
           onPress={this.handleSubmit.bind(this, 'math')}
@@ -174,7 +174,7 @@ class Category extends React.Component{
           </TouchableHighlight>
         </Animatable.View>
 
-        <Animatable.View animation="bounceIn">
+        <Animatable.View animation="bounceInLeft" easing="ease-in">
           <TouchableHighlight
           style={styles.button}
           onPress={this.handleSubmit.bind(this, 'random')}
@@ -183,7 +183,7 @@ class Category extends React.Component{
           </TouchableHighlight>
         </Animatable.View>
 
-        <Animatable.View animation="bounceIn">
+        <Animatable.View animation="bounceInRight" easing="ease-in">
             <TouchableHighlight
               style={styles.button}
               onPress={this.handleSubmit.bind(this, 'superheroes')}

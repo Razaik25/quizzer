@@ -3,6 +3,7 @@ var React = require('react-native');
 var Result = require('./Result');
 var _ = require('underscore');
 var Animatable = require('react-native-animatable');
+var Dimensions = require('Dimensions');
 
 const {
   View,
@@ -47,11 +48,12 @@ class Quiz extends React.Component{
     this.state ={
       questioncount: 0,
       score: 0,
-      isCorrect: false
+      answerColor: ''
+
     };
   }
 
-answerBackground(btn){
+  answerBackground(btn){
     var obj = {
       flexDirection: 'row',
       alignSelf: 'stretch',
@@ -66,6 +68,13 @@ answerBackground(btn){
       obj.backgroundColor = '#758BF4';
     } else {
       obj.backgroundColor = '#3079ab';
+    }
+    return obj;
+  }
+
+  hideTouchableHighlights(btn){
+    var obj = {
+      display: 'none'
     }
     return obj;
   }
@@ -107,7 +116,7 @@ answerBackground(btn){
              style={that.answerBackground(index)}
              onPress={that.handleAnswers.bind(that, answers.id)}
              underlayColor="#FFC300">
-             <Animatable.Text animation="wobble" style={styles.text}>{answers.answer}</Animatable.Text>
+             <Text style={styles.text}>{answers.answer}</Text>
             </TouchableHighlight>
           )
         });
@@ -130,14 +139,24 @@ answerBackground(btn){
   }
 
   animateWrongAnswer(){
-
-
+    // var backgroundColor = 'red';
+    // this.setState({
+    //  backgroundColor: backgroundColor
+    // })
+    // // set the height as 0 of other TouchableHighlights
+    // return (
+    //   <TouchableHighlight  underlayColor="white"
+    //     style={{backgroundColor: this.state.backgroundColor, height:60, flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}
+    //     >
+    //   </TouchableHighlight>
+    // );
   }
 
   animateRighAnswer(){
-
-
-
+    var backgroundColor = 'green';
+    this.setState({
+     backgroundColor: backgroundColor
+    })
   }
 
 
@@ -150,7 +169,7 @@ answerBackground(btn){
       this.setState({
         score: this.state.score + 1,
         questioncount: this.state.questioncount + 1,
-        isCorrect: true
+
 
       })
       console.log(this.state.score);
@@ -160,8 +179,8 @@ answerBackground(btn){
       // animate the wrong answer as red and make other answers disapper
       this.setState({
         questioncount: this.state.questioncount + 1,
-        isCorrect: false
       })
+
     }
 
     // check if the question count is 7 then pass the data to the result component

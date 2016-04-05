@@ -66,12 +66,12 @@ class Result extends React.Component{
        <Animatable.Text animation="slideInDown" iterationCount={5} direction="alternate" style={styles.text}>
          {this.props.username} you scored {this.props.score} out of 7
        </Animatable.Text>
-       <Animatable.View style={styles.button} animation="fadeInUpBig">
+       <Animatable.View style={styles.button} animation="bounceInLeft" easing="ease-in">
          <TouchableHighlight style={styles.button} onPress={this.startAgain.bind(this)} underlayColor="#FFC300">
            <Text  style={styles.buttonText}>Play Again </Text>
          </TouchableHighlight>
       </Animatable.View>
-      <Animatable.View style={styles.button} animation="fadeInUpBig">
+      <Animatable.View style={styles.button} animation="bounceInRight" easing="ease-in">
         <TouchableHighlight style={styles.button} onPress={this.differentPlayer.bind(this)} underlayColor="#FFC300">
           <Animatable.Text style={styles.buttonText}>Different Player?</Animatable.Text>
         </TouchableHighlight>
