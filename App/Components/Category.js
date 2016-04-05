@@ -4,6 +4,7 @@ var React = require('react-native');
 var api = require('../network/api');
 var Quiz = require('./Quiz');
 var Animatable = require('react-native-animatable');
+
 var {
   Text,
   View,

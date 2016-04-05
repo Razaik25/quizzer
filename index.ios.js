@@ -17,7 +17,8 @@ class quizzer extends Component {
       <Navigator
         initialRoute={{ name: 'Quiz App', component: Main }}
         configureScene={(route) => ({
-          ...Navigator.SceneConfigs.FloatFromRight
+          ...Navigator.SceneConfigs.HorizontalSwipeJump
+
         })}
         renderScene={(route, navigator) => {
           if (route.component) {

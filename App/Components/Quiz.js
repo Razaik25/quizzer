@@ -3,7 +3,7 @@ var React = require('react-native');
 var Result = require('./Result');
 var _ = require('underscore');
 var Animatable = require('react-native-animatable');
-var Dimensions = require('Dimensions');
+
 
 const {
   View,

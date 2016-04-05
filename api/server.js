@@ -21,6 +21,21 @@ app.get('/api/:category', function(req, res) {
     });
 });
 
+// to get the user info - when a user logs in (in log in)
+app.get('/users/:data', function(req, res) {
+
+});
+
+// to post the user info - when a user sign up (in sign up)
+app.post('/users/:data', function(req,res) {
+
+});
+
+// to update the user info - when a user finihes playing a category (in results page)
+app.put('/users/:data', function(req,res) {
+
+});
+
 
 var port = process.env.PORT || 3000;
 app.listen(port, () => {
