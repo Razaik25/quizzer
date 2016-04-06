@@ -10,6 +10,8 @@ const Firebase = require('firebase');
 const ref = new Firebase('https://quizzer-raz.firebaseio.com/')
 
 var Profile = require('./Profile');
+var api = require('../network/api');
+
 
 var {
   AppRegistry,
@@ -91,9 +93,6 @@ var styles = StyleSheet.create({
       fontSize: 22,
       fontWeight: 'bold'
     },
-    greyFont: {
-      color: '#D8D8D8'
-    },
     whiteFont: {
       color: '#FFF',
       fontWeight: '900'
@@ -138,7 +137,44 @@ class Signup extends React.Component{
     });
   }
 
+  PushProfilePage(data){
+    this.props.navigator.push({
+      title: 'User Profile',
+      component: Profile,
+      passProps:{userstats: data}
+    });
+  }
+
+
+  apicall(){
+    // send a request to api for creating a user and getting the stats back for the games a user played in each category
+    var email = this.state.email;
+    var username = this.state.username;
+    api.addUser(email,username)
+    .then((res) =>{
+         console.log('in add user api',res);
+         api.getUser(email)
+           .then((data) => {
+               console.log('in appi second call',data);
+               this.PushProfilePage(data);
+            })
+       .catch((err) => {
+         console.log('inside err', err);
+         this.setState({
+           isLoading: false,
+           error: `There was an error: ${err}`
+         });
+       });
+    });
+
+    this.setState({
+      isLoading: true,
+    });
+
+  }
+
   handleSignup(){
+    // adds user to firebase
     ref.createUser({
       email: this.state.email,
       password: this.state.password
@@ -147,17 +183,11 @@ class Signup extends React.Component{
         console.log('Error creating user: ', error);
       } else {
         console.log("Signup Success")
-        this.props.navigator.resetTo({
-          component: Profile,
-          title: 'Profile'
-          })
+        this.apicall();
         }
       }
     )
-    
-    this.setState({
-      isLoading: true,
-    });
+
   }
 
   render(){
@@ -212,10 +242,15 @@ class Signup extends React.Component{
         </View>
 
         {/* Sign up*/}
-        <View style={styles.signin}>
-            <Text style={styles.whiteFont}
-            onPress={this.handleSignup.bind(this)}>Sign Up</Text>
+        <View>
+            <TouchableHighlight
+            style={styles.signin}
+            onPress={this.handleSignup.bind(this)}
+            underlayColor="#FFC300">
+              <Text style={styles.whiteFont}> Sign Up </Text>
+            </TouchableHighlight>
         </View>
+
       </View>
     )
   }

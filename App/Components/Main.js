@@ -97,9 +97,6 @@ var styles = StyleSheet.create({
       fontSize: 22,
       fontWeight: 'bold'
     },
-    greyFont: {
-      color: '#D8D8D8'
-    },
     whiteFont: {
       color: '#FFF',
       fontWeight: '900'
@@ -138,7 +135,7 @@ class Main extends React.Component{
   PushSignupPage(){
     this.props.navigator.push({
       title: 'Sign up',
-      component: Signup,
+      component: Signup
     });
 
   }
@@ -186,6 +183,7 @@ class Main extends React.Component{
         <Text style={styles.title}> Welcome to Quizzer! </Text>
       <View style={styles.inputs}>
 
+        {/* email section*/}
         <View style={styles.inputContainer}>
           <Image style={styles.inputUsername}
           source={{uri: 'http://i66.tinypic.com/2qltjx3.png'}}/>
