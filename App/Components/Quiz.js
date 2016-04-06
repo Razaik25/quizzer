@@ -3,7 +3,7 @@ var React = require('react-native');
 var Result = require('./Result');
 var _ = require('underscore');
 var Animatable = require('react-native-animatable');
-var Dimensions = require('Dimensions');
+
 
 const {
   View,
@@ -133,6 +133,8 @@ class Quiz extends React.Component{
       passProps: {
         username: this.props.username,
         score: this.state.score,
+        category: this.props.category,
+        email: this.props.email,
         startAgainRoute: this.props.startAgainRoute
       }
     });

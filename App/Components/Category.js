@@ -4,6 +4,7 @@ var React = require('react-native');
 var api = require('../network/api');
 var Quiz = require('./Quiz');
 var Animatable = require('react-native-animatable');
+
 var {
   Text,
   View,
@@ -87,6 +88,8 @@ class Category extends React.Component{
            passProps: {
              username: this.props.username,
              quizdata: res,
+             category: category,
+             email: this.props.email,
              startAgainRoute: this.getCurrentRoute()
            }
          });
