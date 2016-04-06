@@ -2,9 +2,10 @@
 
 'use strict';
 var React = require('react-native');
+var Category = require('./Category');
 var Animatable = require('react-native-animatable');
 var _ = require('underscore');
-var Animatable = require('react-native-animatable');
+
 
 
 const {
@@ -60,9 +61,17 @@ const styles = StyleSheet.create({
 
 class Profile extends React.Component{
 
+  constructor(props){
+    super(props);
+    this.state = {
+      error: false
+    }
+  }
+
   renderStats(){
     var currentobj = this.props.userstats[0];
     var stats;
+    var that = this;
     stats =  Object.keys(currentobj).map(function(key) {
       if(key ==='username'){
         // return <Text style={styles.title}>{key} {currentobj[key]}</Text>
@@ -73,19 +82,27 @@ class Profile extends React.Component{
         return <Text style={styles.title}>Your score in {key}:{currentobj[key]}</Text>
 
       }
-
     })
-
     return stats;
   }
 
+  PushCategoryPage(){
+
+    this.props.navigator.push({
+      title: 'Choose Category',
+      component: Category,
+      passProps:{username: this.props.userstats[0].username}
+    });
+  }
+
+
   handleSubmit(){
-    
+    // direct to the Category page
+    this.PushCategoryPage();
   }
 
   render(){
     return(
-
         <View style={styles.container}>
           <Text style ={styles.title}>In Profile</Text>
           {this.renderStats()}
