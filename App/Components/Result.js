@@ -2,6 +2,7 @@
 'use strict';
 var React = require('react-native');
 var Animatable = require('react-native-animatable');
+var api = require('../network/api');
 
 
 const {
@@ -58,6 +59,29 @@ class Result extends React.Component{
      // going back to the top most route
      this.props.navigator.popToTop();
 
+  }
+
+  updateScore(){
+    // update the score in the database by making a call to the api
+
+    api.updateUser(this.props.email, this.props.category, this.props.score)
+       .then((res) =>{
+         console.log('updated sucessfully',res);
+
+       })
+       .catch((err) => {
+         console.log('inside err', err);
+         this.setState({
+           isLoading: false,
+           error: `There was an error: ${err}`
+         });
+       })
+       .done();
+
+  }
+
+  componentDidMount(){
+    this.updateScore();
   }
 
   render(){

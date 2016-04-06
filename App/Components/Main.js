@@ -7,6 +7,7 @@ var windowSize = Dimensions.get('window');
 
 var Profile = require('./Profile');
 var Signup = require('./Signup');
+var api = require('../network/api');
 
 // invoking firebase
 const Firebase = require('firebase');
@@ -111,7 +112,7 @@ var styles = StyleSheet.create({
 });
 
 class Main extends React.Component{
-  // ed6 equivalent of get initialState
+  // es6 equivalent of get initialState
   constructor(props){
     super(props);
     this.state = {
@@ -123,11 +124,14 @@ class Main extends React.Component{
     }
   }
 
-  PushProfilePage(){
+  PushProfilePage(data){
     this.props.navigator.push({
-      title: 'User Profile',
+      title: `Profile Page`,
       component: Profile,
-      passProps:{username: this.state.username}
+      passProps: {
+        username: this.props.username,
+        userstats: data
+      }
     });
   }
 
@@ -160,10 +164,26 @@ class Main extends React.Component{
       if (error) {
           console.log('Login Failed!', error)
       } else {
-          this.PushProfilePage();
         }
       }
     )
+
+    // Make an api request to get all the data relevant to the user
+    api.getUser(this.state.email)
+       .then((res) =>{
+         console.log('data in api',res);
+         // passing the data from the Main to Profile component
+         this.PushProfilePage(res);
+       })
+       .catch((err) => {
+         console.log('inside err', err);
+         this.setState({
+           isLoading: false,
+           error: `There was an error: ${err}`
+         });
+       })
+       .done();
+
     this.setState({
       isLoading: true,
     });

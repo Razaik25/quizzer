@@ -39,13 +39,15 @@ app.get('/users/:email',db.getUser, function(req, res) {
 });
 
 // to post the user info - when a user sign up (in sign up)
-app.post('/users/:email', db.createUser, function(req,res) {
+app.post('/users/:email', db.createUser, function(req, res) {
   res.json(res.data);
 
 });
 
-// to update the user info - when a user finihes playing a category (in results page)
-app.put('/users/:email', function(req,res) {
+// to update the user info - when a user finishes playing a category (in results page)
+app.post('/users/update/:email', db.updateUser, function(req, res) {
+  console.log('in put', req.body);
+  res.json(res.data);
 
 });
 

@@ -69,17 +69,18 @@ class Profile extends React.Component{
   }
 
   renderStats(){
+
     var currentobj = this.props.userstats[0];
     var stats;
     var that = this;
     stats =  Object.keys(currentobj).map(function(key) {
       if(key ==='username'){
         // return <Text style={styles.title}>{key} {currentobj[key]}</Text>
-        return <Text style={styles.title}>Welcome {currentobj[key]}</Text>
+        return <Text key={key} style={styles.title}>Welcome {currentobj[key]}</Text>
       }
 
       if(currentobj[key] !== null && key !== 'id' && key !== 'email'){
-        return <Text style={styles.title}>Your score in {key}:{currentobj[key]}</Text>
+        return <Text key ={key} style={styles.title}>Your score in {key}:{currentobj[key]}</Text>
 
       }
     })
@@ -91,7 +92,9 @@ class Profile extends React.Component{
     this.props.navigator.push({
       title: 'Choose Category',
       component: Category,
-      passProps:{username: this.props.userstats[0].username}
+      passProps:{ username: this.props.userstats[0].username,
+                  email: this.props.userstats[0].email
+                }
     });
   }
 

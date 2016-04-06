@@ -133,6 +133,8 @@ class Quiz extends React.Component{
       passProps: {
         username: this.props.username,
         score: this.state.score,
+        category: this.props.category,
+        email: this.props.email,
         startAgainRoute: this.props.startAgainRoute
       }
     });

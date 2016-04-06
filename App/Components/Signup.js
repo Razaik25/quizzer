@@ -165,7 +165,8 @@ class Signup extends React.Component{
            error: `There was an error: ${err}`
          });
        });
-    });
+    })
+    .done();
 
     this.setState({
       isLoading: true,

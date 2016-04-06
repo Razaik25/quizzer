@@ -88,6 +88,8 @@ class Category extends React.Component{
            passProps: {
              username: this.props.username,
              quizdata: res,
+             category: category,
+             email: this.props.email,
              startAgainRoute: this.getCurrentRoute()
            }
          });

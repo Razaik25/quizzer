@@ -20,15 +20,19 @@ var api = {
     var url = `http://localhost:3000/users/${email}`;
     return fetch(url).then((res) => res.json())
   },
-  
+
   // have to update this
-  updateUser(email,category){
+  updateUser(email,category,score){
     email = email.toLowerCase().trim();
     category = category.toLowerCase().trim();
-    var url = `http://localhost:3000/users/${email}`;
+    var url = `http://localhost:3000/users/update/${email}`;
     return fetch(url, {
-      method: 'put',
-      body: (username)
+      method: 'post',
+      body: JSON.stringify({
+        email: email,
+        category: category,
+        score: score
+      })
     }).then((res) => res.json());
   }
 

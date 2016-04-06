@@ -44,7 +44,24 @@ function getUser (req, res, next) {
 }
 
 function updateUser (req, res, next) {
-  db.any(`UPDATE users SET score = ($1) where email = ($2) and category =($3);`, [req.body])
+  console.log('in pg', req.body);
+  var email = req.params.email;
+  var data = JSON.parse(Object.keys(req.body)[0]);
+  var category;
+  var score;
+  for(var key in data){
+    if(key === 'category'){
+      category = data[key].trim();
+    }
+
+    if(key === 'score'){
+      score = data[key];
+    }
+  }
+  console.log('category',category);
+  console.log(typeof(score));
+  console.log('score',score);
+  db.any(`UPDATE users SET ${category} = $1 where email = $2;`, [score,email])
   .then(function(data) {
     res.data = data;
     next()
