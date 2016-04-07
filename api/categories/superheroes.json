@@ -1,0 +1,171 @@
+[
+      {
+        "id": "1",
+        "question":"What is the name of the substance that makes superman helpless ?",
+        "image": "ssp1.jpg",
+        "correct": 3,
+        "answers": [
+            {
+              "id": "1",
+              "answer": "Nothing,Superman is invincible -duh"
+            },
+            {
+              "id": "2",
+              "answer": "Plutonite"
+            },
+            {
+              "id": "3",
+              "answer": "Kryptonite"
+            },
+            {
+              "id": "4",
+              "answer": "Potassium"
+            }
+          ]
+      },
+      {
+          "id": "2",
+          "question":"What is the name of metal that is bonded to Wolverine's skeleton and claws ?",
+          "image": "swolf.jpg",
+          "correct": 4,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Germanium"
+              },
+              {
+                  "id": "2",
+                  "answer": "Vibranium"
+              },
+              {
+                  "id": "3",
+                  "answer": "Titanium"
+              },
+              {
+                  "id": "4",
+                  "answer": "Adamantium"
+              }
+          ]
+      },
+      {
+          "id": "3",
+          "question": "What is Incredible Hulk's real name?",
+          "image": "sp3.jpg",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Clark Kent"
+              },
+              {
+                  "id": "2",
+                  "answer": "Bruce Banner"
+              },
+              {
+                  "id": "3",
+                  "answer": "Bruce Wayne"
+              },
+              {
+                  "id": "4",
+                  "answer": "Tony Stark"
+              }
+          ]
+      },
+      {
+          "id": "4",
+          "image": "thor2.jpg",
+          "question": "What is the name of Thor's home planet?",
+          "correct": 3,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Krypton"
+              },
+              {
+                  "id": "2",
+                  "answer": "Midgard"
+              },
+              {
+                  "id": "3",
+                  "answer": "Asgard"
+              },
+              {
+                  "id": "4",
+                  "answer": "Galactus"
+              }
+          ]
+      },
+      {
+          "id": "5",
+          "image": "spider5.jpg",
+          "question": "Peter parker is the name of which superhero?",
+          "correct": 4,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Iron Man"
+              },
+              {
+                  "id": "2",
+                  "answer": "Captain America"
+              },
+              {
+                  "id": "3",
+                  "answer": "The Green Lantern"
+              },
+              {
+                  "id": "4",
+                  "answer": "Spiderman"
+              }
+          ]
+      },
+      {
+          "id": "6",
+          "image": "sp6.jpg",
+          "question": "Batman is the saviour of which city?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Central City"
+              },
+              {
+                  "id": "2",
+                  "answer": "Gotham"
+              },
+              {
+                  "id": "3",
+                  "answer": "Chicago"
+              },
+              {
+                  "id": "4",
+                  "answer": "Starling City"
+              }
+          ]
+      },
+      {
+          "id": "7",
+          "image": "sp7.jpg",
+          "question": "What is the name of Tony Stark's interactive computer assistant?",
+          "correct": 4,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Artificial Intelligence bot"
+              },
+              {
+                  "id": "2",
+                  "answer": "SIRI"
+              },
+              {
+                  "id": "3",
+                  "answer": "Iron Man Assistant"
+              },
+              {
+                  "id": "4",
+                  "answer": "JARVIS"
+              }
+          ]
+      }
+
+]

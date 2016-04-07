@@ -21,7 +21,7 @@ const {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 0.9,
     backgroundColor: '#5cb860',
     justifyContent: 'center',
     alignItems: 'center',
@@ -80,7 +80,7 @@ class Profile extends React.Component{
       }
 
       if(currentobj[key] !== null && key !== 'id' && key !== 'email'){
-        return <Text key ={key} style={styles.title}>Your score in {key}:{currentobj[key]}</Text>
+        return <Text key ={key} style={styles.title}>Score {key}:{currentobj[key]}</Text>
 
       }
     })
@@ -106,16 +106,15 @@ class Profile extends React.Component{
 
   render(){
     return(
-        <View style={styles.container}>
-          <Text style ={styles.title}>In Profile</Text>
-          {this.renderStats()}
-            <TouchableHighlight
-            style={styles.button}
-            onPress= {this.handleSubmit.bind(this)}
-            underlayColor="#FFC300">
-              <Text style={styles.buttonText}> Start Game </Text>
-            </TouchableHighlight>
-        </View>
+      <View style={styles.container}>
+        {this.renderStats()}
+          <TouchableHighlight
+          style={styles.button}
+          onPress= {this.handleSubmit.bind(this)}
+          underlayColor="#FFC300">
+            <Text style={styles.buttonText}> Start Game </Text>
+          </TouchableHighlight>
+      </View>
 
     )
   }
