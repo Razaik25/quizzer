@@ -4,6 +4,7 @@
 var React = require('react-native');
 var Category = require('./Category');
 var Animatable = require('react-native-animatable');
+var Video = require('react-native-video').default;
 var _ = require('underscore');
 
 
@@ -21,11 +22,11 @@ const {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 0.9,
+    flex: 1,
     backgroundColor: '#5cb860',
     justifyContent: 'center',
     alignItems: 'center',
-    flexDirection: 'column',
+    flexDirection: 'column'
 
   },
   text: {
@@ -107,14 +108,14 @@ class Profile extends React.Component{
   render(){
     return(
       <View style={styles.container}>
-        {this.renderStats()}
-          <TouchableHighlight
-          style={styles.button}
-          onPress= {this.handleSubmit.bind(this)}
-          underlayColor="#FFC300">
-            <Text style={styles.buttonText}> Start Game </Text>
-          </TouchableHighlight>
-      </View>
+          {this.renderStats()}
+            <TouchableHighlight
+            style={styles.button}
+            onPress= {this.handleSubmit.bind(this)}
+            underlayColor="#FFC300">
+              <Text style={styles.buttonText}> Start Game </Text>
+            </TouchableHighlight>
+        </View>
 
     )
   }
