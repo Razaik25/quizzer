@@ -14,7 +14,7 @@ const Firebase = require('firebase');
 // link to the database in firebase
 const ref = new Firebase('https://quizzer-raz.firebaseio.com/')
 
-
+// Fix errors in the page
 
 var {
   View,
@@ -130,7 +130,8 @@ class Main extends React.Component{
       component: Profile,
       passProps: {
         username: this.props.username,
-        userstats: data
+        userstats: data,
+        login: true
       }
     });
   }
@@ -156,24 +157,14 @@ class Main extends React.Component{
     });
   }
 
-  handleSignin(){
-    ref.authWithPassword({
-      email: this.state.email,
-      password: this.state.password
-    }, (error, authData) =>{
-      if (error) {
-          console.log('Login Failed!', error)
-      } else {
-        }
-      }
-    )
-
+  apiRequest(){
     // Make an api request to get all the data relevant to the user
     api.getUser(this.state.email)
        .then((res) =>{
          console.log('data in api',res);
          // passing the data from the Main to Profile component
-         this.PushProfilePage(res);
+          this.PushProfilePage(res);
+
        })
        .catch((err) => {
          console.log('inside err', err);
@@ -183,6 +174,22 @@ class Main extends React.Component{
          });
        })
        .done();
+
+  }
+
+  handleSignin(){
+    ref.authWithPassword({
+      email: this.state.email,
+      password: this.state.password
+    }, (error, authData) =>{
+      if (error) {
+          console.log('Login Failed!', error)
+      } else {
+        this.apiRequest();
+
+        }
+      }
+    );
 
     this.setState({
       isLoading: true,

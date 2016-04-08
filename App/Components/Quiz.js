@@ -19,7 +19,7 @@ var styles = StyleSheet.create({
     flex: 1
   },
   image: {
-    height: 300
+    height: 260
   },
   text: {
       color: '#fff',

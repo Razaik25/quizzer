@@ -141,7 +141,9 @@ class Signup extends React.Component{
     this.props.navigator.push({
       title: 'User Profile',
       component: Profile,
-      passProps:{userstats: data}
+      passProps:{userstats: data,
+                 login: false
+      }
     });
   }
 
