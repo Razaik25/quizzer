@@ -31,10 +31,11 @@ var styles = StyleSheet.create ({
     height: 350,
   },
   buttonText: {
-    fontSize: 18,
+    fontSize: 15,
     color: '#111',
     alignSelf: 'center',
-    fontFamily: 'Futura'
+    fontFamily: 'Futura',
+    marginBottom: 5
   },
   title: {
     paddingTop: 20,
@@ -65,15 +66,15 @@ var styles = StyleSheet.create ({
   },
   categoryIcon: {
     height: window.height/8.335,
-    borderRadius: (window.height/8.3350)/2,
+    borderRadius: 10,
     marginRight: 2,
     width: window.height/8.335,
     shadowColor: '#000000',
     shadowOpacity: 0.5,
     backgroundColor: '#F2F2F2',
     // borderRadius: 4,
-   borderWidth: 2,
-   borderColor: '#F6CED8',
+    borderWidth: 2,
+    borderColor: '#F6CED8',
 
   },
   category: {
@@ -83,7 +84,8 @@ var styles = StyleSheet.create ({
     justifyContent: 'center',
     marginLeft: 20,
     marginRight: 20,
-    marginBottom: 20,
+    marginBottom: 30,
+    marginTop: 25,
     paddingLeft: 10
 
   },
@@ -158,105 +160,96 @@ class Category extends React.Component{
       <View style={styles.container}>
 
         <Animatable.View animation="bounceInLeft" easing="ease-in">
-          <Text style={styles.title}>Pick a Category to start {username} </Text>
+          <Text style={styles.title}>Pick a Category {username} </Text>
         </Animatable.View>
 
         <View style = {styles.category}>
           <Animatable.View animation="bounceInRight" easing="ease-in">
-            <Image style={styles.categoryIcon} source={require("../Media/icons/canada.jpg")}/>
+            <Text style={styles.buttonText}> Canada eh...</Text>
             <TouchableHighlight
-            style={styles.button}
             onPress={this.handleSubmit.bind(this, 'canada')}
             underlayColor="#FFC300">
-              <Text style={styles.buttonText}> Canada eh...</Text>
+              <Image style={styles.categoryIcon} source={require("../Media/icons/canada.jpg")}/>
             </TouchableHighlight>
           </Animatable.View>
 
           <Animatable.View style={{marginLeft: 40}} animation="bounceInLeft" easing="ease-in">
-            <Image style={styles.categoryIcon} source={require("../Media/icons/celebrities.jpg")}/>
+            <Text style={styles.buttonText}> Celebrities </Text>
             <TouchableHighlight
-              style={styles.button}
               onPress={this.handleSubmit.bind(this, 'celebrities')}
               underlayColor="#FFC300">
-              <Text style={styles.buttonText}> Celebrities </Text>
+                <Image style={styles.categoryIcon} source={require("../Media/icons/celebrities.jpg")}/>
             </TouchableHighlight>
           </Animatable.View>
         </View>
 
       <View style = {styles.category}>
         <Animatable.View animation="bounceInRight" easing="ease-in">
-          <Image style={styles.categoryIcon} source={require("../Media/icons/coding.jpg")}/>
+          <Text style={styles.buttonText}> Coding </Text>
           <TouchableHighlight
-          style={styles.button}
           onPress={this.handleSubmit.bind(this, 'coding')}
           underlayColor="#FFC300">
-            <Text style={styles.buttonText}> Coding </Text>
+            <Image style={styles.categoryIcon} source={require("../Media/icons/coding.jpg")}/>
           </TouchableHighlight>
         </Animatable.View>
 
-        <Animatable.View  style={{marginLeft: 40, left: 30}} animation="bounceInLeft" easing="ease-in">
-          <Image style={styles.categoryIcon} source={require("../Media/icons/friends.jpg")}/>
+        <Animatable.View  style={{marginLeft: 40, left: 20}} animation="bounceInLeft" easing="ease-in">
+          <Text style={styles.buttonText}> Friends Show </Text>
           <TouchableHighlight
-          style={styles.button}
           onPress={this.handleSubmit.bind(this, 'friendstvshow')}
           underlayColor="#FFC300">
-            <Text style={styles.buttonText}> Friends-Tv Show </Text>
+            <Image style={styles.categoryIcon} source={require("../Media/icons/friends.jpg")}/>
           </TouchableHighlight>
         </Animatable.View>
       </View>
 
       <View style = {styles.category}>
         <Animatable.View animation="bounceInRight" easing="ease-in">
-          <Image style={styles.categoryIcon} source={require("../Media/icons/gk.jpg")}/>
+          <Text style={styles.buttonText}> General Knowledge </Text>
           <TouchableHighlight
-          style={styles.button}
           onPress={this.handleSubmit.bind(this, 'generalknowledge')}
           underlayColor="#FFC300">
-            <Text style={styles.buttonText}> General Knowledge </Text>
+           <Image style={styles.categoryIcon} source={require("../Media/icons/gk.jpg")}/>
           </TouchableHighlight>
         </Animatable.View>
 
         <Animatable.View animation="bounceInLeft" easing="ease-in">
-          <Image style={styles.categoryIcon} source={require("../Media/icons/hp.jpg")}/>
+          <Text style={styles.buttonText}> Harry Potter </Text>
           <TouchableHighlight
-          style={styles.button}
           onPress={this.handleSubmit.bind(this, 'harrypotter')}
           underlayColor="#FFC300">
-            <Text style={styles.buttonText}> Harry Potter </Text>
+            <Image style={styles.categoryIcon} source={require("../Media/icons/hp.jpg")}/>
           </TouchableHighlight>
         </Animatable.View>
       </View>
 
       <View style = {styles.category}>
         <Animatable.View style={{marginRight: 10}} animation="bounceInRight" easing="ease-in">
-          <Image style={styles.categoryIcon} source={require("../Media/icons/math.jpg")}/>
+          <Text style={styles.buttonText}> Math </Text>
           <TouchableHighlight
-          style={styles.button}
           onPress={this.handleSubmit.bind(this, 'math')}
           underlayColor="#FFC300">
-            <Text style={styles.buttonText}> Math </Text>
+            <Image style={styles.categoryIcon} source={require("../Media/icons/math.jpg")}/>
           </TouchableHighlight>
         </Animatable.View>
 
-        <Animatable.View style={{marginLeft: 70}} animation="bounceInLeft" easing="ease-in">
-          <Image style={styles.categoryIcon} source={require("../Media/icons/arrows.jpg")}/>
+        <Animatable.View style={{marginLeft: 60}} animation="bounceInLeft" easing="ease-in">
+            <Text style={styles.buttonText}> Random </Text>
           <TouchableHighlight
-          style={styles.button}
           onPress={this.handleSubmit.bind(this, 'random')}
           underlayColor="#FFC300">
-            <Text style={styles.buttonText}> Random </Text>
+           <Image style={styles.categoryIcon} source={require("../Media/icons/arrows.jpg")}/>
           </TouchableHighlight>
         </Animatable.View>
     </View>
 
       <View style = {styles.category}>
         <Animatable.View animation="bounceInRight" easing="ease-in">
-          <Image style={styles.categoryIcon} source={require("../Media/icons/sh.jpg")}/>
+          <Text style={styles.buttonText}> Super Heros </Text>
             <TouchableHighlight
-              style={styles.button}
               onPress={this.handleSubmit.bind(this, 'superheroes')}
               underlayColor="#FFC300">
-              <Text style={styles.buttonText}> Super Heros </Text>
+                <Image style={styles.categoryIcon} source={require("../Media/icons/sh.jpg")}/>
             </TouchableHighlight>
         </Animatable.View>
       </View>
