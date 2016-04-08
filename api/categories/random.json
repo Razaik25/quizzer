@@ -1,0 +1,172 @@
+[
+      {
+        "id": "1",
+        "question":"3458 - 1458?",
+        "image": "math1.jpg",
+        "correct": 2,
+        "answers": [
+            {
+              "id": "1",
+              "answer": "1999"
+            },
+            {
+              "id": "2",
+              "answer": "2000"
+            },
+            {
+              "id": "3",
+              "answer": "2001"
+            },
+            {
+              "id": "4",
+              "answer": "2004"
+            }
+          ]
+      },
+      {
+          "id": "2",
+          "question":"Which number when multipied by itself gives 144?",
+          "image": "matt.jpg",
+          "correct": 3,
+          "answers": [
+
+              {
+                  "id": "1",
+                  "answer": "15"
+              },
+              {
+                  "id": "2",
+                  "answer": "11"
+              },
+              {
+                  "id": "3",
+                  "answer": "12"
+              },
+              {
+                  "id": "4",
+                  "answer": "14"
+              }
+          ]
+      },
+      {
+          "id": "3",
+          "question": "( 7 - 4 ) - ( 206 - 203) = ?",
+          "image": "maa3.jpg",
+          "correct": 4,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "8"
+              },
+              {
+                  "id": "2",
+                  "answer": "4"
+              },
+              {
+                  "id": "3",
+                  "answer": "7"
+              },
+              {
+                  "id": "4",
+                  "answer": "0"
+              }
+          ]
+      },
+      {
+          "id": "4",
+          "image": "math4.jpg",
+          "question": "685x2 ??",
+          "correct": 3,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "1344"
+              },
+              {
+                  "id": "2",
+                  "answer": "1364"
+              },
+              {
+                  "id": "3",
+                  "answer": "1370"
+              },
+              {
+                  "id": "4",
+                  "answer": "1342"
+              }
+          ]
+      },
+      {
+          "id": "5",
+          "image": "ma5.jpg",
+          "question": "What is the only even prime number?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "4"
+              },
+              {
+                  "id": "2",
+                  "answer": "2"
+              },
+              {
+                  "id": "3",
+                  "answer": "8"
+              },
+              {
+                  "id": "4",
+                  "answer": "6"
+              }
+          ]
+      },
+      {
+          "id": "6",
+          "image": "ma6.jpg",
+          "question": "(a^5)x(b^5)?",
+          "correct": 1,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "(ab)^5"
+              },
+              {
+                  "id": "2",
+                  "answer": "ab^5"
+              },
+              {
+                  "id": "3",
+                  "answer": "ba^5"
+              },
+              {
+                  "id": "4",
+                  "answer": "(ab)^10"
+              }
+          ]
+      },
+      {
+          "id": "7",
+          "image": "math7.jpg",
+          "question": "When you have two parametric equations, what's the name of the rule you can use to work out dy/dx?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Use PEMDAS rule"
+              },
+              {
+                  "id": "2",
+                  "answer": "Chain Rule"
+              },
+              {
+                  "id": "3",
+                  "answer": "Substitution Rule"
+              },
+              {
+                  "id": "4",
+                  "answer": "I don't Know ( ._.)"
+              }
+          ]
+      }
+
+]

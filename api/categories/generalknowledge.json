@@ -146,7 +146,7 @@
       },
       {
           "id": "7",
-          "image": "gk7.png",
+          "image": "gk7.jpg",
           "question": "In a standard deck of cards, which king is the only one to not have a moustache?",
           "correct": 4,
           "answers": [
@@ -164,7 +164,7 @@
               },
               {
                   "id": "4",
-                  "answer": "King of hearts"
+                  "answer": "King of Hearts"
               }
           ]
       }

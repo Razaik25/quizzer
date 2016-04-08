@@ -25,145 +25,145 @@
       },
       {
           "id": "2",
-          "question":"Which of these sports was invented in Canada?",
-          "image": "canada2.jpg",
-          "correct": 3,
+          "question":"Which game did Chandler make up to make Joey purposely win money from him?",
+          "image": "f2.jpg",
+          "correct": 2,
           "answers": [
               {
                   "id": "1",
-                  "answer": "Baseball"
+                  "answer": "Extreme Poker"
               },
               {
                   "id": "2",
-                  "answer": "Soccer"
+                  "answer": "Cups"
               },
               {
                   "id": "3",
-                  "answer": "Basketball"
+                  "answer": "Fireball"
               },
               {
                   "id": "4",
-                  "answer": "Hockey"
+                  "answer": "Bamboozled"
               }
           ]
       },
       {
           "id": "3",
-          "question": "Toronto is a city in which Canadian Province?",
-          "image": "canadaa3.jpg",
+          "question": "What is Ross's occupation?",
+          "image": "fr.jpg",
           "correct": 4,
           "answers": [
               {
                   "id": "1",
-                  "answer": "Quebec"
+                  "answer": "Actor"
               },
               {
                   "id": "2",
-                  "answer": "Alberta"
+                  "answer": "Surgeon"
               },
               {
                   "id": "3",
-                  "answer": "British Columbia"
+                  "answer": "Anthropologist"
               },
               {
                   "id": "4",
-                  "answer": "Ontario"
+                  "answer": "Paleontologist"
               }
           ]
       },
       {
           "id": "4",
-          "image": "canada4.jpg",
-          "question": "What is the color of $20 dollar bill?",
-          "correct": 3,
+          "image": "fp.jpg",
+          "question": "What is Pheobe's twin sister's name?",
+          "correct": 1,
           "answers": [
               {
                   "id": "1",
-                  "answer": "Blue"
+                  "answer": "Ursula"
               },
               {
                   "id": "2",
-                  "answer": "White"
+                  "answer": "She does not have a twin"
               },
               {
                   "id": "3",
-                  "answer": "Green"
+                  "answer": "Janice"
               },
               {
                   "id": "4",
-                  "answer": "Red"
+                  "answer": "Amy"
               }
           ]
       },
       {
           "id": "5",
-          "image": "canada5.jpg",
-          "question": "What does CN stand for in CN tower?",
-          "correct": 2,
+          "image": "f115.jpg",
+          "question": "What TV show is Phoebe's doctor obessed with?",
+          "correct": 3,
           "answers": [
               {
                   "id": "1",
-                  "answer": "Corporate National"
+                  "answer": "Howard"
               },
               {
                   "id": "2",
-                  "answer": "Canadian National"
+                  "answer": "Marion"
               },
               {
                   "id": "3",
-                  "answer": "Canadian Network"
+                  "answer": "Fonzie"
               },
               {
                   "id": "4",
-                  "answer": "Canadian Native"
+                  "answer": "Archie Andrews"
               }
           ]
       },
       {
           "id": "6",
-          "image": "canadaa6.jpg",
-          "question": "Which Canadian Province produces most oil?",
-          "correct": 1,
+          "image": "f6.jpg",
+          "question": "What was the cause of fire in Pheobe and Rachel's apartment?",
+          "correct": 3,
           "answers": [
               {
                   "id": "1",
-                  "answer": "Alberta"
+                  "answer": "Rachel's curling iron"
               },
               {
                   "id": "2",
-                  "answer": "Nothwest Territories"
+                  "answer": "Pheobe's candles"
               },
               {
                   "id": "3",
-                  "answer": "Manitoba"
+                  "answer": "Racheal's hair straightner"
               },
               {
                   "id": "4",
-                  "answer": "New Brunswick"
+                  "answer": "Phoebe left the stove running"
               }
           ]
       },
       {
           "id": "7",
-          "image": "canadaa7.jpg",
-          "question": "Which city is refered as 'The City of Hundred Bell Towers'?",
-          "correct": 2,
+          "image": "f7.jpg",
+          "question": "What is Ross's nickname for himeself when he gets extremely worked up'?",
+          "correct": 4,
           "answers": [
               {
                   "id": "1",
-                  "answer": "Vancouver"
+                  "answer": "Angry Ross"
               },
               {
                   "id": "2",
-                  "answer": "Montreal"
+                  "answer": "Raging Ross"
               },
               {
                   "id": "3",
-                  "answer": "Ottawa"
+                  "answer": "Geller Yeller"
               },
               {
                   "id": "4",
-                  "answer": "Edmonton"
+                  "answer": "Red Ross"
               }
           ]
       }

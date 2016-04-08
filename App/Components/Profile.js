@@ -4,6 +4,10 @@
 var React = require('react-native');
 var Category = require('./Category');
 var Animatable = require('react-native-animatable');
+var Dimensions = require('Dimensions');
+var window = Dimensions.get('window');
+var Video = require('react-native-video').default;
+var Separator = require('./Separator');
 var _ = require('underscore');
 
 
@@ -22,41 +26,85 @@ const {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#5cb860',
     justifyContent: 'center',
     alignItems: 'center',
-    flexDirection: 'column',
-
+    backgroundColor: 'transparent',
   },
+
   text: {
     color: '#fff',
     fontSize: 25,
-    marginBottom: 50,
-    fontFamily: 'Helvetica',
-  },
-  button: {
-    height: 45,
-    flexDirection: 'row',
-    backgroundColor: 'white',
-    borderColor: 'white',
-    borderWidth: 1,
-    borderRadius: 8,
-    marginBottom: 10,
     marginTop: 10,
-    alignSelf: 'stretch',
-    justifyContent: 'center'
+    fontFamily: 'Futura',
+  },
+
+  button: {
+    backgroundColor: '#FF3366',
+    padding: 20,
+    marginBottom: 20,
+    alignItems: 'center',
   },
   buttonText: {
-    color: '#5cb860',
-    fontSize: 16,
-    fontFamily: 'Helvetica',
+    color: '#FFF',
+    fontWeight: '900'
   },
+
   title: {
+
     marginBottom: 30,
     fontSize: 25,
     textAlign: 'center',
-    color: '#fff'
-  }
+    color: '#fff',
+    fontFamily: 'Futura',
+  },
+
+  bg: {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    resizeMode: "stretch"
+    // width: window.width,
+    // height: window.height
+  },
+
+  avatarimage: {
+   height: 125,
+   width: 125,
+   borderRadius: 65,
+   marginTop: 45,
+   alignSelf: 'center'
+ },
+
+ gamehistoryImg: {
+  height: window.height/8.335,
+   borderRadius: (window.height/8.3350)/2,
+   marginRight: 2,
+   width: window.height/8.335,
+
+ },
+
+ gamehistorytext: {
+   alignItems: 'center',
+   alignSelf: 'center',
+   color: 'white',
+   marginTop: -25,
+   fontWeight: '600',
+   fontSize: 14,
+   flex: 1,
+   textAlign: 'center'
+ },
+
+ gamehistory: {
+   flex: 1,
+   flexDirection: 'row',
+   alignSelf: 'stretch',
+   justifyContent: 'center',
+   marginLeft: 60,
+   marginBottom: 20
+
+ }
+
+
 });
 
 class Profile extends React.Component{
@@ -68,22 +116,129 @@ class Profile extends React.Component{
     }
   }
 
+  renderRandomAvatar(){
+
+    // random number between 1 and 4
+    var number =  Math.floor(Math.random() * 4) + 1;
+    if( number === 1){
+      return (
+        <Image style={styles.avatarimage} source={require('../Media/avatar1.jpg')}/>
+      )
+    } else if( number === 2) {
+      return (
+        <Image style={styles.avatarimage} source={require('../Media/avatar2.jpg')}/>
+      )
+    } else if( number === 3) {
+
+      return (
+        <Image style={styles.avatarimage} source={require('../Media/avatar3.jpg')}/>
+      )
+    } else if( number === 4){
+      return (
+        <Image style={styles.avatarimage} source={require('../Media/avatar3.jpg')}/>
+      )
+    }
+
+  }
+
   renderStats(){
 
     var currentobj = this.props.userstats[0];
     var stats;
     var that = this;
-    stats =  Object.keys(currentobj).map(function(key) {
+    var test ='test'
+    stats =  Object.keys(currentobj).map(function(key,index) {
       if(key ==='username'){
-        // return <Text style={styles.title}>{key} {currentobj[key]}</Text>
-        return <Text key={key} style={styles.title}>Welcome {currentobj[key]}</Text>
+        return (
+          <Text key={key} style={styles.text}> Welcome {currentobj[key]} {"\n"}{"\n"} Game History  {"\n"}</Text>
+        )
       }
-
       if(currentobj[key] !== null && key !== 'id' && key !== 'email'){
-        return <Text key ={key} style={styles.title}>Your score in {key}:{currentobj[key]}</Text>
+        switch(key) {
+          case 'canada':
+          return(
+            <Animatable.View animation="zoomIn" easing="ease-in" style={styles.gamehistory}key ={index}>
+              <Image  style={styles.gamehistoryImg} source={require('../Media/canadaav.jpg')}/>
+              <Text  key ={key} style={styles.gamehistorytext}>{"\n"} Canada: {currentobj[key]}</Text>
+            </Animatable.View>
+          )
+          break;
 
+          case 'celebrities':
+          return(
+            <Animatable.View animation="zoomIn" easing="ease-in" style={styles.gamehistory}key ={index}>
+              <Image style={styles.gamehistoryImg} source={require('../Media/celebsav.jpg')}/>
+              <Text key ={key} style={styles.gamehistorytext}>{"\n"} Celebrities: {currentobj[key]}</Text>
+            </Animatable.View>
+          )
+          break;
+
+          case 'coding':
+          return(
+            <Animatable.View animation="zoomIn" easing="ease-in" style={styles.gamehistory}key ={index}>
+              <Image style={styles.gamehistoryImg} source={require('../Media/codingav.jpg')}/>
+              <Text key ={key} style={styles.gamehistorytext}>{"\n"} Coding: {currentobj[key]}</Text>
+            </Animatable.View>
+          )
+          break;
+
+          case 'friendstvshow':
+          return(
+            <Animatable.View animation="zoomIn" easing="ease-in" style={styles.gamehistory}key ={index}>
+              <Image style={styles.gamehistoryImg} source={require('../Media/freindsav.jpg')}/>
+              <Text key ={key} style={styles.gamehistorytext}>{"\n"} Friends-TV Show: {currentobj[key]}</Text>
+            </Animatable.View>
+          )
+          break;
+
+          case 'generalknowledge':
+          return(
+            <Animatable.View animation="zoomIn" easing="ease-in" style={styles.gamehistory}key ={index}>
+              <Image style={styles.gamehistoryImg} source={require('../Media/gkav.jpg')}/>
+              <Text key ={key} style={styles.gamehistorytext}>{"\n"} General Knowledge: {currentobj[key]}</Text>
+            </Animatable.View>
+          )
+          break;
+
+          case 'harrypotter':
+          return(
+            <Animatable.View animation="zoomIn" easing="ease-in" style={styles.gamehistory}key ={index}>
+              <Image style={styles.gamehistoryImg} source={require('../Media/hpav.jpg')}/>
+              <Text key ={key} style={styles.gamehistorytext}>{"\n"} Harry Potter: {currentobj[key]}</Text>
+            </Animatable.View>
+          )
+          break;
+
+          case 'math':
+          return(
+            <Animatable.View animation="zoomIn" easing="ease-in"style={styles.gamehistory}key ={index}>
+              <Image style={styles.gamehistoryImg} source={require('../Media/mathav.jpg')}/>
+              <Text key ={key} style={styles.gamehistorytext}>{"\n"} Math: {currentobj[key]}</Text>
+            </Animatable.View>
+          )
+          break;
+
+          case 'random':
+          return(
+            <Animatable.View animation="zoomIn" easing="ease-in" style={styles.gamehistory}key ={index}>
+              <Image animation="flipInY" style={styles.gamehistoryImg} source={require('../Media/randomav.jpg')}/>
+              <Text animation="flipInY" key ={key} style={styles.gamehistorytext}>{"\n"} Random: {currentobj[key]}</Text>
+            </Animatable.View>
+          )
+          break;
+
+          case 'superheroes':
+          return(
+            <Animatable.View animation="zoomIn" easing="ease-in" style={styles.gamehistory}key ={index}>
+              <Image style={styles.gamehistoryImg} source={require('../Media/superav.jpg')}/>
+              <Text key ={key} style={styles.gamehistorytext}>{"\n"} Super Heros: {currentobj[key]}</Text>
+            </Animatable.View>
+          )
+          break;
+        }
       }
     })
+
     return stats;
   }
 
@@ -106,16 +261,21 @@ class Profile extends React.Component{
 
   render(){
     return(
-        <View style={styles.container}>
-          <Text style ={styles.title}>In Profile</Text>
-          {this.renderStats()}
-            <TouchableHighlight
+      <ScrollView>
+      <View style={styles.container}>
+        <Image style={styles.bg} source={require('../Media/bg-pattern.jpg')}/>
+        {this.renderRandomAvatar()}
+        {this.renderStats()}
+        <View >
+          <TouchableHighlight
             style={styles.button}
             onPress= {this.handleSubmit.bind(this)}
             underlayColor="#FFC300">
-              <Text style={styles.buttonText}> Start Game </Text>
-            </TouchableHighlight>
-        </View>
+            <Text style={styles.buttonText}> Start Quizzer </Text>
+          </TouchableHighlight>
+       </View>
+      </View>
+    </ScrollView>
 
     )
   }

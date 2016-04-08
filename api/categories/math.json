@@ -26,7 +26,7 @@
       {
           "id": "2",
           "question":"Which number when multipied by itself gives 144?",
-          "image": "math2.jpg",
+          "image": "matt.jpg",
           "correct": 3,
           "answers": [
 
@@ -51,7 +51,7 @@
       {
           "id": "3",
           "question": "( 7 - 4 ) - ( 206 - 203) = ?",
-          "image": "math3.jpg",
+          "image": "maa3.jpg",
           "correct": 4,
           "answers": [
               {
@@ -98,7 +98,7 @@
       },
       {
           "id": "5",
-          "image": "math5.jpg",
+          "image": "ma5.jpg",
           "question": "What is the only even prime number?",
           "correct": 2,
           "answers": [
@@ -122,7 +122,7 @@
       },
       {
           "id": "6",
-          "image": "math6.jpg",
+          "image": "ma6.jpg",
           "question": "(a^5)x(b^5)?",
           "correct": 1,
           "answers": [
