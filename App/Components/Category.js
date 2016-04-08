@@ -4,6 +4,8 @@ var React = require('react-native');
 var api = require('../network/api');
 var Quiz = require('./Quiz');
 var Animatable = require('react-native-animatable');
+var Dimensions = require('Dimensions');
+var window = Dimensions.get('window');
 
 var {
   Text,
@@ -21,7 +23,9 @@ var styles = StyleSheet.create ({
     padding: 20,
     flexDirection: 'column',
     justifyContent: 'center',
-    backgroundColor: '#48BBEC'
+    backgroundColor: 'transparent',
+    marginLeft: 20,
+    marginRight: 20
   },
   image: {
     height: 350,
@@ -29,13 +33,16 @@ var styles = StyleSheet.create ({
   buttonText: {
     fontSize: 18,
     color: '#111',
-    alignSelf: 'center'
+    alignSelf: 'center',
+    fontFamily: 'Futura'
   },
   title: {
+    paddingTop: 20,
     marginBottom: 30,
     fontSize: 25,
     textAlign: 'center',
-    color: '#fff'
+    color: '#111',
+    fontFamily: 'Futura'
   },
   button: {
     height: 45,
@@ -56,6 +63,44 @@ var styles = StyleSheet.create ({
   horizontalScrollView: {
     height: 120,
   },
+  categoryIcon: {
+    height: window.height/8.335,
+    borderRadius: (window.height/8.3350)/2,
+    marginRight: 2,
+    width: window.height/8.335,
+    shadowColor: '#000000',
+    shadowOpacity: 0.5,
+    backgroundColor: '#F2F2F2',
+    // borderRadius: 4,
+   borderWidth: 2,
+   borderColor: '#F6CED8',
+
+  },
+  category: {
+    flex: 1,
+    flexDirection: 'row',
+    alignSelf: 'stretch',
+    justifyContent: 'center',
+    marginLeft: 20,
+    marginRight: 20,
+    marginBottom: 20,
+    paddingLeft: 10
+
+  },
+  bg: {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    bottom: 0,
+    right: 0,
+    resizeMode:  'stretch'
+  },
+  overlay: {
+    backgroundColor:'rgba(80,94,104,0.7)',
+    height: 100,
+    width: 100,
+    alignItems:'center'
+  }
 });
 
 class Category extends React.Component{
@@ -106,33 +151,41 @@ class Category extends React.Component{
 
   render(){
     var username = this.props.username;
+    //  <Image style={styles.bg} source={require('../Media/bg-pattern.jpg')}/>
+
     return (
+     <ScrollView>
       <View style={styles.container}>
-       <ScrollView>
-      <Animatable.View animation="bounceInLeft" easing="ease-in">
-        <Text style={styles.title}>Choose Categories to start</Text>
-        <Text style={styles.title}>{username}</Text>
-       </Animatable.View>
 
-      <Animatable.View animation="bounceInRight" easing="ease-in">
-          <TouchableHighlight
-          style={styles.button}
-          onPress={this.handleSubmit.bind(this, 'canada')}
-          underlayColor="#FFC300">
-            <Text style={styles.buttonText}> Canada eh...</Text>
-          </TouchableHighlight>
-       </Animatable.View>
-
-       <Animatable.View animation="bounceInLeft" easing="ease-in">
-          <TouchableHighlight
-          style={styles.button}
-          onPress={this.handleSubmit.bind(this, 'celebrities')}
-          underlayColor="#FFC300">
-            <Text style={styles.buttonText}> Celebrities </Text>
-          </TouchableHighlight>
+        <Animatable.View animation="bounceInLeft" easing="ease-in">
+          <Text style={styles.title}>Pick a Category to start {username} </Text>
         </Animatable.View>
 
+        <View style = {styles.category}>
+          <Animatable.View animation="bounceInRight" easing="ease-in">
+            <Image style={styles.categoryIcon} source={require("../Media/icons/canada.jpg")}/>
+            <TouchableHighlight
+            style={styles.button}
+            onPress={this.handleSubmit.bind(this, 'canada')}
+            underlayColor="#FFC300">
+              <Text style={styles.buttonText}> Canada eh...</Text>
+            </TouchableHighlight>
+          </Animatable.View>
+
+          <Animatable.View style={{marginLeft: 40}} animation="bounceInLeft" easing="ease-in">
+            <Image style={styles.categoryIcon} source={require("../Media/icons/celebrities.jpg")}/>
+            <TouchableHighlight
+              style={styles.button}
+              onPress={this.handleSubmit.bind(this, 'celebrities')}
+              underlayColor="#FFC300">
+              <Text style={styles.buttonText}> Celebrities </Text>
+            </TouchableHighlight>
+          </Animatable.View>
+        </View>
+
+      <View style = {styles.category}>
         <Animatable.View animation="bounceInRight" easing="ease-in">
+          <Image style={styles.categoryIcon} source={require("../Media/icons/coding.jpg")}/>
           <TouchableHighlight
           style={styles.button}
           onPress={this.handleSubmit.bind(this, 'coding')}
@@ -141,7 +194,8 @@ class Category extends React.Component{
           </TouchableHighlight>
         </Animatable.View>
 
-        <Animatable.View animation="bounceInLeft" easing="ease-in">
+        <Animatable.View  style={{marginLeft: 40, left: 30}} animation="bounceInLeft" easing="ease-in">
+          <Image style={styles.categoryIcon} source={require("../Media/icons/friends.jpg")}/>
           <TouchableHighlight
           style={styles.button}
           onPress={this.handleSubmit.bind(this, 'friendstvshow')}
@@ -149,8 +203,11 @@ class Category extends React.Component{
             <Text style={styles.buttonText}> Friends-Tv Show </Text>
           </TouchableHighlight>
         </Animatable.View>
+      </View>
 
+      <View style = {styles.category}>
         <Animatable.View animation="bounceInRight" easing="ease-in">
+          <Image style={styles.categoryIcon} source={require("../Media/icons/gk.jpg")}/>
           <TouchableHighlight
           style={styles.button}
           onPress={this.handleSubmit.bind(this, 'generalknowledge')}
@@ -160,6 +217,7 @@ class Category extends React.Component{
         </Animatable.View>
 
         <Animatable.View animation="bounceInLeft" easing="ease-in">
+          <Image style={styles.categoryIcon} source={require("../Media/icons/hp.jpg")}/>
           <TouchableHighlight
           style={styles.button}
           onPress={this.handleSubmit.bind(this, 'harrypotter')}
@@ -167,8 +225,11 @@ class Category extends React.Component{
             <Text style={styles.buttonText}> Harry Potter </Text>
           </TouchableHighlight>
         </Animatable.View>
+      </View>
 
-        <Animatable.View animation="bounceInRight" easing="ease-in">
+      <View style = {styles.category}>
+        <Animatable.View style={{marginRight: 10}} animation="bounceInRight" easing="ease-in">
+          <Image style={styles.categoryIcon} source={require("../Media/icons/math.jpg")}/>
           <TouchableHighlight
           style={styles.button}
           onPress={this.handleSubmit.bind(this, 'math')}
@@ -177,7 +238,8 @@ class Category extends React.Component{
           </TouchableHighlight>
         </Animatable.View>
 
-        <Animatable.View animation="bounceInLeft" easing="ease-in">
+        <Animatable.View style={{marginLeft: 70}} animation="bounceInLeft" easing="ease-in">
+          <Image style={styles.categoryIcon} source={require("../Media/icons/arrows.jpg")}/>
           <TouchableHighlight
           style={styles.button}
           onPress={this.handleSubmit.bind(this, 'random')}
@@ -185,8 +247,11 @@ class Category extends React.Component{
             <Text style={styles.buttonText}> Random </Text>
           </TouchableHighlight>
         </Animatable.View>
+    </View>
 
+      <View style = {styles.category}>
         <Animatable.View animation="bounceInRight" easing="ease-in">
+          <Image style={styles.categoryIcon} source={require("../Media/icons/sh.jpg")}/>
             <TouchableHighlight
               style={styles.button}
               onPress={this.handleSubmit.bind(this, 'superheroes')}
@@ -194,9 +259,10 @@ class Category extends React.Component{
               <Text style={styles.buttonText}> Super Heros </Text>
             </TouchableHighlight>
         </Animatable.View>
-
-        </ScrollView>
       </View>
+
+    </View>
+    </ScrollView>
 
     );
   }
