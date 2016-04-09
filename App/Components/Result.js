@@ -3,6 +3,7 @@
 var React = require('react-native');
 var Animatable = require('react-native-animatable');
 var api = require('../network/api');
+var ScoreBoard = require('./Scoreboard');
 
 
 const {
@@ -12,6 +13,7 @@ const {
   TextInput,
   TouchableHighlight,
   TouchableOpacity,
+  Navigator,
   Image,
 } = React;
 
@@ -21,7 +23,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#5cb860',
     justifyContent: 'center',
     alignItems: 'center',
-    flexDirection: 'column',
+    flexDirection: 'column'
+
   },
   text: {
     color: '#fff',
@@ -47,6 +50,13 @@ const styles = StyleSheet.create({
 
 class Result extends React.Component{
 
+  constructor(props){
+    super(props);
+    this.state ={
+      goToScoreboard: false
+    };
+  }
+
 
   startAgain(){
     // getting the category route
@@ -61,13 +71,33 @@ class Result extends React.Component{
 
   }
 
+  handleScoreboard(){
+    this.setState({
+      goToScoreboard: true
+    })
+   this.updateScore();
+  }
+
+  viewScoreboard(data){
+    this.props.navigator.push({
+      title: `ScoreBoard Page`,
+      component: ScoreBoard,
+      passProps: {
+        userstats: data,
+        startAgainRoute: this.props.startAgainRoute
+      }
+    });
+  }
+
   updateScore(){
     // update the score in the database by making a call to the api
 
     api.updateUser(this.props.email, this.props.category, this.props.score)
        .then((res) =>{
          console.log('updated sucessfully',res);
-
+         if(this.state.goToScoreboard){
+           this.viewScoreboard(res);
+         }
        })
        .catch((err) => {
          console.log('inside err', err);
@@ -87,19 +117,30 @@ class Result extends React.Component{
   render(){
     return(
       <View style={styles.container}>
+    
+
        <Animatable.Text animation="slideInDown" iterationCount={5} direction="alternate" style={styles.text}>
          {this.props.username} you scored {this.props.score} out of 7
        </Animatable.Text>
+
        <Animatable.View style={styles.button} animation="bounceInLeft" easing="ease-in">
          <TouchableHighlight style={styles.button} onPress={this.startAgain.bind(this)} underlayColor="#FFC300">
            <Text  style={styles.buttonText}>Play Again </Text>
          </TouchableHighlight>
       </Animatable.View>
+
       <Animatable.View style={styles.button} animation="bounceInRight" easing="ease-in">
         <TouchableHighlight style={styles.button} onPress={this.differentPlayer.bind(this)} underlayColor="#FFC300">
           <Animatable.Text style={styles.buttonText}>Different Player?</Animatable.Text>
         </TouchableHighlight>
       </Animatable.View>
+
+      <Animatable.View style={styles.button} animation="bounceInRight" easing="ease-in">
+        <TouchableHighlight style={styles.button} onPress={this.handleScoreboard.bind(this)} underlayColor="#FFC300">
+          <Animatable.Text style={styles.buttonText}>View Profile</Animatable.Text>
+        </TouchableHighlight>
+      </Animatable.View>
+
       </View>
     )
   }

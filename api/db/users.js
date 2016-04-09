@@ -61,7 +61,7 @@ function updateUser (req, res, next) {
   console.log('category',category);
   console.log(typeof(score));
   console.log('score',score);
-  db.any(`UPDATE users SET ${category} = $1 where email = $2;`, [score,email])
+  db.any(`UPDATE users SET ${category} = $1 where email = $2 Returning *;`, [score,email])
   .then(function(data) {
     res.data = data;
     next()

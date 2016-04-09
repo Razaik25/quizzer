@@ -100,7 +100,9 @@ class Quiz extends React.Component{
         currentImage = value;
       }
     });
-    return  `http://localhost:3000/images/${currentImage}`;
+    // return  `http://localhost:3000/images/${currentImage}`;
+    return  `https://quizzer-api.herokuapp.com/images/${currentImage}`;
+
   }
 
   renderAnswers(){

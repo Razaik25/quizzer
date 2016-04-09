@@ -164,7 +164,6 @@ class Main extends React.Component{
          console.log('data in api',res);
          // passing the data from the Main to Profile component
           this.PushProfilePage(res);
-
        })
        .catch((err) => {
          console.log('inside err', err);

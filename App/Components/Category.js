@@ -23,9 +23,7 @@ var styles = StyleSheet.create ({
     padding: 20,
     flexDirection: 'column',
     justifyContent: 'center',
-    backgroundColor: 'transparent',
-    marginLeft: 20,
-    marginRight: 20
+    backgroundColor: '#cc3e30'
   },
   image: {
     height: 350,
@@ -42,7 +40,7 @@ var styles = StyleSheet.create ({
     marginBottom: 30,
     fontSize: 25,
     textAlign: 'center',
-    color: '#111',
+    color: '#fff',
     fontFamily: 'Futura'
   },
   button: {
@@ -95,7 +93,7 @@ var styles = StyleSheet.create ({
     top: 0,
     bottom: 0,
     right: 0,
-    resizeMode:  'stretch'
+    resizeMode:  'cover'
   },
   overlay: {
     backgroundColor:'rgba(80,94,104,0.7)',
@@ -153,10 +151,9 @@ class Category extends React.Component{
 
   render(){
     var username = this.props.username;
-    //  <Image style={styles.bg} source={require('../Media/bg-pattern.jpg')}/>
-
     return (
      <ScrollView>
+
       <View style={styles.container}>
 
         <Animatable.View animation="bounceInLeft" easing="ease-in">
@@ -233,7 +230,7 @@ class Category extends React.Component{
           </TouchableHighlight>
         </Animatable.View>
 
-        <Animatable.View style={{marginLeft: 60}} animation="bounceInLeft" easing="ease-in">
+        <Animatable.View style={{marginLeft: 55}} animation="bounceInLeft" easing="ease-in">
             <Text style={styles.buttonText}> Random </Text>
           <TouchableHighlight
           onPress={this.handleSubmit.bind(this, 'random')}

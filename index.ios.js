@@ -12,6 +12,7 @@ var {
 } = React;
 
 class quizzer extends Component {
+  
   render() {
     return (
       <Navigator
