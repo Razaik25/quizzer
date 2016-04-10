@@ -9,8 +9,6 @@ var Separator = require('./Separator');
 var Dimensions = require('Dimensions');
 var windowSize = Dimensions.get('window');
 
-
-
 const {
   View,
   Text,
@@ -28,17 +26,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#111',
     width: windowSize.width,
-    height: windowSize.height/2.4,
+    height: windowSize.height/2.2,
     marginTop: 0,
     flexDirection: 'column'
   },
-
-  // text: {
-  //   color: '#fff',
-  //   fontSize: 25,
-  //   marginBottom: 50,
-  //   fontFamily: 'Helvetica',
-  // },
 
   playAgain:{
     backgroundColor: '#5CB3FF',
@@ -115,6 +106,7 @@ const styles = StyleSheet.create({
    marginBottom: 5
  }
 
+
 });
 
 class Result extends React.Component{
@@ -158,7 +150,7 @@ class Result extends React.Component{
   }
 
   renderQuestionWithAnswer(questionnumber){
-    var obj =[];
+    var questionArr =[];
     this.props.quizdata.forEach((el,index) =>{
         // looping over the answers to match the answer id to correct
         // get the value of the answer if asnwer id and correct matche
@@ -168,12 +160,30 @@ class Result extends React.Component{
               question: el.question,
               answer: answer.answer
             };
-            obj.push(temp);
+            questionArr.push(temp);
           }
       }); // end el.answers
 
     }); // end this.props.forEach
-    return [<Text key={questionnumber}>{obj[questionnumber].question}</Text>, <Text key={questionnumber+1}> {"\n"} {"\n"} Answer: {obj[questionnumber].answer}</Text>];
+
+    return [<Text key={questionnumber}>{questionArr[questionnumber].question}</Text>, <Text key={questionnumber+1}> {"\n"} {"\n"} Answer: {questionArr[questionnumber].answer}</Text>];
+
+  }
+
+  renderUserAnswers(questionnumber){
+    var userAnsnwerArr =[];
+    console.log('props',this.props.userAnswer[questionnumber]);
+
+
+      this.props.quizdata.forEach((el,index) =>{
+        el.answers.forEach((answer,id) =>{
+          if (answer.id ===this.props.userAnswer[questionnumber]){
+            userAnsnwerArr.push(answer.answer);
+          }
+        });// end el.asnwers
+      }); // end this.props.quizdata
+
+      return <Text>{userAnsnwerArr[questionnumber]}</Text>
 
   }
 
@@ -222,110 +232,84 @@ renderPagination(index, total, context) {
 
 
   render(){
-    // <View style={styles.container}>
-    //  <Animatable.Text animation="slideInDown" iterationCount={5} direction="alternate" style={styles.text}>
-    //    {this.props.username} you scored {this.props.score} out of 7
-    //  </Animatable.Text>
-    //
-    //  <Animatable.View style={styles.button} animation="bounceInLeft" easing="ease-in">
-    //    <TouchableHighlight style={styles.button} onPress={this.startAgain.bind(this)} underlayColor="#FFC300">
-    //      <Text  style={styles.buttonText}>Play Again </Text>
-    //    </TouchableHighlight>
-    // </Animatable.View>
-    //
-    // <Animatable.View style={styles.button} animation="bounceInRight" easing="ease-in">
-    //   <TouchableHighlight style={styles.button} onPress={this.differentPlayer.bind(this)} underlayColor="#FFC300">
-    //     <Animatable.Text style={styles.buttonText}>Different Player?</Animatable.Text>
-    //   </TouchableHighlight>
-    // </Animatable.View>
-    //
-    // <Animatable.View style={styles.button} animation="bounceInRight" easing="ease-in">
-    //   <TouchableHighlight style={styles.button} onPress={this.handleScoreboard.bind(this)} underlayColor="#FFC300">
-    //     <Animatable.Text style={styles.buttonText}>View Profile</Animatable.Text>
-    //   </TouchableHighlight>
-    // </Animatable.View>
-    // </View>
-    //  {this.props.username.toUpperCase()}
-
+    console.log('in results',this.props.userAnswer);
     return(
 
-
       <ScrollView>
-
-        <View style={{flex: 0.1, backgroundColor: '#111', alignItems: 'center'}}>
-           <Animatable.Text  animation="bounceInLeft" easing="ease-in" style={styles.resultText}> RESULTS </Animatable.Text>
-           <Animatable.Text animation="bounceInRight" easing="ease-in" style={styles.categoryText}> {this.props.category.toUpperCase()} </Animatable.Text>
-            <Animatable.Text animation="bounceInLeft" easing="ease-in" style={styles.scoreText}>
+        <Animatable.View animation="bounceInLeft" style={{flex: 0.1, backgroundColor: '#111', alignItems: 'center'}}>
+           <Text   style={styles.resultText}> RESULTS </Text>
+           <Text   style={styles.categoryText}> {this.props.category.toUpperCase()} </Text>
+            <Text  style={styles.scoreText}>
                Your Score {this.props.score}/7
-            </Animatable.Text>
-        </View>
-
-        <Separator />
-
-        <Animatable.View animation="bounceInLeft" easing="ease-in" style={{backgroundColor: '#6D7B8D', alignItems: 'center'}}>
-          <Text style={styles.questionText}> QUESTIONS </Text>
+            </Text>
         </Animatable.View>
+        <Separator />
+        <Animatable.View  animation="bounceInRight" >
+          <View style={{backgroundColor: '#6D7B8D', alignItems: 'center'}}>
+            <Text style={styles.questionText}> QUESTIONS </Text>
+          </View>
 
+          <View>
+            <Swiper style={styles.wrapper}height={240}
+              renderPagination={this.renderPagination}
+              paginationStyle={{
+                bottom: -23, left: null, right: 10,
+              }} loop={false}>
 
-        <Animatable.View  animation="bounceInRight" easing="ease-in">
-         <Swiper style={styles.wrapper}height={240}
-             renderPagination={this.renderPagination}
-             paginationStyle={{
-               bottom: -23, left: null, right: 10,
-             }} loop={false}>
-             <View style={styles.slide} title={<Text style={{color: '#fff', fontWeight: 'bold', marginBottom: 80}} numberOfLines={1}>Your answer </Text>}>
-               <Text style={styles.text}> {this.renderQuestionWithAnswer(0)}</Text>
-             </View>
+              <View style={styles.slide} title={<Text style={{color: '#fff', fontWeight: 'bold', marginBottom: 80}} numberOfLines={1}>Your answer: {this.renderUserAnswers(0)} </Text>}>
+                <Text style={styles.text}> {this.renderQuestionWithAnswer(0)}</Text>
+              </View>
 
-             <View style={styles.slide} title={<Text numberOfLines={1}> </Text>}>
+             <View style={styles.slide} title={<Text style={{color: '#fff', fontWeight: 'bold', marginBottom: 80}} numberOfLines={1}>Your answer: {this.renderUserAnswers(1)}</Text>}>
                <Text style={styles.text}> {this.renderQuestionWithAnswer(1)}</Text>
              </View>
 
-             <View style={styles.slide} title={<Text numberOfLines={1}> </Text>}>
+             <View style={styles.slide} title={<Text style={{color: '#fff', fontWeight: 'bold', marginBottom: 80}} numberOfLines={1}>Your answer: {this.renderUserAnswers(2)} </Text>}>
                <Text style={styles.text}> {this.renderQuestionWithAnswer(2)}</Text>
              </View>
 
-             <View style={styles.slide} title={<Text numberOfLines={1}> </Text>}>
+             <View style={styles.slide} title={<Text style={{color: '#fff', fontWeight: 'bold', marginBottom: 80}} numberOfLines={1}>Your answer: {this.renderUserAnswers(3)}</Text>}>
                <Text style={styles.text}> {this.renderQuestionWithAnswer(3)}</Text>
              </View>
 
-             <View style={styles.slide} title={<Text numberOfLines={1}> </Text>}>
+             <View style={styles.slide} title={<Text style={{color: '#fff', fontWeight: 'bold', marginBottom: 80}} numberOfLines={1}>Your answer: {this.renderUserAnswers(4)}</Text>}>
                <Text style={styles.text}> {this.renderQuestionWithAnswer(4)}</Text>
              </View>
 
-             <View style={styles.slide} title={<Text numberOfLines={1}> </Text>}>
+             <View style={styles.slide} title={<Text style={{color: '#fff', fontWeight: 'bold', marginBottom: 80}} numberOfLines={1}>Your answer: {this.renderUserAnswers(5)}</Text>}>
                <Text style={styles.text}> {this.renderQuestionWithAnswer(5)}</Text>
              </View>
 
-             <View style={styles.slide} title={<Text numberOfLines={1}></Text>}>
+             <View style={styles.slide} title={<Text style={{color: '#fff', fontWeight: 'bold', marginBottom: 80}} numberOfLines={1}>Your answer: {this.renderUserAnswers(6)}</Text>}>
                <Text style={styles.text}> {this.renderQuestionWithAnswer(6)}</Text>
              </View>
 
            </Swiper>
-         </Animatable.View>
+         </View>
+        </Animatable.View>
 
         <Separator />
           <View style={styles.container}>
-           <Animatable.View  animation="bounceInLeft" easing="ease-in">
-             <TouchableHighlight style={styles.playAgain} onPress={this.startAgain.bind(this)} underlayColor="#fff">
-               <Text  style={styles.buttonText}>Play Again </Text>
+            <Animatable.View  animation="slideInLeft" >
+              <TouchableHighlight style={styles.playAgain} onPress={this.startAgain.bind(this)} underlayColor="#fff">
+                <Text  style={styles.buttonText}>Play Again </Text>
+              </TouchableHighlight>
+            </Animatable.View>
+
+           <Animatable.View  animation="slideInRight" >
+             <TouchableHighlight style={styles.differentPlayer} onPress={this.differentPlayer.bind(this)} underlayColor="#fff">
+               <Animatable.Text style={styles.buttonText}>Different Player</Animatable.Text>
              </TouchableHighlight>
-          </Animatable.View>
+            </Animatable.View>
 
-          <Animatable.View  animation="bounceInRight" easing="ease-in">
-            <TouchableHighlight style={styles.differentPlayer} onPress={this.differentPlayer.bind(this)} underlayColor="#fff">
-              <Animatable.Text style={styles.buttonText}>Different Player</Animatable.Text>
-            </TouchableHighlight>
-          </Animatable.View>
+            <Animatable.View animation="slideInLeft" >
+              <TouchableHighlight style={styles.profile} onPress={this.handleScoreboard.bind(this)} underlayColor="#fff">
+                <Animatable.Text style={styles.buttonText}>View Profile</Animatable.Text>
+              </TouchableHighlight>
+            </Animatable.View>
 
-          <Animatable.View animation="bounceInLeft" easing="ease-in">
-            <TouchableHighlight style={styles.profile} onPress={this.handleScoreboard.bind(this)} underlayColor="#fff">
-              <Animatable.Text style={styles.buttonText}>View Profile</Animatable.Text>
-            </TouchableHighlight>
-          </Animatable.View>
           </View>
-    </ScrollView>
-
+        </ScrollView>
     )
   }
 }

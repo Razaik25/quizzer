@@ -70,7 +70,6 @@ var styles = StyleSheet.create ({
     shadowColor: '#000000',
     shadowOpacity: 0.5,
     backgroundColor: '#F2F2F2',
-    // borderRadius: 4,F2F2F2
     borderWidth: 2,
     borderColor: '#F6CED8',
 
@@ -151,7 +150,6 @@ class Category extends React.Component{
 
   render(){
     var username = this.props.username;
-    console.log('in ',this.props.quizdata);
     return (
      <ScrollView>
 
@@ -166,7 +164,7 @@ class Category extends React.Component{
             <Text style={styles.buttonText}> Canada eh...</Text>
             <TouchableHighlight
             onPress={this.handleSubmit.bind(this, 'canada')}
-            underlayColor="#FFC300">
+            underlayColor="#000080">
               <Image style={styles.categoryIcon} source={require("../Media/icons/canada.jpg")}/>
             </TouchableHighlight>
           </Animatable.View>
@@ -175,7 +173,7 @@ class Category extends React.Component{
             <Text style={styles.buttonText}> Celebrities </Text>
             <TouchableHighlight
               onPress={this.handleSubmit.bind(this, 'celebrities')}
-              underlayColor="#FFC300">
+              underlayColor="#000080">
                 <Image style={styles.categoryIcon} source={require("../Media/icons/celebrities.jpg")}/>
             </TouchableHighlight>
           </Animatable.View>
@@ -186,7 +184,7 @@ class Category extends React.Component{
           <Text style={styles.buttonText}> Coding </Text>
           <TouchableHighlight
           onPress={this.handleSubmit.bind(this, 'coding')}
-          underlayColor="#FFC300">
+          underlayColor="#000080">
             <Image style={styles.categoryIcon} source={require("../Media/icons/coding.jpg")}/>
           </TouchableHighlight>
         </Animatable.View>
@@ -195,27 +193,27 @@ class Category extends React.Component{
           <Text style={styles.buttonText}> Friends Show </Text>
           <TouchableHighlight
           onPress={this.handleSubmit.bind(this, 'friendstvshow')}
-          underlayColor="#FFC300">
+          underlayColor="#000080">
             <Image style={styles.categoryIcon} source={require("../Media/icons/friends.jpg")}/>
           </TouchableHighlight>
         </Animatable.View>
       </View>
 
       <View style = {styles.category}>
-        <Animatable.View animation="bounceInRight" easing="ease-in">
-          <Text style={styles.buttonText}> General Knowledge </Text>
+        <Animatable.View style={{marginRight: window.height/25}} animation="bounceInRight" easing="ease-in">
+          <Text style={styles.buttonText}> General Facts </Text>
           <TouchableHighlight
           onPress={this.handleSubmit.bind(this, 'generalknowledge')}
-          underlayColor="#FFC300">
+          underlayColor="#000080">
            <Image style={styles.categoryIcon} source={require("../Media/icons/gk.jpg")}/>
           </TouchableHighlight>
         </Animatable.View>
 
-        <Animatable.View animation="bounceInLeft" easing="ease-in">
+        <Animatable.View style={{left: window.height/60}} animation="bounceInLeft" easing="ease-in">
           <Text style={styles.buttonText}> Harry Potter </Text>
           <TouchableHighlight
           onPress={this.handleSubmit.bind(this, 'harrypotter')}
-          underlayColor="#FFC300">
+          underlayColor="#000080">
             <Image style={styles.categoryIcon} source={require("../Media/icons/hp.jpg")}/>
           </TouchableHighlight>
         </Animatable.View>
@@ -226,8 +224,8 @@ class Category extends React.Component{
           <Text style={styles.buttonText}> Math </Text>
           <TouchableHighlight
           onPress={this.handleSubmit.bind(this, 'math')}
-          underlayColor="#FFC300">
-            <Image style={styles.categoryIcon} source={require("../Media/icons/math.jpg")}/>
+          underlayColor="#000080">
+            <Image style={[styles.categoryIcon]} source={require("../Media/icons/math.jpg")}/>
           </TouchableHighlight>
         </Animatable.View>
 
@@ -235,7 +233,7 @@ class Category extends React.Component{
             <Text style={styles.buttonText}> Random </Text>
           <TouchableHighlight
           onPress={this.handleSubmit.bind(this, 'random')}
-          underlayColor="#FFC300">
+          underlayColor="#000080">
            <Image style={styles.categoryIcon} source={require("../Media/icons/arrows.jpg")}/>
           </TouchableHighlight>
         </Animatable.View>
@@ -246,7 +244,7 @@ class Category extends React.Component{
           <Text style={styles.buttonText}> Super Heros </Text>
             <TouchableHighlight
               onPress={this.handleSubmit.bind(this, 'superheroes')}
-              underlayColor="#FFC300">
+              underlayColor="#000080">
                 <Image style={styles.categoryIcon} source={require("../Media/icons/sh.jpg")}/>
             </TouchableHighlight>
         </Animatable.View>

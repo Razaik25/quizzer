@@ -15,12 +15,15 @@ class quizzer extends Component {
 
   render() {
     // configureScene={(route) => ({
+    //
     //   ...Navigator.SceneConfigs.HorizontalSwipeJump
     //
     // })}
+
     return (
       <Navigator
         initialRoute={{ name: 'Quiz App', component: Main }}
+
 
         renderScene={(route, navigator) => {
           if (route.component) {

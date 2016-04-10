@@ -66,7 +66,8 @@ const styles = StyleSheet.create({
     top: 0,
     bottom: 0,
     right: 0,
-    resizeMode:  'stretch'
+    // resizeMode:  'stretch'
+    height: window.height*4
   },
 
   avatarimage: {
