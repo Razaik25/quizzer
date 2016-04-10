@@ -1,4 +1,3 @@
-
 'use strict';
 var React = require('react-native');
 var Category = require('./Category');
@@ -8,7 +7,6 @@ var Dimensions = require('Dimensions');
 var window = Dimensions.get('window');
 
 var Video = require('react-native-video').default;
-var Separator = require('./Separator');
 var _ = require('underscore');
 
 
@@ -21,6 +19,7 @@ const {
   TouchableHighlight,
   TouchableOpacity,
   Image,
+  Navigator,
   ScrollView
 } = React;
 
@@ -66,8 +65,7 @@ const styles = StyleSheet.create({
     top: 0,
     bottom: 0,
     right: 0,
-    // resizeMode:  'stretch'
-    height: window.height*4
+    resizeMode:  'stretch'
   },
 
   avatarimage: {
@@ -115,7 +113,7 @@ const styles = StyleSheet.create({
 
 });
 
-class Profile extends React.Component{
+class ScoreBoard extends React.Component{
 
   constructor(props){
     super(props);
@@ -156,20 +154,14 @@ class Profile extends React.Component{
     var that = this;
     var test ='test'
     stats =  Object.keys(currentobj).map(function(key,index) {
-      if(key ==='username' && that.props.login){
+      if(key ==='username'){
         return (
           <View style={styles.welcome} key={index} >
             <Animatable.Text animation="zoomIn" easing="ease-in" key={key} style={styles.text}> Welcome {currentobj[key]} {"\n"}{"\n"} Game History  {"\n"}</Animatable.Text>
           </View>
         )
-      } else if(key ==='username') {
-        return (
-          <View style={styles.welcome} key={index} >
-            <Animatable.Text animation="zoomIn" easing="ease-in" key={key} style={styles.text}> Welcome {currentobj[key]} {"\n"}{"\n"} Start Playing!!  {"\n"}</Animatable.Text>
-          </View>
-        )
-
       }
+
       if(currentobj[key] !== null && key !== 'id' && key !== 'email'){
         switch(key) {
           case 'canada':
@@ -259,21 +251,13 @@ class Profile extends React.Component{
     return stats;
   }
 
-  PushCategoryPage(){
-
-    this.props.navigator.push({
-      title: 'Choose Category',
-      component: Category,
-      passProps:{ username: this.props.userstats[0].username,
-                  email: this.props.userstats[0].email
-                }
-    });
-  }
-
 
   handleSubmit(){
-    // direct to the Category page
-    this.PushCategoryPage();
+    // getting the category route
+    var startroute = this.props.startAgainRoute;
+    // passing the category route to navigator
+    this.props.navigator.popToRoute(startroute);
+
   }
 
   render(){
@@ -297,4 +281,4 @@ class Profile extends React.Component{
     )
   }
 }
-module.exports = Profile;
+module.exports = ScoreBoard;

@@ -19,18 +19,18 @@ var styles = StyleSheet.create({
     flex: 1
   },
   image: {
-    height: 300
+    height: 260
   },
   text: {
       color: '#fff',
       alignSelf: 'center',
-      fontFamily: 'Helvetica',
+      fontFamily: 'Futura',
       fontSize: 16,
 
   },
   question: {
     backgroundColor: '#4daf51',
-    fontFamily: 'Helvetica',
+    fontFamily: 'Futura',
     flexDirection: 'row',
     alignSelf: 'stretch',
     fontSize: 18,
@@ -48,7 +48,7 @@ class Quiz extends React.Component{
     this.state ={
       questioncount: 0,
       score: 0,
-      answerColor: ''
+      userAnswer: []
 
     };
   }
@@ -100,7 +100,9 @@ class Quiz extends React.Component{
         currentImage = value;
       }
     });
-    return  `http://localhost:3000/images/${currentImage}`;
+    // return  `http://localhost:3000/images/${currentImage}`;
+    return  `https://quizzer-api.herokuapp.com/images/${currentImage}`;
+
   }
 
   renderAnswers(){
@@ -135,7 +137,9 @@ class Quiz extends React.Component{
         score: this.state.score,
         category: this.props.category,
         email: this.props.email,
-        startAgainRoute: this.props.startAgainRoute
+        startAgainRoute: this.props.startAgainRoute,
+        quizdata: this.props.quizdata,
+        userAnswer: this.state.userAnswer
       }
     });
   }
@@ -165,22 +169,26 @@ class Quiz extends React.Component{
   handleAnswers(answerid){
     // compare the answer id for to the correct answer
     var currentobj = this.props.quizdata[this.state.questioncount];
+
+    var userAnsArr = this.state.userAnswer;
+    userAnsArr.push(answerid);
+
     // if the user gives correct answer
     if(currentobj.correct === parseInt(answerid) ){
     // increment the score and the question count and set the state
       this.setState({
         score: this.state.score + 1,
         questioncount: this.state.questioncount + 1,
-
-
+        userAnswer: userAnsArr
       })
-      console.log(this.state.score);
-      // animate the right answer as green and make other buttons disappear
+
+      // animate the right answer as green and make other buttons disappear or play the right sound
 
     } else {  // if the answer does not match, move to the next question
-      // animate the wrong answer as red and make other answers disapper
+      // animate the wrong answer as red and make other answers disapper or play the wrong sound
       this.setState({
         questioncount: this.state.questioncount + 1,
+        userAnswer: userAnsArr
       })
 
     }

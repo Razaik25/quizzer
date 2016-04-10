@@ -14,7 +14,7 @@ const Firebase = require('firebase');
 // link to the database in firebase
 const ref = new Firebase('https://quizzer-raz.firebaseio.com/')
 
-
+// Fix errors in the page
 
 var {
   View,
@@ -23,6 +23,7 @@ var {
   TextInput,
   Image,
   TouchableHighlight,
+  ActivityIndicatorIOS,
   Alert,
 } = React;
 
@@ -45,7 +46,7 @@ var styles = StyleSheet.create({
     header: {
       justifyContent: 'center',
       alignItems: 'center',
-      flex: .5,
+      flex: 0.5,
       backgroundColor: 'transparent'
     },
     mark: {
@@ -130,7 +131,8 @@ class Main extends React.Component{
       component: Profile,
       passProps: {
         username: this.props.username,
-        userstats: data
+        userstats: data,
+        login: true
       }
     });
   }
@@ -156,24 +158,13 @@ class Main extends React.Component{
     });
   }
 
-  handleSignin(){
-    ref.authWithPassword({
-      email: this.state.email,
-      password: this.state.password
-    }, (error, authData) =>{
-      if (error) {
-          console.log('Login Failed!', error)
-      } else {
-        }
-      }
-    )
-
+  apiRequest(){
     // Make an api request to get all the data relevant to the user
     api.getUser(this.state.email)
        .then((res) =>{
          console.log('data in api',res);
          // passing the data from the Main to Profile component
-         this.PushProfilePage(res);
+          this.PushProfilePage(res);
        })
        .catch((err) => {
          console.log('inside err', err);
@@ -181,16 +172,37 @@ class Main extends React.Component{
            isLoading: false,
            error: `There was an error: ${err}`
          });
+
        })
        .done();
 
-    this.setState({
-      isLoading: true,
-    });
+  }
+
+  handleSignin(){
+    ref.authWithPassword({
+      email: this.state.email,
+      password: this.state.password
+    }, (error, authData) =>{
+      if (error) {
+          console.log('Login Failed!', error)
+          alert('Invalid login credentials, Please try again');
+          this.setState({
+            isLoading: true,
+          });
+
+      } else {
+        this.apiRequest();
+
+        }
+      }
+    );
+
+
 
   }
 
   render(){
+
     return(
      <View  style={styles.container}>
        <Image style={styles.bg}
@@ -225,6 +237,12 @@ class Main extends React.Component{
           value={this.state.password}
           onChange={this.handlePassword.bind(this)}/>
         </View>
+
+        {/* Loading ActivityIndicatorIOS */}
+         <ActivityIndicatorIOS
+           animating={this.state.isLoading}
+           color="#fff"
+           size="small"  />
 
       </View>
 
