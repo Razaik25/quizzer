@@ -27,12 +27,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#111',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'column',
     width: windowSize.width,
-    height: windowSize.height/2.4
-
+    height: windowSize.height/2.4,
+    marginTop: 0,
+    flexDirection: 'column'
   },
 
   // text: {
@@ -42,51 +40,75 @@ const styles = StyleSheet.create({
   //   fontFamily: 'Helvetica',
   // },
 
-  button: {
-    height: 60,
-    backgroundColor: '#fff',
-    alignSelf: 'stretch',
-    justifyContent: 'center',
+  playAgain:{
+    backgroundColor: '#5CB3FF',
+    padding: 20,
+    marginTop:20,
+    marginBottom: 20,
     alignItems: 'center',
-    margin: 10,
-    borderRadius: 10,
+
+  },
+  differentPlayer:{
+    backgroundColor: '#387C44',
+    padding: 20,
+    marginBottom: 20,
+    alignItems: 'center'
+
+  },
+  profile: {
+    backgroundColor: '#FDD017',
+    padding: 20,
+    marginBottom: 20,
+    alignItems: 'center',
   },
   buttonText: {
-    color: '#5cb860',
+    color: '#111',
     fontSize: 16,
     fontFamily: 'Futura',
   },
   wrapper: {
-    backgroundColor: '#2E2E2E',
-    flex: 0.4,
+    backgroundColor: '#6D7B8D',
+
   },
   slide: {
-   flex: 1,
-  marginLeft:2,
-  marginRight: 2,
+  //  flex: 0.05,
+   marginTop: 30,
+   marginLeft:5,
+   marginRight: 5,
    justifyContent: 'center',
+   alignItems: 'center',
    backgroundColor: 'transparent',
   },
   text: {
    color: '#fff',
    fontSize: 22,
-   fontWeight: 'bold',
+   fontFamily: 'Futura'
+  //  fontWeight: 'bold',
  },
  resultText: {
-   color: '#FFF380',
+
+   color: '#B6B6B4',
    fontSize: 18,
    fontWeight: 'bold',
    marginTop: 15
  },
+ questionText: {
+   color: '#8C001A',
+   fontSize: 18,
+   fontWeight: 'bold',
+   marginTop: 15
+
+ },
  categoryText: {
-   color: '#347C17',
+  //  color: '#347C17',
+   color: '#fff',
    fontSize: 18,
    fontWeight: 'bold',
    marginTop: 15,
    marginBottom: 5
  },
  scoreText: {
-   color: '#800517',
+   color: '#FBB917',
    fontSize: 18,
    fontWeight: 'bold',
    marginTop: 10,
@@ -151,7 +173,7 @@ class Result extends React.Component{
       }); // end el.answers
 
     }); // end this.props.forEach
-    return [<Text key={questionnumber}>{obj[questionnumber].question}</Text>, <Text key={questionnumber+1}> {"\n"}Correct Answer: {obj[questionnumber].answer}</Text>];
+    return [<Text key={questionnumber}>{obj[questionnumber].question}</Text>, <Text key={questionnumber+1}> {"\n"} {"\n"} Answer: {obj[questionnumber].answer}</Text>];
 
   }
 
@@ -188,9 +210,9 @@ renderPagination(index, total, context) {
       right: 10
 
     }}>
-      <Text style={{color: '#842DCE', fontWeight: 'bold', marginBottom: 40}}>Question: <Text style={{
-        color: '#007aff',
-        fontSize: 20,
+      <Text style={{color: '#fff',  fontSize: 15, fontWeight: 'bold',marginBottom: 40}}>Question: <Text style={{
+        color: '#5CB3FF',
+        fontSize: 15,
         fontWeight: 'bold'
 
       }}>{index + 1}</Text>/{total}</Text>
@@ -230,10 +252,9 @@ renderPagination(index, total, context) {
 
       <ScrollView>
 
-
         <View style={{flex: 0.1, backgroundColor: '#111', alignItems: 'center'}}>
-           <Text style={styles.resultText}> RESULTS </Text>
-           <Text style={styles.categoryText}> {this.props.category.toUpperCase()} </Text>
+           <Animatable.Text  animation="bounceInLeft" easing="ease-in" style={styles.resultText}> RESULTS </Animatable.Text>
+           <Animatable.Text animation="bounceInRight" easing="ease-in" style={styles.categoryText}> {this.props.category.toUpperCase()} </Animatable.Text>
             <Animatable.Text animation="bounceInLeft" easing="ease-in" style={styles.scoreText}>
                Your Score {this.props.score}/7
             </Animatable.Text>
@@ -241,18 +262,18 @@ renderPagination(index, total, context) {
 
         <Separator />
 
-        <View style={{flex: 0.1, backgroundColor: '#2E2E2E', alignItems: 'center'}}>
-          <Text style={styles.resultText}> QUESTIONS </Text>
-        </View>
+        <Animatable.View animation="bounceInLeft" easing="ease-in" style={{backgroundColor: '#6D7B8D', alignItems: 'center'}}>
+          <Text style={styles.questionText}> QUESTIONS </Text>
+        </Animatable.View>
 
 
-        <View>
+        <Animatable.View  animation="bounceInRight" easing="ease-in">
          <Swiper style={styles.wrapper}height={240}
              renderPagination={this.renderPagination}
              paginationStyle={{
                bottom: -23, left: null, right: 10,
              }} loop={false}>
-             <View style={styles.slide} title={<Text style={{color: '#842DCE', fontWeight: 'bold', marginBottom: 80}} numberOfLines={1}>Your answer </Text>}>
+             <View style={styles.slide} title={<Text style={{color: '#fff', fontWeight: 'bold', marginBottom: 80}} numberOfLines={1}>Your answer </Text>}>
                <Text style={styles.text}> {this.renderQuestionWithAnswer(0)}</Text>
              </View>
 
@@ -281,36 +302,28 @@ renderPagination(index, total, context) {
              </View>
 
            </Swiper>
+         </Animatable.View>
 
-         </View>
         <Separator />
-
-
           <View style={styles.container}>
-           <Animatable.View style={styles.button} animation="bounceInLeft" easing="ease-in">
-             <TouchableHighlight style={styles.button} onPress={this.startAgain.bind(this)} underlayColor="#FFC300">
+           <Animatable.View  animation="bounceInLeft" easing="ease-in">
+             <TouchableHighlight style={styles.playAgain} onPress={this.startAgain.bind(this)} underlayColor="#fff">
                <Text  style={styles.buttonText}>Play Again </Text>
              </TouchableHighlight>
           </Animatable.View>
 
-          <Animatable.View style={styles.button} animation="bounceInRight" easing="ease-in">
-            <TouchableHighlight style={styles.button} onPress={this.differentPlayer.bind(this)} underlayColor="#FFC300">
-              <Animatable.Text style={styles.buttonText}>Different Player?</Animatable.Text>
+          <Animatable.View  animation="bounceInRight" easing="ease-in">
+            <TouchableHighlight style={styles.differentPlayer} onPress={this.differentPlayer.bind(this)} underlayColor="#fff">
+              <Animatable.Text style={styles.buttonText}>Different Player</Animatable.Text>
             </TouchableHighlight>
           </Animatable.View>
 
-          <Animatable.View style={styles.button} animation="bounceInRight" easing="ease-in">
-            <TouchableHighlight style={styles.button} onPress={this.handleScoreboard.bind(this)} underlayColor="#FFC300">
+          <Animatable.View animation="bounceInLeft" easing="ease-in">
+            <TouchableHighlight style={styles.profile} onPress={this.handleScoreboard.bind(this)} underlayColor="#fff">
               <Animatable.Text style={styles.buttonText}>View Profile</Animatable.Text>
             </TouchableHighlight>
           </Animatable.View>
           </View>
-
-
-
-
-
-
     </ScrollView>
 
     )

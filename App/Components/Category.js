@@ -23,7 +23,7 @@ var styles = StyleSheet.create ({
     padding: 20,
     flexDirection: 'column',
     justifyContent: 'center',
-    backgroundColor: '#cc3e30'
+    backgroundColor: '#F75D59'
   },
   image: {
     height: 350,

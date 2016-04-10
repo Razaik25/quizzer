@@ -23,6 +23,7 @@ var {
   TextInput,
   Image,
   TouchableHighlight,
+  ActivityIndicatorIOS,
   Alert,
 } = React;
 
@@ -171,6 +172,7 @@ class Main extends React.Component{
            isLoading: false,
            error: `There was an error: ${err}`
          });
+
        })
        .done();
 
@@ -183,6 +185,11 @@ class Main extends React.Component{
     }, (error, authData) =>{
       if (error) {
           console.log('Login Failed!', error)
+          alert('Invalid login credentials, Please try again');
+          this.setState({
+            isLoading: true,
+          });
+
       } else {
         this.apiRequest();
 
@@ -190,13 +197,12 @@ class Main extends React.Component{
       }
     );
 
-    this.setState({
-      isLoading: true,
-    });
+
 
   }
 
   render(){
+
     return(
      <View  style={styles.container}>
        <Image style={styles.bg}
@@ -231,6 +237,12 @@ class Main extends React.Component{
           value={this.state.password}
           onChange={this.handlePassword.bind(this)}/>
         </View>
+
+        {/* Loading ActivityIndicatorIOS */}
+         <ActivityIndicatorIOS
+           animating={this.state.isLoading}
+           color="#fff"
+           size="small"  />
 
       </View>
 
