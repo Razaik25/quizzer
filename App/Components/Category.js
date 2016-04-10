@@ -70,7 +70,7 @@ var styles = StyleSheet.create ({
     shadowColor: '#000000',
     shadowOpacity: 0.5,
     backgroundColor: '#F2F2F2',
-    // borderRadius: 4,
+    // borderRadius: 4,F2F2F2
     borderWidth: 2,
     borderColor: '#F6CED8',
 
@@ -151,6 +151,7 @@ class Category extends React.Component{
 
   render(){
     var username = this.props.username;
+    console.log('in ',this.props.quizdata);
     return (
      <ScrollView>
 

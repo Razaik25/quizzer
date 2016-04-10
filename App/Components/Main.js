@@ -45,7 +45,7 @@ var styles = StyleSheet.create({
     header: {
       justifyContent: 'center',
       alignItems: 'center',
-      flex: .5,
+      flex: 0.5,
       backgroundColor: 'transparent'
     },
     mark: {

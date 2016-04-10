@@ -137,7 +137,8 @@ class Quiz extends React.Component{
         score: this.state.score,
         category: this.props.category,
         email: this.props.email,
-        startAgainRoute: this.props.startAgainRoute
+        startAgainRoute: this.props.startAgainRoute,
+        quizdata: this.props.quizdata
       }
     });
   }
@@ -177,10 +178,10 @@ class Quiz extends React.Component{
 
       })
       console.log(this.state.score);
-      // animate the right answer as green and make other buttons disappear
+      // animate the right answer as green and make other buttons disappear or play the right sound
 
     } else {  // if the answer does not match, move to the next question
-      // animate the wrong answer as red and make other answers disapper
+      // animate the wrong answer as red and make other answers disapper or play the wrong sound
       this.setState({
         questioncount: this.state.questioncount + 1,
       })

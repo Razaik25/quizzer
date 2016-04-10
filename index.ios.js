@@ -12,15 +12,16 @@ var {
 } = React;
 
 class quizzer extends Component {
-  
+
   render() {
+    // configureScene={(route) => ({
+    //   ...Navigator.SceneConfigs.HorizontalSwipeJump
+    //
+    // })}
     return (
       <Navigator
         initialRoute={{ name: 'Quiz App', component: Main }}
-        configureScene={(route) => ({
-          ...Navigator.SceneConfigs.HorizontalSwipeJump
 
-        })}
         renderScene={(route, navigator) => {
           if (route.component) {
             return <route.component navigator={navigator} {...route.passProps} />;
