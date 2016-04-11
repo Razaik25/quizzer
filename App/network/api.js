@@ -1,7 +1,7 @@
 
 var api = {
   getCategory(category){
-    // commenting out the localhost connection and aadding heroku deployment
+    // commenting out the localhost connection and adding heroku server
     // var url = `http://localhost:3000/api/${category}`;
 
     var url = `https://quizzer-api.herokuapp.com/api/${category}`;
@@ -11,7 +11,9 @@ var api = {
   addUser(email, username){
     email = email.toLowerCase().trim();
     username = username.toLowerCase().trim();
-    var url = `http://localhost:3000/users/${email}`;
+    // commenting out the localhost connection and adding heroku server
+    // var url = `http://localhost:3000/users/${email}`;
+    var url = `https://quizzer-api.herokuapp.com/users/${email}`;
     return fetch(url, {
       method: 'post',
       body: (username)
@@ -20,7 +22,9 @@ var api = {
 
   getUser(email){
     email = email.toLowerCase().trim();
-    var url = `http://localhost:3000/users/${email}`;
+    // commenting out the localhost connection and adding heroku server
+    // var url = `http://localhost:3000/users/${email}`;
+    var url = `https://quizzer-api.herokuapp.com/users/${email}`;
     return fetch(url).then((res) => res.json())
   },
 
@@ -28,7 +32,9 @@ var api = {
   updateUser(email,category,score){
     email = email.toLowerCase().trim();
     category = category.toLowerCase().trim();
-    var url = `http://localhost:3000/users/update/${email}`;
+    // commenting out the localhost connection and adding heroku server
+    // var url = `http://localhost:3000/users/update/${email}`;
+    var url = `https://quizzer-api.herokuapp.com/users/update/${email}`;
     return fetch(url, {
       method: 'post',
       body: JSON.stringify({

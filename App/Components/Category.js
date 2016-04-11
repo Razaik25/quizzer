@@ -23,7 +23,7 @@ var styles = StyleSheet.create ({
     padding: 20,
     flexDirection: 'column',
     justifyContent: 'center',
-    backgroundColor: '#fff'
+    backgroundColor: '#c43235'
   },
   image: {
     height: 350,
@@ -150,7 +150,7 @@ class Category extends React.Component{
   }
 
   render(){
-  
+
     var username = this.props.username.toUpperCase();
     return (
      <ScrollView>

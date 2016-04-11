@@ -24,7 +24,7 @@ const {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#4863A0',
+    backgroundColor: '#dddfd4',
     width: windowSize.width,
     height: windowSize.height/2.2,
     marginTop: 0,
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   },
 
   playAgain:{
-    backgroundColor: '#5CB3FF',
+    backgroundColor: '#3fb0ac',
     padding: 20,
     marginTop:20,
     marginBottom: 20,
@@ -40,25 +40,25 @@ const styles = StyleSheet.create({
 
   },
   differentPlayer:{
-    backgroundColor: '#387C44',
+    backgroundColor: '#173e43',
     padding: 20,
     marginBottom: 20,
     alignItems: 'center'
 
   },
   profile: {
-    backgroundColor: '#FBB117',
+    backgroundColor: '#5e0231',
     padding: 20,
     marginBottom: 20,
     alignItems: 'center',
   },
   buttonText: {
     color: '#111',
-    fontSize: 16,
-    fontFamily: 'Futura',
+    fontSize: 18,
+    fontFamily: 'Futura'
   },
   wrapper: {
-    backgroundColor: '#6D7B8D',
+    backgroundColor: '#fae596',
 
   },
   slide: {
@@ -71,14 +71,14 @@ const styles = StyleSheet.create({
    backgroundColor: 'transparent',
   },
   text: {
-   color: '#fff',
+   color: '#111',
    fontSize: 22,
    fontFamily: 'Futura'
   //  fontWeight: 'bold',
  },
  resultText: {
 
-   color: '#B6B6B4',
+   color: '#111',
    fontSize: 18,
    fontWeight: 'bold',
    marginTop: 15
@@ -91,15 +91,15 @@ const styles = StyleSheet.create({
 
  },
  categoryText: {
-  //  color: '#347C17',
-   color: '#fff',
+   color: '#347C17',
+  //  color: '#fff',
    fontSize: 18,
    fontWeight: 'bold',
    marginTop: 15,
    marginBottom: 5
  },
  scoreText: {
-   color: '#FBB917',
+   color: '#111',
    fontSize: 18,
    fontWeight: 'bold',
    marginTop: 10,
@@ -217,7 +217,7 @@ renderPagination(index, total, context) {
       right: 10
 
     }}>
-      <Text style={{color: '#fff',  fontSize: 15, fontWeight: 'bold',marginBottom: 40}}>Question: <Text style={{
+      <Text style={{color: '#111',  fontSize: 15, fontWeight: 'bold',marginBottom: 40}}>Question: <Text style={{
         color: '#5CB3FF',
         fontSize: 15,
         fontWeight: 'bold'
@@ -232,7 +232,7 @@ renderPagination(index, total, context) {
     console.log('in result',this.props.quizdata);
     return(
       <ScrollView>
-        <Animatable.View animation="flipInY" easing="ease-in" style={{flex: 0.1, backgroundColor: '#4863A0', alignItems: 'center'}}>
+        <Animatable.View animation="flipInY" easing="ease-in" style={{flex: 0.1, backgroundColor: '#dddfd4', alignItems: 'center'}}>
            <Text   style={styles.resultText}> RESULTS </Text>
            <Text   style={styles.categoryText}> {this.props.category.toUpperCase()} </Text>
             <Text  style={styles.scoreText}>
@@ -241,7 +241,7 @@ renderPagination(index, total, context) {
         </Animatable.View>
         <Separator />
         <Animatable.View  animation="flipInY" >
-          <View style={{backgroundColor: '#6D7B8D', alignItems: 'center'}}>
+          <View style={{backgroundColor: '#fae596', alignItems: 'center'}}>
             <Text style={styles.questionText}> QUESTIONS </Text>
           </View>
 
@@ -252,31 +252,31 @@ renderPagination(index, total, context) {
                 bottom: -23, left: null, right: 10,
               }} loop={false}>
 
-              <View style={styles.slide} title={<Text style={{color: '#fff', fontWeight: 'bold', marginBottom: 80}} numberOfLines={1}>Your answer: {this.renderUserAnswers(0)} </Text>}>
+              <View style={styles.slide} title={<Text style={{color: '#111', fontWeight: 'bold', marginBottom: 80}} numberOfLines={1}>Your answer: {this.renderUserAnswers(0)} </Text>}>
                 <Text style={styles.text}> {this.renderQuestionWithAnswer(0)}</Text>
               </View>
 
-             <View style={styles.slide} title={<Text style={{color: '#fff', fontWeight: 'bold', marginBottom: 80}} numberOfLines={1}>Your answer: {this.renderUserAnswers(1)}</Text>}>
+             <View style={styles.slide} title={<Text style={{color: '#111', fontWeight: 'bold', marginBottom: 80}} numberOfLines={1}>Your answer: {this.renderUserAnswers(1)}</Text>}>
                <Text style={styles.text}> {this.renderQuestionWithAnswer(1)}</Text>
              </View>
 
-             <View style={styles.slide} title={<Text style={{color: '#fff', fontWeight: 'bold', marginBottom: 80}} numberOfLines={1}>Your answer: {this.renderUserAnswers(2)} </Text>}>
+             <View style={styles.slide} title={<Text style={{color: '#111', fontWeight: 'bold', marginBottom: 80}} numberOfLines={1}>Your answer: {this.renderUserAnswers(2)} </Text>}>
                <Text style={styles.text}> {this.renderQuestionWithAnswer(2)}</Text>
              </View>
 
-             <View style={styles.slide} title={<Text style={{color: '#fff', fontWeight: 'bold', marginBottom: 80}} numberOfLines={1}>Your answer: {this.renderUserAnswers(3)}</Text>}>
+             <View style={styles.slide} title={<Text style={{color: '#111', fontWeight: 'bold', marginBottom: 80}} numberOfLines={1}>Your answer: {this.renderUserAnswers(3)}</Text>}>
                <Text style={styles.text}> {this.renderQuestionWithAnswer(3)}</Text>
              </View>
 
-             <View style={styles.slide} title={<Text style={{color: '#fff', fontWeight: 'bold', marginBottom: 80}} numberOfLines={1}>Your answer: {this.renderUserAnswers(4)}</Text>}>
+             <View style={styles.slide} title={<Text style={{color: '#111', fontWeight: 'bold', marginBottom: 80}} numberOfLines={1}>Your answer: {this.renderUserAnswers(4)}</Text>}>
                <Text style={styles.text}> {this.renderQuestionWithAnswer(4)}</Text>
              </View>
 
-             <View style={styles.slide} title={<Text style={{color: '#fff', fontWeight: 'bold', marginBottom: 80}} numberOfLines={1}>Your answer: {this.renderUserAnswers(5)}</Text>}>
+             <View style={styles.slide} title={<Text style={{color: '#111', fontWeight: 'bold', marginBottom: 80}} numberOfLines={1}>Your answer: {this.renderUserAnswers(5)}</Text>}>
                <Text style={styles.text}> {this.renderQuestionWithAnswer(5)}</Text>
              </View>
 
-             <View style={styles.slide} title={<Text style={{color: '#fff', fontWeight: 'bold', marginBottom: 80}} numberOfLines={1}>Your answer: {this.renderUserAnswers(6)}</Text>}>
+             <View style={styles.slide} title={<Text style={{color: '#111', fontWeight: 'bold', marginBottom: 80}} numberOfLines={1}>Your answer: {this.renderUserAnswers(6)}</Text>}>
                <Text style={styles.text}> {this.renderQuestionWithAnswer(6)}</Text>
              </View>
 

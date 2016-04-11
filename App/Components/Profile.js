@@ -165,7 +165,7 @@ class Profile extends React.Component{
       } else if(key ==='username') {
         return (
           <View style={styles.welcome} key={index} >
-            <Animatable.Text animation="zoomIn" easing="ease-in" key={key} style={styles.text}> Welcome {currentobj[key]} {"\n"}{"\n"} Start Playing!!  {"\n"}</Animatable.Text>
+            <Animatable.Text animation="zoomIn" easing="ease-in" key={key} style={styles.text}> Welcome {currentobj[key]} {"\n"}{"\n"}</Animatable.Text>
           </View>
         )
 
@@ -252,7 +252,7 @@ class Profile extends React.Component{
             </Animatable.View>
           )
           break;
-          
+
         }
       }
     })

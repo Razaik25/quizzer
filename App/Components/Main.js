@@ -126,6 +126,11 @@ class Main extends React.Component{
   }
 
   PushProfilePage(data){
+    this.setState({
+      username: '',
+      email: '',
+      password: '',
+    });
     this.props.navigator.push({
       title: `Profile Page`,
       component: Profile,

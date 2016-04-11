@@ -184,6 +184,7 @@ class Signup extends React.Component{
     }, (error, userData) => {
       if(error) {
         console.log('Error creating user: ', error);
+        alert(error);
       } else {
         console.log("Signup Success")
         this.apicall();

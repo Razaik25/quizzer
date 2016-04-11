@@ -11,7 +11,8 @@ const {
   StyleSheet,
   TextInput,
   TouchableHighlight,
-  Image
+  Image,
+  Vibration
 } = React;
 
 var styles = StyleSheet.create({
@@ -160,26 +161,7 @@ class Quiz extends React.Component{
     });
   }
 
-  animateWrongAnswer(){
-    // var backgroundColor = 'red';
-    // this.setState({
-    //  backgroundColor: backgroundColor
-    // })
-    // // set the height as 0 of other TouchableHighlights
-    // return (
-    //   <TouchableHighlight  underlayColor="white"
-    //     style={{backgroundColor: this.state.backgroundColor, height:60, flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}
-    //     >
-    //   </TouchableHighlight>
-    // );
-  }
 
-  animateRighAnswer(){
-    var backgroundColor = 'green';
-    this.setState({
-     backgroundColor: backgroundColor
-    })
-  }
 
 
   handleAnswers(answerid){
@@ -198,10 +180,12 @@ class Quiz extends React.Component{
         userAnswer: userAnsArr
       })
 
-      // animate the right answer as green and make other buttons disappear or play the right sound
+      // play the right sound
 
     } else {  // if the answer does not match, move to the next question
-      // animate the wrong answer as red and make other answers disapper or play the wrong sound
+      //  play the wrong sound
+      // vibrate
+      Vibration.vibrate();
       this.setState({
         questioncount: this.state.questioncount + 1,
         userAnswer: userAnsArr
