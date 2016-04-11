@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     right: 0,
     // resizeMode:  'stretch'
-    height: window.height*4
+    height: (window.height)*8
   },
 
   avatarimage: {
@@ -252,6 +252,7 @@ class Profile extends React.Component{
             </Animatable.View>
           )
           break;
+          
         }
       }
     })
@@ -288,7 +289,7 @@ class Profile extends React.Component{
             style={styles.button}
             onPress= {this.handleSubmit.bind(this)}
             underlayColor="#FFC300">
-            <Text style={styles.buttonText}> Start Quizzer </Text>
+            <Text style={styles.buttonText}> Start Playing </Text>
           </TouchableHighlight>
        </View>
       </View>

@@ -21,8 +21,8 @@ function createUser (req, res, next) {
   var email = req.params.email;
   var username = Object.keys(req.body)[0];
 
-  db.any(`INSERT INTO users(username, email)
-  VALUES($1, $2) Returning id`, [username, email])
+  db.one(`INSERT INTO users(username, email)
+  VALUES($1, $2) RETURNING id`, [username, email])
   .then(function(data) {
     res.data = data;
     next();
@@ -33,7 +33,7 @@ function createUser (req, res, next) {
 }
 
 function getUser (req, res, next) {
-  db.any(`SELECT * from users WHERE email =($1)`, [req.params.email])
+  db.any('SELECT * FROM users WHERE email = $1', [req.params.email])
   .then(function(data) {
     res.data = data;
     next()
@@ -58,10 +58,7 @@ function updateUser (req, res, next) {
       score = data[key];
     }
   }
-  console.log('category',category);
-  console.log(typeof(score));
-  console.log('score',score);
-  db.any(`UPDATE users SET ${category} = $1 where email = $2 Returning *;`, [score,email])
+  db.any('UPDATE users SET $1~ = $2 WHERE email = $3 RETURNING *', [category, score, email])
   .then(function(data) {
     res.data = data;
     next()

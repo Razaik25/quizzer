@@ -2,7 +2,7 @@
       {
         "id": "1",
         "question":"What is Canada's National Animal?",
-        "image": "canadaa1.jpg",
+        "image": "can1.jpg",
         "correct": 1,
         "answers": [
             {
@@ -26,7 +26,7 @@
       {
           "id": "2",
           "question":"Which of these sports was invented in Canada?",
-          "image": "canada2.jpg",
+          "image": "can2.jpg",
           "correct": 3,
           "answers": [
               {
@@ -50,7 +50,7 @@
       {
           "id": "3",
           "question": "Toronto is a city in which Canadian Province?",
-          "image": "ct3.jpg",
+          "image": "can3.jpg",
           "correct": 4,
           "answers": [
               {
@@ -73,7 +73,7 @@
       },
       {
           "id": "4",
-          "image": "canada4.jpg",
+          "image": "can4.jpg",
           "question": "What is the color of $20 dollar bill?",
           "correct": 3,
           "answers": [
@@ -97,7 +97,7 @@
       },
       {
           "id": "5",
-          "image": "canada5.jpg",
+          "image": "can5.jpg",
           "question": "What does CN stand for in CN tower?",
           "correct": 2,
           "answers": [
@@ -121,7 +121,7 @@
       },
       {
           "id": "6",
-          "image": "canadaa6.jpg",
+          "image": "can6.jpg",
           "question": "Which Canadian Province produces most oil?",
           "correct": 1,
           "answers": [
@@ -145,7 +145,7 @@
       },
       {
           "id": "7",
-          "image": "canadaa7.jpg",
+          "image": "can7.jpg",
           "question": "Which city is refered as 'The City of Hundred Bell Towers'?",
           "correct": 2,
           "answers": [
@@ -164,6 +164,174 @@
               {
                   "id": "4",
                   "answer": "Edmonton"
+              }
+          ]
+      },
+      {
+          "id": "8",
+          "image": "c8.jpg",
+          "question": "How many oceans border Canada?",
+          "correct": 1,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "1"
+              },
+              {
+                  "id": "2",
+                  "answer": "2"
+              },
+              {
+                  "id": "3",
+                  "answer": "3"
+              },
+              {
+                  "id": "4",
+                  "answer": "4"
+              }
+          ]
+      },
+      {
+          "id": "9",
+          "image": "c9.jpg",
+          "question": "What major sporting event was held in Canada in 2010?",
+          "correct": 3,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "World Cup"
+              },
+              {
+                  "id": "2",
+                  "answer": "Commonwealth Games"
+              },
+              {
+                  "id": "3",
+                  "answer": "Winter Olympics"
+              },
+              {
+                  "id": "4",
+                  "answer": " Summer Olympics"
+              }
+          ]
+      },
+      {
+          "id": "10",
+          "image": "c10.jpg",
+          "question": "If a Canadian says she's going to Tim's, where is she going??",
+          "correct": 4,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Department Store"
+              },
+              {
+                  "id": "2",
+                  "answer": "Weight Loss Studio"
+              },
+              {
+                  "id": "3",
+                  "answer": "Chruch"
+              },
+              {
+                  "id": "4",
+                  "answer": "Doughnut Shop"
+              }
+          ]
+      },
+      {
+          "id": "11",
+          "image": "c11.jpg",
+          "question": "What is The Bloc?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Television Show"
+              },
+              {
+                  "id": "2",
+                  "answer": "Political Party"
+              },
+              {
+                  "id": "3",
+                  "answer": "Dance Move"
+              },
+              {
+                  "id": "4",
+                  "answer": "Biker Gang"
+              }
+          ]
+      },
+      {
+          "id": "12",
+          "image": "c12.jpg",
+          "question": "What is capital of Canada?",
+          "correct": 1,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Ottawa"
+              },
+              {
+                  "id": "2",
+                  "answer": "Halifax"
+              },
+              {
+                  "id": "3",
+                  "answer": "Toronto"
+              },
+              {
+                  "id": "4",
+                  "answer": "Charlottetown"
+              }
+          ]
+      },
+      {
+          "id": "13",
+          "image": "c13.jpg",
+          "question": "What food do Canadians consume more than any other country in the world?",
+          "correct": 3,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Cod"
+              },
+              {
+                  "id": "2",
+                  "answer": "French Fries"
+              },
+              {
+                  "id": "3",
+                  "answer": "Mac and Cheese"
+              },
+              {
+                  "id": "4",
+                  "answer": "Chicken"
+              }
+          ]
+      },
+      {
+          "id": "14",
+          "image": "c14.jpg",
+          "question": "What do Candians have more than all other countries combined?",
+          "correct": 3,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Igloos"
+              },
+              {
+                  "id": "2",
+                  "answer": "Gas Stations"
+              },
+              {
+                  "id": "3",
+                  "answer": "Lakes"
+              },
+              {
+                  "id": "4",
+                  "answer": "Beer"
               }
           ]
       }

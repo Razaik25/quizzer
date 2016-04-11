@@ -33,7 +33,7 @@ var styles = StyleSheet.create({
     fontFamily: 'Futura',
     flexDirection: 'row',
     alignSelf: 'stretch',
-    fontSize: 18,
+    fontSize: 16,
     color: '#fff',
     flex: 1,
     paddingLeft: 10,
@@ -48,7 +48,8 @@ class Quiz extends React.Component{
     this.state ={
       questioncount: 0,
       score: 0,
-      userAnswer: []
+      userAnswer: [],
+      shuffleddata: ''
 
     };
   }
@@ -79,9 +80,21 @@ class Quiz extends React.Component{
     return obj;
   }
 
+  shuffle(){
+    var shuffleddata = _.shuffle(this.props.quizdata);
+    this.setState({
+      shuffleddata: shuffleddata
+    });
+
+  }
+
+  componentDidMount(){
+    this.shuffle();
+  }
+
   renderQuestion(){
     // loop to get the current question
-    var currentObj = this.props.quizdata[this.state.questioncount];
+    var currentObj = this.state.shuffleddata[this.state.questioncount];
     var currentQuestion;
     // using underscore .each to loop over the currentObj
     _.each(currentObj, function(value,key){
@@ -93,20 +106,23 @@ class Quiz extends React.Component{
   }
 
   renderImage(){
-    var currentObj = this.props.quizdata[this.state.questioncount];
+
+    var currentObj = this.state.shuffleddata[this.state.questioncount];
     var currentImage;
     _.each(currentObj, function(value,key){
       if(key ==="image"){
         currentImage = value;
       }
     });
+
+    // adding heroku server
     // return  `http://localhost:3000/images/${currentImage}`;
     return  `https://quizzer-api.herokuapp.com/images/${currentImage}`;
 
   }
 
   renderAnswers(){
-    var currentObj = this.props.quizdata[this.state.questioncount];
+    var currentObj = this.state.shuffleddata[this.state.questioncount];
     var currentAnswers;
     var that = this;
     _.each(currentObj, function(value,key){
@@ -138,7 +154,7 @@ class Quiz extends React.Component{
         category: this.props.category,
         email: this.props.email,
         startAgainRoute: this.props.startAgainRoute,
-        quizdata: this.props.quizdata,
+        quizdata: this.state.shuffleddata,
         userAnswer: this.state.userAnswer
       }
     });
@@ -168,7 +184,7 @@ class Quiz extends React.Component{
 
   handleAnswers(answerid){
     // compare the answer id for to the correct answer
-    var currentobj = this.props.quizdata[this.state.questioncount];
+    var currentobj = this.state.shuffleddata[this.state.questioncount];
 
     var userAnsArr = this.state.userAnswer;
     userAnsArr.push(answerid);
@@ -198,7 +214,6 @@ class Quiz extends React.Component{
     if(this.state.questioncount === 7){
       this.pushResultPage();
     }
-
   }
 
   render(){

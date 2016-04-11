@@ -167,6 +167,174 @@
                   "answer": "King of Hearts"
               }
           ]
+      },
+      {
+          "id": "8",
+          "image": "gkk8.jpg",
+          "question": "What is the standard taste of the water??",
+          "correct": 1,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Water has no taste"
+              },
+              {
+                  "id": "2",
+                  "answer": "Hint of Sweetness"
+              },
+              {
+                  "id": "3",
+                  "answer": "Kind of Salty"
+              },
+              {
+                  "id": "4",
+                  "answer": "Sour"
+              }
+          ]
+      },
+      {
+          "id": "9",
+          "image": "gkk9.jpg",
+          "question": "Which of these tourist attractions are in Egypt?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Cubes"
+              },
+              {
+                  "id": "2",
+                  "answer": "Pyramids"
+              },
+              {
+                  "id": "3",
+                  "answer": "Rectangles"
+              },
+              {
+                  "id": "4",
+                  "answer": "Circles"
+              }
+          ]
+      },
+      {
+          "id": "10",
+          "image": "gkk10.jpg",
+          "question": "Which of these companies has a bird in their logo?",
+          "correct": 3,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Youtube"
+              },
+              {
+                  "id": "2",
+                  "answer": "Facebook"
+              },
+              {
+                  "id": "3",
+                  "answer": "Twitter"
+              },
+              {
+                  "id": "4",
+                  "answer": "Instagram"
+              }
+          ]
+      },
+      {
+          "id": "11",
+          "image": "gkk11.jpg",
+          "question": "What bird is able to regenerate and rise from its ashes?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Crow"
+              },
+              {
+                  "id": "2",
+                  "answer": "Phoenix"
+              },
+              {
+                  "id": "3",
+                  "answer": "Parrot"
+              },
+              {
+                  "id": "4",
+                  "answer": "Sparrow"
+              }
+          ]
+      },
+      {
+          "id": "12",
+          "image": "gkk12.jpg",
+          "question": "Who invented the Telephone?",
+          "correct": 4,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Issac Newton"
+              },
+              {
+                  "id": "2",
+                  "answer": "Albert Einstein"
+              },
+              {
+                  "id": "3",
+                  "answer": "Stephan Hawking"
+              },
+              {
+                  "id": "4",
+                  "answer": "Alexander Gramham Bell"
+              }
+          ]
+      },
+      {
+          "id": "13",
+          "image": "gkk13.jpg",
+          "question": "Which planet is known as the Red Planet?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Venus"
+              },
+              {
+                  "id": "2",
+                  "answer": "Mars"
+              },
+              {
+                  "id": "3",
+                  "answer": "Saturn"
+              },
+              {
+                  "id": "4",
+                  "answer": "Jupiter"
+              }
+          ]
+      },
+      {
+          "id": "14",
+          "image": "gkk14.jpg",
+          "question": "In which country is Mount Everest located?",
+          "correct": 4,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "India"
+              },
+              {
+                  "id": "2",
+                  "answer": "China"
+              },
+              {
+                  "id": "3",
+                  "answer": "Russia"
+              },
+              {
+                  "id": "4",
+                  "answer": "Nepal"
+              }
+          ]
       }
 
 ]

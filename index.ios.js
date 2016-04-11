@@ -23,8 +23,6 @@ class quizzer extends Component {
     return (
       <Navigator
         initialRoute={{ name: 'Quiz App', component: Main }}
-
-
         renderScene={(route, navigator) => {
           if (route.component) {
             return <route.component navigator={navigator} {...route.passProps} />;

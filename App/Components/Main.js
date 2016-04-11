@@ -223,6 +223,7 @@ class Main extends React.Component{
           placeholder="Email"
           placeholderTextColor="#FFF"
           value={this.state.email}
+          autoFocus={true}
           onChange={this.handleEmail.bind(this)}/>
         </View>
 
@@ -235,6 +236,7 @@ class Main extends React.Component{
           placeholder="Password"
           placeholderTextColor="#FFF"
           value={this.state.password}
+          autoFocus={true}
           onChange={this.handlePassword.bind(this)}/>
         </View>
 

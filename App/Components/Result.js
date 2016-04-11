@@ -24,7 +24,7 @@ const {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#111',
+    backgroundColor: '#4863A0',
     width: windowSize.width,
     height: windowSize.height/2.2,
     marginTop: 0,
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
 
   },
   profile: {
-    backgroundColor: '#FDD017',
+    backgroundColor: '#FBB117',
     padding: 20,
     marginBottom: 20,
     alignItems: 'center',
@@ -172,9 +172,6 @@ class Result extends React.Component{
 
   renderUserAnswers(questionnumber){
     var userAnsnwerArr =[];
-    console.log('props',this.props.userAnswer[questionnumber]);
-
-
       this.props.quizdata.forEach((el,index) =>{
         el.answers.forEach((answer,id) =>{
           if (answer.id ===this.props.userAnswer[questionnumber]){
@@ -232,11 +229,10 @@ renderPagination(index, total, context) {
 
 
   render(){
-    console.log('in results',this.props.userAnswer);
+    console.log('in result',this.props.quizdata);
     return(
-
       <ScrollView>
-        <Animatable.View animation="bounceInLeft" style={{flex: 0.1, backgroundColor: '#111', alignItems: 'center'}}>
+        <Animatable.View animation="flipInY" easing="ease-in" style={{flex: 0.1, backgroundColor: '#4863A0', alignItems: 'center'}}>
            <Text   style={styles.resultText}> RESULTS </Text>
            <Text   style={styles.categoryText}> {this.props.category.toUpperCase()} </Text>
             <Text  style={styles.scoreText}>
@@ -244,7 +240,7 @@ renderPagination(index, total, context) {
             </Text>
         </Animatable.View>
         <Separator />
-        <Animatable.View  animation="bounceInRight" >
+        <Animatable.View  animation="flipInY" >
           <View style={{backgroundColor: '#6D7B8D', alignItems: 'center'}}>
             <Text style={styles.questionText}> QUESTIONS </Text>
           </View>
@@ -290,19 +286,19 @@ renderPagination(index, total, context) {
 
         <Separator />
           <View style={styles.container}>
-            <Animatable.View  animation="slideInLeft" >
+            <Animatable.View  animation="flipInX" easing="ease-in" >
               <TouchableHighlight style={styles.playAgain} onPress={this.startAgain.bind(this)} underlayColor="#fff">
                 <Text  style={styles.buttonText}>Play Again </Text>
               </TouchableHighlight>
             </Animatable.View>
 
-           <Animatable.View  animation="slideInRight" >
+           <Animatable.View  animation="flipInX" easing="ease-in" >
              <TouchableHighlight style={styles.differentPlayer} onPress={this.differentPlayer.bind(this)} underlayColor="#fff">
                <Animatable.Text style={styles.buttonText}>Different Player</Animatable.Text>
              </TouchableHighlight>
             </Animatable.View>
 
-            <Animatable.View animation="slideInLeft" >
+            <Animatable.View animation="flipInX" easing="ease-in" >
               <TouchableHighlight style={styles.profile} onPress={this.handleScoreboard.bind(this)} underlayColor="#fff">
                 <Animatable.Text style={styles.buttonText}>View Profile</Animatable.Text>
               </TouchableHighlight>

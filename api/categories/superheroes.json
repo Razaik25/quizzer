@@ -166,6 +166,174 @@
                   "answer": "JARVIS"
               }
           ]
+      },
+      {
+          "id": "8",
+          "image": "sp8.jpg",
+          "question": "What is Batman commanly known as?",
+          "correct": 3,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Vigilante"
+              },
+              {
+                  "id": "2",
+                  "answer": "The Bat"
+              },
+              {
+                  "id": "3",
+                  "answer": "Dark Knight"
+              },
+              {
+                  "id": "4",
+                  "answer": "Bat of the Knight"
+              }
+          ]
+      },
+      {
+          "id": "9",
+          "image": "spp9.jpg",
+          "question": "Captain America fights crime against which organization?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Revengers"
+              },
+              {
+                  "id": "2",
+                  "answer": "Hydra"
+              },
+              {
+                  "id": "3",
+                  "answer": "Suicide Squad"
+              },
+              {
+                  "id": "4",
+                  "answer": "Watchmen"
+              }
+          ]
+      },
+      {
+          "id": "10",
+          "image": "sp10.jpg",
+          "question": "What is Magneto's super power?",
+          "correct": 1,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Can control magnetic field"
+              },
+              {
+                  "id": "2",
+                  "answer": "Shape Shifting"
+              },
+              {
+                  "id": "3",
+                  "answer": "Flying"
+              },
+              {
+                  "id": "4",
+                  "answer": "Fire"
+              }
+          ]
+      },
+      {
+          "id": "11",
+          "image": "spp11.jpg",
+          "question": "Robin is also known as ?",
+          "correct": 4,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Bird of Pray"
+              },
+              {
+                  "id": "2",
+                  "answer": "Crime Crusader"
+              },
+              {
+                  "id": "3",
+                  "answer": "Dark Knight"
+              },
+              {
+                  "id": "4",
+                  "answer": "Boy Wonder"
+              }
+          ]
+      },
+      {
+          "id": "12",
+          "image": "sp12.jpg",
+          "question": "What is the job held by Superman's alter ego, Peter Parker?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Policeman"
+              },
+              {
+                  "id": "2",
+                  "answer": "Photographer"
+              },
+              {
+                  "id": "3",
+                  "answer": "Lawyer"
+              },
+              {
+                  "id": "4",
+                  "answer": "Bodyguard"
+              }
+          ]
+      },
+      {
+          "id": "13",
+          "image": "sp13.jpg",
+          "question": "In superhero movie does Lex Luthor appear?",
+          "correct": 1,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Superman"
+              },
+              {
+                  "id": "2",
+                  "answer": "Batman"
+              },
+              {
+                  "id": "3",
+                  "answer": "Spiderman"
+              },
+              {
+                  "id": "4",
+                  "answer": "Ironman"
+              }
+          ]
+      },
+      {
+          "id": "14",
+          "image": "sp14.jpg",
+          "question": "Who is Ocean Master to AquaMan?",
+          "correct": 1,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Father"
+              },
+              {
+                  "id": "2",
+                  "answer": "Brother"
+              },
+              {
+                  "id": "3",
+                  "answer": "Cousin"
+              },
+              {
+                  "id": "4",
+                  "answer": "No one"
+              }
+          ]
       }
 
 ]

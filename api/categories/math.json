@@ -167,6 +167,174 @@
                   "answer": "I don't Know ( ._.)"
               }
           ]
+      },
+      {
+          "id": "8",
+          "image": "mathematics8.jpg",
+          "question": "Complete the Sequence 2,4,6,8,_?",
+          "correct": 1,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "10"
+              },
+              {
+                  "id": "2",
+                  "answer": "12"
+              },
+              {
+                  "id": "3",
+                  "answer": "18"
+              },
+              {
+                  "id": "4",
+                  "answer": "16"
+              }
+          ]
+      },
+      {
+          "id": "9",
+          "image": "matmathematics9.jpg",
+          "question": "What is next 3,6,9,12,_ ?",
+          "correct": 3,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "13"
+              },
+              {
+                  "id": "2",
+                  "answer": "14"
+              },
+              {
+                  "id": "3",
+                  "answer": "15"
+              },
+              {
+                  "id": "4",
+                  "answer": "16"
+              }
+          ]
+      },
+      {
+          "id": "10",
+          "image": "mathematics10.jpg",
+          "question": "tan(45)?",
+          "correct": 4,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "0"
+              },
+              {
+                  "id": "2",
+                  "answer": "-1/2"
+              },
+              {
+                  "id": "3",
+                  "answer": "1/2"
+              },
+              {
+                  "id": "4",
+                  "answer": "1"
+              }
+          ]
+      },
+      {
+          "id": "11",
+          "image": "mathematics11.jpg",
+          "question": "What is next 5,10,15,20,_ ?",
+          "correct": 3,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "30"
+              },
+              {
+                  "id": "2",
+                  "answer": "35"
+              },
+              {
+                  "id": "3",
+                  "answer": "25"
+              },
+              {
+                  "id": "4",
+                  "answer": "0"
+              }
+          ]
+      },
+      {
+          "id": "12",
+          "image": "mathematics12.jpg",
+          "question": "Smallest odd Prime Number?",
+          "correct": 1,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "3"
+              },
+              {
+                  "id": "2",
+                  "answer": "1"
+              },
+              {
+                  "id": "3",
+                  "answer": "5"
+              },
+              {
+                  "id": "4",
+                  "answer": "I don't Know ( ._.)"
+              }
+          ]
+      },
+      {
+          "id": "13",
+          "image": "mathematics13.jpg",
+          "question": "Which of the following number is divisible by 5?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "-1"
+              },
+              {
+                  "id": "2",
+                  "answer": "0"
+              },
+              {
+                  "id": "3",
+                  "answer": "5/2"
+              },
+              {
+                  "id": "4",
+                  "answer": "11"
+              }
+          ]
+      },
+      {
+          "id": "14",
+          "image": "mathematics14.jpg",
+          "question": "0/1?",
+          "correct": 4,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "0.1"
+              },
+              {
+                  "id": "2",
+                  "answer": "1"
+              },
+              {
+                  "id": "3",
+                  "answer": "Infinity"
+              },
+              {
+                  "id": "4",
+                  "answer": "0"
+              }
+          ]
       }
 
 ]

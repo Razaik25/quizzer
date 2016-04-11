@@ -167,6 +167,174 @@
                   "answer": "Reveals invisible ink"
               }
           ]
+      },
+      {
+          "id": "8",
+          "image": "hpo8.jpg",
+          "question": "What is name of the spell used against Dementors?",
+          "correct": 1,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Patronus Charm"
+              },
+              {
+                  "id": "2",
+                  "answer": "Oblivate Charm"
+              },
+              {
+                  "id": "3",
+                  "answer": "Banishing Charm"
+              },
+              {
+                  "id": "4",
+                  "answer": "Defensive Charm"
+              }
+          ]
+      },
+      {
+          "id": "9",
+          "image": "hpo9.jpg",
+          "question": "Who is Half Blood Prince?",
+          "correct": 4,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Dumbledore"
+              },
+              {
+                  "id": "2",
+                  "answer": "Voldemort"
+              },
+              {
+                  "id": "3",
+                  "answer": "Harry Potter"
+              },
+              {
+                  "id": "4",
+                  "answer": "Severus Snape"
+              }
+          ]
+      },
+      {
+          "id": "10",
+          "image": "hpo10.jpg",
+          "question": "Who calls Hermione Mudblood first?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Harry Potter"
+              },
+              {
+                  "id": "2",
+                  "answer": "Draco Malfoy"
+              },
+              {
+                  "id": "3",
+                  "answer": "Ron Wesley"
+              },
+              {
+                  "id": "4",
+                  "answer": "Ginny Wesley"
+              }
+          ]
+      },
+      {
+          "id": "11",
+          "image": "hpo11.jpg",
+          "question": "In which year do wizards take OWL exams?",
+          "correct": 4,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Year 2"
+              },
+              {
+                  "id": "2",
+                  "answer": "Year 3"
+              },
+              {
+                  "id": "3",
+                  "answer": "Year 7"
+              },
+              {
+                  "id": "4",
+                  "answer": "Year 5"
+              }
+          ]
+      },
+      {
+          "id": "12",
+          "image": "hpo12.jpg",
+          "question": "Who is 'the boy who lived'?",
+          "correct": 3,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Ron Wesley"
+              },
+              {
+                  "id": "2",
+                  "answer": "Dumbledore"
+              },
+              {
+                  "id": "3",
+                  "answer": "Harry Potter"
+              },
+              {
+                  "id": "4",
+                  "answer": "Voldemort"
+              }
+          ]
+      },
+      {
+          "id": "13",
+          "image": "hpo13.jpg",
+          "question": "Who wrote Harry Potter books?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Sydney Sheldon"
+              },
+              {
+                  "id": "2",
+                  "answer": "JK Rowling"
+              },
+              {
+                  "id": "3",
+                  "answer": "Sirius Black"
+              },
+              {
+                  "id": "4",
+                  "answer": "Nora Roberts"
+              }
+          ]
+      },
+      {
+          "id": "14",
+          "image": "hpo14.jpg",
+          "question": "What's Voldemort's real name?",
+          "correct": 3,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "James"
+              },
+              {
+                  "id": "2",
+                  "answer": "Remus"
+              },
+              {
+                  "id": "3",
+                  "answer": "Tom"
+              },
+              {
+                  "id": "4",
+                  "answer": "Severus"
+              }
+          ]
       }
 
 ]

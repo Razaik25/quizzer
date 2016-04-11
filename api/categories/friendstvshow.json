@@ -166,6 +166,174 @@
                   "answer": "Red Ross"
               }
           ]
+      },
+      {
+          "id": "8",
+          "image": "f8.jpg",
+          "question": "Who does Ross marry in Las Vegas ?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "No One"
+              },
+              {
+                  "id": "2",
+                  "answer": "Racheal"
+              },
+              {
+                  "id": "3",
+                  "answer": "Mona"
+              },
+              {
+                  "id": "4",
+                  "answer": "Charlie"
+              }
+          ]
+      },
+      {
+          "id": "9",
+          "image": "f9.jpg",
+          "question": "Where did Phoebe's boyfriend David move?",
+          "correct": 3,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Siberia"
+              },
+              {
+                  "id": "2",
+                  "answer": "Dublin"
+              },
+              {
+                  "id": "3",
+                  "answer": "Minsk"
+              },
+              {
+                  "id": "4",
+                  "answer": "Venice"
+              }
+          ]
+      },
+      {
+          "id": "10",
+          "image": "f10.jpg",
+          "question": "What did the duck eat that made him sick?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Peanut Butter"
+              },
+              {
+                  "id": "2",
+                  "answer": "Face Cream"
+              },
+              {
+                  "id": "3",
+                  "answer": "Nuts"
+              },
+              {
+                  "id": "4",
+                  "answer": "Bread"
+              }
+          ]
+      },
+      {
+          "id": "11",
+          "image": "f11.jpg",
+          "question": "What was Richard Burke’s profession?",
+          "correct": 4,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Teacher"
+              },
+              {
+                  "id": "2",
+                  "answer": "Chef"
+              },
+              {
+                  "id": "3",
+                  "answer": "Actor"
+              },
+              {
+                  "id": "4",
+                  "answer": "Eye Doctor"
+              }
+          ]
+      },
+      {
+          "id": "12",
+          "image": "f12.jpg",
+          "question": "Who is the only friend who didn't get married throughout all 10 seasons??",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Pheobe"
+              },
+              {
+                  "id": "2",
+                  "answer": "Joey"
+              },
+              {
+                  "id": "3",
+                  "answer": "Chandler"
+              },
+              {
+                  "id": "4",
+                  "answer": "Monica"
+              }
+          ]
+      },
+      {
+          "id": "13",
+          "image": "fs13.jpg",
+          "question": "Why did Phoebe and Gary break up?",
+          "correct": 3,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "He cheated on her"
+              },
+              {
+                  "id": "2",
+                  "answer": "He was weird"
+              },
+              {
+                  "id": "3",
+                  "answer": "He shot a Pigeon"
+              },
+              {
+                  "id": "4",
+                  "answer": "Phoebe did not like him"
+              }
+          ]
+      },
+      {
+          "id": "14",
+          "image": "fs14.jpg",
+          "question": "What was Ross's Paleontologist girlfriend's name?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Mona"
+              },
+              {
+                  "id": "2",
+                  "answer": "Charlie"
+              },
+              {
+                  "id": "3",
+                  "answer": "Chloe"
+              },
+              {
+                  "id": "4",
+                  "answer": "Carrie"
+              }
+          ]
       }
 
 ]

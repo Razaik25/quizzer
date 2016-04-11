@@ -1,7 +1,9 @@
 
 var api = {
   getCategory(category){
+    // commenting out the localhost connection and aadding heroku deployment
     // var url = `http://localhost:3000/api/${category}`;
+
     var url = `https://quizzer-api.herokuapp.com/api/${category}`;
     return fetch(url).then((res) => res.json());
   },
