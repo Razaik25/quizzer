@@ -40,14 +40,14 @@ const styles = StyleSheet.create({
 
   },
   differentPlayer:{
-    backgroundColor: '#173e43',
+    backgroundColor: '#4AA02C',
     padding: 20,
     marginBottom: 20,
     alignItems: 'center'
 
   },
   profile: {
-    backgroundColor: '#5e0231',
+    backgroundColor: '#e62739',
     padding: 20,
     marginBottom: 20,
     alignItems: 'center',
@@ -218,7 +218,7 @@ renderPagination(index, total, context) {
 
     }}>
       <Text style={{color: '#111',  fontSize: 15, fontWeight: 'bold',marginBottom: 40}}>Question: <Text style={{
-        color: '#5CB3FF',
+        color: '#008080',
         fontSize: 15,
         fontWeight: 'bold'
 
