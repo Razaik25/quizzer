@@ -9,6 +9,8 @@ var Profile = require('./Profile');
 var Signup = require('./Signup');
 var api = require('../network/api');
 
+var KeyboardSpacer = require('react-native-keyboard-spacer');
+
 // invoking firebase
 const Firebase = require('firebase');
 // link to the database in firebase
@@ -231,6 +233,7 @@ class Main extends React.Component{
           autoFocus={true}
           onChange={this.handleEmail.bind(this)}/>
         </View>
+         <KeyboardSpacer/>
 
         {/* password section*/}
         <View style={styles.inputContainer}>
@@ -244,6 +247,9 @@ class Main extends React.Component{
           autoFocus={true}
           onChange={this.handlePassword.bind(this)}/>
         </View>
+
+        <KeyboardSpacer/>
+
 
         {/* Loading ActivityIndicatorIOS */}
          <ActivityIndicatorIOS
