@@ -33,7 +33,6 @@ var {
 
 var styles = StyleSheet.create({
     container: {
-      marginTop: 0,
       flexDirection: 'column',
       flex: 1,
       backgroundColor: 'transparent'
@@ -68,11 +67,11 @@ var styles = StyleSheet.create({
       backgroundColor: '#FF3366',
       justifyContent: 'center',
       alignItems: 'center',
-      flex: .15,
+      flex: .5
 
     },
     inputs: {
-      marginTop: 10,
+      // marginTop: 10,
       marginBottom: 10,
       flex: .25
     },
@@ -233,7 +232,7 @@ class Main extends React.Component{
           autoFocus={true}
           onChange={this.handleEmail.bind(this)}/>
         </View>
-         <KeyboardSpacer/>
+
 
         {/* password section*/}
         <View style={styles.inputContainer}>
@@ -248,9 +247,6 @@ class Main extends React.Component{
           onChange={this.handlePassword.bind(this)}/>
         </View>
 
-        <KeyboardSpacer/>
-
-
         {/* Loading ActivityIndicatorIOS */}
          <ActivityIndicatorIOS
            animating={this.state.isLoading}
@@ -258,6 +254,9 @@ class Main extends React.Component{
            size="small"  />
 
       </View>
+
+      <KeyboardSpacer/>
+
 
       {/* Sign In*/}
       <View>
