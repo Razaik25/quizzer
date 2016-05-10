@@ -1,6 +1,4 @@
-
-import Main from './app/components/Main';
-
+'use strict';
 import React, {
   Component,
 } from 'react';
@@ -13,6 +11,8 @@ import {
   Navigator,
   View,
 } from 'react-native';
+
+import Main from './app/components/Main';
 
 class quizzer extends Component {
 

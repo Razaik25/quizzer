@@ -1,24 +1,9 @@
+'use strict';
+import React, {
+  Component,
+} from 'react'
 
-
-var React = require('react-native');
-var Dimensions = require('Dimensions');
-var Animatable = require('react-native-animatable');
-var windowSize = Dimensions.get('window');
-
-var Profile = require('./Profile');
-var Signup = require('./Signup');
-var api = require('../network/api');
-
-var KeyboardSpacer = require('react-native-keyboard-spacer');
-
-// invoking firebase
-const Firebase = require('firebase');
-// link to the database in firebase
-const ref = new Firebase('https://quizzer-raz.firebaseio.com/')
-
-// Fix errors in the page
-
-var {
+import {
   View,
   Text,
   StyleSheet,
@@ -27,11 +12,190 @@ var {
   TouchableHighlight,
   ActivityIndicatorIOS,
   Alert,
-} = React;
+} from 'react-native'
+
+import Dimensions from 'Dimensions';
+import Animatable from 'react-native-animatable';
+import KeyboardSpacer from 'react-native-keyboard-spacer';
+
+import Profile from './Profile';
+import Signup from './Signup';
+import api from '../network/api';
+
+const windowSize = Dimensions.get('window');
+// invoking firebase
+const Firebase = require('firebase');
+// link to the database in firebase
+const ref = new Firebase('https://quizzer-raz.firebaseio.com/')
+
+export default class Main extends Component{
+  // es6 equivalent of get initialState
+  constructor(props){
+    super(props);
+    this.state = {
+      username: '',
+      email: '',
+      password: '',
+      isLoading: false,
+      error: false
+    }
+  }
+
+  PushProfilePage(data){
+    this.setState({
+      username: '',
+      email: '',
+      password: '',
+    });
+    this.props.navigator.push({
+      title: `Profile Page`,
+      component: Profile,
+      passProps: {
+        username: this.props.username,
+        userstats: data,
+        login: true
+      }
+    });
+  }
 
 
+  PushSignupPage(){
+    this.props.navigator.push({
+      title: 'Sign up',
+      component: Signup
+    });
 
-var styles = StyleSheet.create({
+  }
+
+  handleEmail(event){
+    this.setState({
+      email: event.nativeEvent.text
+    });
+  }
+
+  handlePassword(event){
+    this.setState({
+      password: event.nativeEvent.text
+    });
+  }
+
+  apiRequest(){
+    // Make an api request to get all the data relevant to the user
+    api.getUser(this.state.email)
+       .then((res) =>{
+         console.log('data in api',res);
+         // passing the data from the Main to Profile component
+          this.PushProfilePage(res);
+       })
+       .catch((err) => {
+         console.log('inside err', err);
+         this.setState({
+           isLoading: false,
+           error: `There was an error: ${err}`
+         });
+
+       })
+       .done();
+  }
+
+  handleSignin(){
+    ref.authWithPassword({
+      email: this.state.email,
+      password: this.state.password
+    }, (error, authData) =>{
+      if (error) {
+          console.log('Login Failed!', error)
+          alert('Invalid login credentials, Please try again');
+          this.setState({
+            isLoading: true,
+          });
+
+      } else {
+        this.apiRequest();
+
+        }
+      }
+    );
+  }
+
+  render(){
+    return(
+     <View  style={styles.container}>
+       <Image style={styles.bg}
+         source={{uri: 'http://www.mobileswall.com/wp-content/uploads/2015/11/901-House-On-The-Rock-Library-l.jpg'}}
+       />
+       <View style={styles.header}>
+          <Image style={styles.mark}
+          source={{uri: 'https://cdn.elegantthemes.com/blog/wp-content/uploads/2015/12/quiz.png'}}/>
+       </View>
+        <Text style={styles.title}> Welcome to Quizzer! </Text>
+      <View style={styles.inputs}>
+
+        {/* email section*/}
+        <View style={styles.inputContainer}>
+          <Image style={styles.inputUsername}
+          source={{uri: 'http://i66.tinypic.com/2qltjx3.png'}}/>
+          <TextInput style={[styles.input, styles.whiteFont]}
+          placeholder="Email"
+          placeholderTextColor="#FFF"
+          value={this.state.email}
+          autoFocus={true}
+          onChange={this.handleEmail.bind(this)}/>
+        </View>
+
+
+        {/* password section*/}
+        <View style={styles.inputContainer}>
+          <Image style={styles.inputPassword}
+          source={{uri: 'http://i.imgur.com/ON58SIG.png'}}/>
+          <TextInput style={[styles.input, styles.whiteFont]}
+          secureTextEntry={true}
+          placeholder="Password"
+          placeholderTextColor="#FFF"
+          value={this.state.password}
+          autoFocus={true}
+          onChange={this.handlePassword.bind(this)}/>
+        </View>
+
+        {/* Loading ActivityIndicatorIOS */}
+         <ActivityIndicatorIOS
+           animating={this.state.isLoading}
+           color="#fff"
+           size="small"  />
+
+      </View>
+
+      <KeyboardSpacer/>
+
+
+      {/* Sign In*/}
+      <View>
+          <TouchableHighlight
+          style={styles.signin}
+          onPress={this.handleSignin.bind(this)}
+          underlayColor="#FFC300">
+            <Text style={styles.whiteFont}> Sign In </Text>
+          </TouchableHighlight>
+      </View>
+
+      {/*Sign up*/}
+        <View animation="bounceInUp" >
+          <TouchableHighlight
+          style={styles.signup}
+          onPress={this.PushSignupPage.bind(this)}
+          underlayColor="#FFC300">
+            <Text style={styles.whiteFont}> Do not have an account? Sign Up</Text>
+          </TouchableHighlight>
+        </View>
+
+     </View>
+   )
+
+  }
+
+}
+
+const styles = StyleSheet.create({
     container: {
       flexDirection: 'column',
       flex: 1,
@@ -112,177 +276,3 @@ var styles = StyleSheet.create({
       fontWeight: 'bold'
     },
 });
-
-class Main extends React.Component{
-  // es6 equivalent of get initialState
-  constructor(props){
-    super(props);
-    this.state = {
-      username: '',
-      email: '',
-      password: '',
-      isLoading: false,
-      error: false
-    }
-  }
-
-  PushProfilePage(data){
-    this.setState({
-      username: '',
-      email: '',
-      password: '',
-    });
-    this.props.navigator.push({
-      title: `Profile Page`,
-      component: Profile,
-      passProps: {
-        username: this.props.username,
-        userstats: data,
-        login: true
-      }
-    });
-  }
-
-
-  PushSignupPage(){
-    this.props.navigator.push({
-      title: 'Sign up',
-      component: Signup
-    });
-
-  }
-
-  handleEmail(event){
-    this.setState({
-      email: event.nativeEvent.text
-    });
-  }
-
-  handlePassword(event){
-    this.setState({
-      password: event.nativeEvent.text
-    });
-  }
-
-  apiRequest(){
-    // Make an api request to get all the data relevant to the user
-    api.getUser(this.state.email)
-       .then((res) =>{
-         console.log('data in api',res);
-         // passing the data from the Main to Profile component
-          this.PushProfilePage(res);
-       })
-       .catch((err) => {
-         console.log('inside err', err);
-         this.setState({
-           isLoading: false,
-           error: `There was an error: ${err}`
-         });
-
-       })
-       .done();
-
-  }
-
-  handleSignin(){
-    ref.authWithPassword({
-      email: this.state.email,
-      password: this.state.password
-    }, (error, authData) =>{
-      if (error) {
-          console.log('Login Failed!', error)
-          alert('Invalid login credentials, Please try again');
-          this.setState({
-            isLoading: true,
-          });
-
-      } else {
-        this.apiRequest();
-
-        }
-      }
-    );
-
-
-
-  }
-
-  render(){
-
-    return(
-     <View  style={styles.container}>
-       <Image style={styles.bg}
-         source={{uri: 'http://www.mobileswall.com/wp-content/uploads/2015/11/901-House-On-The-Rock-Library-l.jpg'}}
-       />
-       <View style={styles.header}>
-          <Image style={styles.mark}
-          source={{uri: 'https://cdn.elegantthemes.com/blog/wp-content/uploads/2015/12/quiz.png'}}/>
-       </View>
-        <Text style={styles.title}> Welcome to Quizzer! </Text>
-      <View style={styles.inputs}>
-
-        {/* email section*/}
-        <View style={styles.inputContainer}>
-          <Image style={styles.inputUsername}
-          source={{uri: 'http://i66.tinypic.com/2qltjx3.png'}}/>
-          <TextInput style={[styles.input, styles.whiteFont]}
-          placeholder="Email"
-          placeholderTextColor="#FFF"
-          value={this.state.email}
-          autoFocus={true}
-          onChange={this.handleEmail.bind(this)}/>
-        </View>
-
-
-        {/* password section*/}
-        <View style={styles.inputContainer}>
-          <Image style={styles.inputPassword}
-          source={{uri: 'http://i.imgur.com/ON58SIG.png'}}/>
-          <TextInput style={[styles.input, styles.whiteFont]}
-          secureTextEntry={true}
-          placeholder="Password"
-          placeholderTextColor="#FFF"
-          value={this.state.password}
-          autoFocus={true}
-          onChange={this.handlePassword.bind(this)}/>
-        </View>
-
-        {/* Loading ActivityIndicatorIOS */}
-         <ActivityIndicatorIOS
-           animating={this.state.isLoading}
-           color="#fff"
-           size="small"  />
-
-      </View>
-
-      <KeyboardSpacer/>
-
-
-      {/* Sign In*/}
-      <View>
-          <TouchableHighlight
-          style={styles.signin}
-          onPress={this.handleSignin.bind(this)}
-          underlayColor="#FFC300">
-            <Text style={styles.whiteFont}> Sign In </Text>
-          </TouchableHighlight>
-      </View>
-
-      {/*Sign up*/}
-        <View animation="bounceInUp" >
-          <TouchableHighlight
-          style={styles.signup}
-          onPress={this.PushSignupPage.bind(this)}
-          underlayColor="#FFC300">
-            <Text style={styles.whiteFont}> Do not have an account? Sign Up</Text>
-          </TouchableHighlight>
-        </View>
-
-     </View>
-   )
-
-  }
-
-}
-
-module.exports = Main;
