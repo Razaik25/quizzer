@@ -36,7 +36,7 @@ export default class Profile extends Component{
 
   renderRandomAvatar(){
     // random number between 1 and 4
-    var number =  Math.floor(Math.random() * 4) + 1;
+    const number =  Math.floor(Math.random() * 4) + 1;
     if( number === 1){
       return (
         <Animatable.Image animation="zoomIn" easing="ease-in" style={styles.avatarimage} source={require('../Media/avatar1.jpg')}/>
@@ -60,10 +60,9 @@ export default class Profile extends Component{
 
   renderStats(){
 
-    var currentobj = this.props.userstats[0];
-    var stats;
-    var that = this;
-    var test ='test'
+    const currentobj = this.props.userstats[0];
+    let stats;
+    const that = this;
     stats =  Object.keys(currentobj).map(function(key,index) {
       if(key ==='username' && that.props.login){
         return (

@@ -69,8 +69,8 @@ export default class Signup extends Component{
 
   apicall(){
     // send a request to api for creating a user and getting the stats back for the games a user played in each category
-    var email = this.state.email;
-    var username = this.state.username;
+    const email = this.state.email;
+    const username = this.state.username;
     api.addUser(email,username)
     .then((res) =>{
          console.log('in add user api',res);

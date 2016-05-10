@@ -1,20 +1,8 @@
 'use strict';
 
-import React, {
-  Component,
-} from 'react';
+import React, {Component} from "react";
 
-import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  TouchableHighlight,
-  TouchableOpacity,
-  Image,
-  Navigator,
-  ScrollView,
-} from 'react-native';
+import { View, Text, StyleSheet,TextInput,TouchableHighlight,TouchableOpacity,Image,Navigator,ScrollView} from 'react-native';
 
 import Animatable from 'react-native-animatable';
 import Dimensions from 'Dimensions';
@@ -36,7 +24,7 @@ export default class ScoreBoard extends Component{
   renderRandomAvatar(){
 
     // random number between 1 and 4
-    var number =  Math.floor(Math.random() * 4) + 1;
+    const number =  Math.floor(Math.random() * 4) + 1;
     if( number === 1){
       return (
         <Animatable.Image animation="zoomIn" easing="ease-in" style={styles.avatarimage} source={require('../Media/avatar1.jpg')}/>
@@ -60,10 +48,10 @@ export default class ScoreBoard extends Component{
 
   renderStats(){
 
-    var currentobj = this.props.userstats[0];
-    var stats;
-    var that = this;
-    var test ='test'
+    const currentobj = this.props.userstats[0];
+    let stats;
+    const that = this;
+    const test ='test'
     stats =  Object.keys(currentobj).map(function(key,index) {
       if(key ==='username'){
         return (
@@ -165,7 +153,7 @@ export default class ScoreBoard extends Component{
 
   handleSubmit(){
     // getting the category route
-    var startroute = this.props.startAgainRoute;
+    const startroute = this.props.startAgainRoute;
     // passing the category route to navigator
     this.props.navigator.popToRoute(startroute);
 

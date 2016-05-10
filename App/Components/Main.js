@@ -17,7 +17,7 @@ import {
 
 import Dimensions from 'Dimensions';
 import Animatable from 'react-native-animatable';
-import KeyboardSpacer from 'react-native-keyboard-spacer';
+// import KeyboardSpacer from 'react-native-keyboard-spacer';
 
 import Profile from './Profile';
 import Signup from './Signup';
@@ -165,8 +165,6 @@ export default class Main extends Component{
            size="small"  />
 
       </View>
-
-      <KeyboardSpacer/>
 
 
       {/* Sign In*/}

@@ -33,7 +33,7 @@ export default class Quiz extends Component{
   }
 
   answerBackground(btn){
-    var obj = {
+    const obj = {
       flexDirection: 'row',
       alignSelf: 'stretch',
       justifyContent: 'center',
@@ -52,14 +52,14 @@ export default class Quiz extends Component{
   }
 
   hideTouchableHighlights(btn){
-    var obj = {
+    const obj = {
       display: 'none'
     }
     return obj;
   }
 
   shuffle(){
-    var shuffleddata = _.shuffle(this.props.quizdata);
+    const shuffleddata = _.shuffle(this.props.quizdata);
     this.setState({
       shuffleddata: shuffleddata
     });
@@ -72,8 +72,8 @@ export default class Quiz extends Component{
 
   renderQuestion(){
     // loop to get the current question
-    var currentObj = this.state.shuffleddata[this.state.questioncount];
-    var currentQuestion;
+    const currentObj = this.state.shuffleddata[this.state.questioncount];
+    let currentQuestion;
     // using underscore .each to loop over the currentObj
     _.each(currentObj, function(value,key){
       if(key ==="question"){
@@ -85,8 +85,8 @@ export default class Quiz extends Component{
 
   renderImage(){
 
-    var currentObj = this.state.shuffleddata[this.state.questioncount];
-    var currentImage;
+    const currentObj = this.state.shuffleddata[this.state.questioncount];
+    let currentImage;
     _.each(currentObj, function(value,key){
       if(key ==="image"){
         currentImage = value;
@@ -100,9 +100,9 @@ export default class Quiz extends Component{
   }
 
   renderAnswers(){
-    var currentObj = this.state.shuffleddata[this.state.questioncount];
-    var currentAnswers;
-    var that = this;
+    const currentObj = this.state.shuffleddata[this.state.questioncount];
+    let currentAnswers;
+    const that = this;
     _.each(currentObj, function(value,key){
       if(key ==="answers"){
         currentAnswers = value.map((answers,index) => {
@@ -140,9 +140,8 @@ export default class Quiz extends Component{
 
   handleAnswers(answerid){
     // compare the answer id for to the correct answer
-    var currentobj = this.state.shuffleddata[this.state.questioncount];
-
-    var userAnsArr = this.state.userAnswer;
+    const currentobj = this.state.shuffleddata[this.state.questioncount];
+    const userAnsArr = this.state.userAnswer;
     userAnsArr.push(answerid);
 
     // if the user gives correct answer

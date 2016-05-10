@@ -9,10 +9,8 @@
     "firebase": "^2.4.2",
     "react": "^0.14.8",
     "react-native": "^0.25.0",
-    "react-native-animatable": "^0.5.2",
-    "react-native-keyboard-spacer": "^0.1.6",
+    "react-native-animatable": "^0.6.0",
     "react-native-swiper": "^1.4.3",
-    "react-native-video": "^0.7.1",
     "underscore": "^1.8.3"
   }
 }

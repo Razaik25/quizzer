@@ -38,7 +38,7 @@ export default class Result extends Component{
 
   startAgain(){
     // getting the category route
-    var startroute = this.props.startAgainRoute;
+    const startroute = this.props.startAgainRoute;
     // passing the category route to navigator
     this.props.navigator.popToRoute(startroute);
   }
@@ -67,13 +67,13 @@ export default class Result extends Component{
   }
 
   renderQuestionWithAnswer(questionnumber){
-    var questionArr =[];
+    const questionArr =[];
     this.props.quizdata.forEach((el,index) =>{
         // looping over the answers to match the answer id to correct
         // get the value of the answer if asnwer id and correct matche
         el.answers.forEach((answer,id) =>{
           if( id+1 === el.correct){
-            var temp = {
+            const temp = {
               question: el.question,
               answer: answer.answer
             };
@@ -88,7 +88,7 @@ export default class Result extends Component{
   }
 
   renderUserAnswers(questionnumber){
-    var userAnsnwerArr =[];
+    const userAnsnwerArr =[];
       this.props.quizdata.forEach((el,index) =>{
         el.answers.forEach((answer,id) =>{
           if (answer.id ===this.props.userAnswer[questionnumber]){

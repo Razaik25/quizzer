@@ -33,7 +33,7 @@ export default class Category extends Component{
 
   getCurrentRoute(){
     // getting the current category route object
-    var currentRoute  = this.props.navigator.navigationContext._currentRoute;
+    const currentRoute  = this.props.navigator.navigationContext._currentRoute;
     return currentRoute;
   }
 
@@ -70,7 +70,7 @@ export default class Category extends Component{
 
   render(){
 
-    var username = this.props.username.toUpperCase();
+    const username = this.props.username.toUpperCase();
     return (
      <ScrollView>
 
