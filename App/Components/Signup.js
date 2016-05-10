@@ -15,7 +15,7 @@ import {
 } from 'react-native';
 
 import Dimensions from 'Dimensions';
-import Animatable from 'react-native-animatable';
+import * as Animatable from 'react-native-animatable';
 
 import Profile from './Profile';
 import api from '../network/api';

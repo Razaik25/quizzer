@@ -16,7 +16,6 @@ import {
 } from 'react-native';
 
 import Dimensions from 'Dimensions';
-import Animatable from 'react-native-animatable';
 // import KeyboardSpacer from 'react-native-keyboard-spacer';
 
 import Profile from './Profile';

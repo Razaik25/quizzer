@@ -2,7 +2,7 @@
       {
         "id": "1",
         "question":"What is the name of the substance that makes superman helpless ?",
-        "image": "ssp1.jpg",
+        "image": "superh1.jpg",
         "correct": 3,
         "answers": [
             {
@@ -26,7 +26,7 @@
       {
           "id": "2",
           "question":"What is the name of metal that is bonded to Wolverine's skeleton and claws ?",
-          "image": "swolf.jpg",
+          "image": "superh2.jpg",
           "correct": 4,
           "answers": [
               {
@@ -50,7 +50,7 @@
       {
           "id": "3",
           "question": "What is Incredible Hulk's real name?",
-          "image": "sp3.jpg",
+          "image": "superh3.jpg",
           "correct": 2,
           "answers": [
               {
@@ -73,7 +73,7 @@
       },
       {
           "id": "4",
-          "image": "thor2.jpg",
+          "image": "superh4.jpg",
           "question": "What is the name of Thor's home planet?",
           "correct": 3,
           "answers": [
@@ -97,7 +97,7 @@
       },
       {
           "id": "5",
-          "image": "spider5.jpg",
+          "image": "superh5.jpg",
           "question": "Peter parker is the name of which superhero?",
           "correct": 4,
           "answers": [
@@ -121,7 +121,7 @@
       },
       {
           "id": "6",
-          "image": "sp6.jpg",
+          "image": "superh6.jpg",
           "question": "Batman is the saviour of which city?",
           "correct": 2,
           "answers": [
@@ -145,7 +145,7 @@
       },
       {
           "id": "7",
-          "image": "sp7.jpg",
+          "image": "superh7.jpg",
           "question": "What is the name of Tony Stark's interactive computer assistant?",
           "correct": 4,
           "answers": [
@@ -169,7 +169,7 @@
       },
       {
           "id": "8",
-          "image": "sp8.jpg",
+          "image": "superh8.jpg",
           "question": "What is Batman commanly known as?",
           "correct": 3,
           "answers": [
@@ -193,7 +193,7 @@
       },
       {
           "id": "9",
-          "image": "spp9.jpg",
+          "image": "superh9.jpg",
           "question": "Captain America fights crime against which organization?",
           "correct": 2,
           "answers": [
@@ -217,7 +217,7 @@
       },
       {
           "id": "10",
-          "image": "sp10.jpg",
+          "image": "superh10.jpg",
           "question": "What is Magneto's super power?",
           "correct": 1,
           "answers": [
@@ -241,7 +241,7 @@
       },
       {
           "id": "11",
-          "image": "spp11.jpg",
+          "image": "superh11.jpg",
           "question": "Robin is also known as ?",
           "correct": 4,
           "answers": [
@@ -265,7 +265,7 @@
       },
       {
           "id": "12",
-          "image": "sp12.jpg",
+          "image": "superh12.jpg",
           "question": "What is the job held by Superman's alter ego, Peter Parker?",
           "correct": 2,
           "answers": [
@@ -289,7 +289,7 @@
       },
       {
           "id": "13",
-          "image": "sp13.jpg",
+          "image": "superh13.jpg",
           "question": "In superhero movie does Lex Luthor appear?",
           "correct": 1,
           "answers": [
@@ -313,7 +313,7 @@
       },
       {
           "id": "14",
-          "image": "sp14.jpg",
+          "image": "superh14.jpg",
           "question": "Who is Ocean Master to AquaMan?",
           "correct": 1,
           "answers": [

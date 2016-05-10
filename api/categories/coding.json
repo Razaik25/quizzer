@@ -50,7 +50,7 @@
       },
       {
           "id": "3",
-          "question": "what does css stand for?",
+          "question": "What does css stand for?",
           "image": "coding3.jpg",
           "correct": 3,
           "answers": [
@@ -194,7 +194,7 @@
       },
       {
           "id": "9",
-          "image": "codingg9.jpg",
+          "image": "coding9.jpg",
           "question": "How do you change the background color?",
           "correct": 2,
           "answers": [

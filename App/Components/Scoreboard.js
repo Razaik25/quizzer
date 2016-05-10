@@ -4,7 +4,7 @@ import React, {Component} from "react";
 
 import { View, Text, StyleSheet,TextInput,TouchableHighlight,TouchableOpacity,Image,Navigator,ScrollView} from 'react-native';
 
-import Animatable from 'react-native-animatable';
+import * as Animatable from 'react-native-animatable';
 import Dimensions from 'Dimensions';
 import _ from 'underscore';
 

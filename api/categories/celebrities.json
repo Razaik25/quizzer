@@ -2,7 +2,7 @@
       {
           "id": "1",
           "question":"You should know this one: Which island nation is popstar Rihanna from?",
-          "image": "c1.jpg",
+          "image": "cel1.jpg",
           "correct": 2,
           "answers": [
               {
@@ -26,7 +26,7 @@
       {
           "id": "2",
           "question":"Really Easy: How many Hemsworth brothers are there?",
-          "image": "c2.jpg",
+          "image": "cel2.jpg",
           "correct": 3,
           "answers": [
               {
@@ -50,7 +50,7 @@
       {
           "id": "3",
           "question": "In which year did Angelina Jolie and Brad Pitt get together?",
-          "image": "c3.jpg",
+          "image": "cel3.jpg",
           "correct": 2,
           "answers": [
               {
@@ -73,7 +73,7 @@
       },
       {
           "id": "4",
-          "image": "c4.jpg",
+          "image": "cel4.jpg",
           "question": "What is Miley Cyrus's birth name?",
           "correct": 2,
           "answers": [
@@ -97,7 +97,7 @@
       },
       {
           "id": "5",
-          "image": "c5.jpg",
+          "image": "cel5.jpg",
           "question": "What is the name of Neil Patrick Harris' husband?",
           "correct": 2,
           "answers": [
@@ -121,7 +121,7 @@
       },
       {
           "id": "6",
-          "image": "c6.jpg",
+          "image": "cel6.jpg",
           "question": "What is the name of the space movie staring Goerge Clooney and Sandra Bullock?",
           "correct": 3,
           "answers": [
@@ -145,7 +145,7 @@
       },
       {
           "id": "7",
-          "image": "c7.jpg",
+          "image": "cel7.jpg",
           "question": "Actress Jada Pinkett is married to which actor?",
           "correct": 3,
           "answers": [
@@ -335,6 +335,5 @@
               }
           ]
       }
-
 
 ]

@@ -2,7 +2,7 @@
       {
         "id": "1",
         "question":"What's the name of the 'girl from the copy place'?",
-        "image": "f1.jpg",
+        "image": "fren1.jpg",
         "correct": 2,
         "answers": [
             {
@@ -26,7 +26,7 @@
       {
           "id": "2",
           "question":"Which game did Chandler make up to make Joey purposely win money from him?",
-          "image": "f2.jpg",
+          "image": "fren2.jpg",
           "correct": 2,
           "answers": [
               {
@@ -50,7 +50,7 @@
       {
           "id": "3",
           "question": "What is Ross's occupation?",
-          "image": "fr.jpg",
+          "image": "fren3.jpg",
           "correct": 4,
           "answers": [
               {
@@ -73,7 +73,7 @@
       },
       {
           "id": "4",
-          "image": "fp.jpg",
+          "image": "fren4.jpg",
           "question": "What is Pheobe's twin sister's name?",
           "correct": 1,
           "answers": [
@@ -97,8 +97,8 @@
       },
       {
           "id": "5",
-          "image": "f115.jpg",
-          "question": "What TV show is Phoebe's doctor obessed with?",
+          "image": "fren5.jpg",
+          "question": "What TV character is Phoebe's doctor obessed with?",
           "correct": 3,
           "answers": [
               {
@@ -121,7 +121,7 @@
       },
       {
           "id": "6",
-          "image": "f6.jpg",
+          "image": "fren6.jpg",
           "question": "What was the cause of fire in Pheobe and Rachel's apartment?",
           "correct": 3,
           "answers": [
@@ -145,7 +145,7 @@
       },
       {
           "id": "7",
-          "image": "f7.jpg",
+          "image": "fren7.jpg",
           "question": "What is Ross's nickname for himeself when he gets extremely worked up'?",
           "correct": 4,
           "answers": [
@@ -169,7 +169,7 @@
       },
       {
           "id": "8",
-          "image": "f8.jpg",
+          "image": "fren8.jpg",
           "question": "Who does Ross marry in Las Vegas ?",
           "correct": 2,
           "answers": [
@@ -193,7 +193,7 @@
       },
       {
           "id": "9",
-          "image": "f9.jpg",
+          "image": "fren9.jpg",
           "question": "Where did Phoebe's boyfriend David move?",
           "correct": 3,
           "answers": [
@@ -217,7 +217,7 @@
       },
       {
           "id": "10",
-          "image": "f10.jpg",
+          "image": "fren10.jpg",
           "question": "What did the duck eat that made him sick?",
           "correct": 2,
           "answers": [
@@ -241,7 +241,7 @@
       },
       {
           "id": "11",
-          "image": "f11.jpg",
+          "image": "fren11.jpg",
           "question": "What was Richard Burke’s profession?",
           "correct": 4,
           "answers": [
@@ -265,7 +265,7 @@
       },
       {
           "id": "12",
-          "image": "f12.jpg",
+          "image": "fren12.jpg",
           "question": "Who is the only friend who didn't get married throughout all 10 seasons??",
           "correct": 2,
           "answers": [
@@ -289,7 +289,7 @@
       },
       {
           "id": "13",
-          "image": "fs13.jpg",
+          "image": "fren13.jpg",
           "question": "Why did Phoebe and Gary break up?",
           "correct": 3,
           "answers": [
@@ -313,7 +313,7 @@
       },
       {
           "id": "14",
-          "image": "fs14.jpg",
+          "image": "fren14.jpg",
           "question": "What was Ross's Paleontologist girlfriend's name?",
           "correct": 2,
           "answers": [

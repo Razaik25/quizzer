@@ -16,7 +16,7 @@ import {
   ScrollView,
 } from 'react-native';
 
-import Animatable from 'react-native-animatable';
+import * as Animatable from 'react-native-animatable';
 import Dimensions from 'Dimensions';
 import _ from 'underscore';
 

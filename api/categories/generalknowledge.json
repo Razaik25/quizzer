@@ -2,7 +2,7 @@
       {
         "id": "1",
         "question":"What is added to iron to make it steel?",
-        "image": "gk1.jpg",
+        "image": "gf1.jpg",
         "correct": 4,
         "answers": [
             {
@@ -26,7 +26,7 @@
       {
           "id": "2",
           "question":"What is the word missing the title of famous novel 'Love in the time of _____'?",
-          "image": "gk2.jpg",
+          "image": "gf2.jpg",
           "correct": 3,
           "answers": [
 
@@ -51,7 +51,7 @@
       {
           "id": "3",
           "question": "What's the name of the triangle with no equal sides?",
-          "image": "gk3.jpg",
+          "image": "gf3.jpg",
           "correct": 2,
           "answers": [
               {
@@ -74,7 +74,7 @@
       },
       {
           "id": "4",
-          "image": "gk4.jpg",
+          "image": "gf4.jpg",
           "question": "This is the flag of which country?",
           "correct": 1,
           "answers": [
@@ -98,7 +98,7 @@
       },
       {
           "id": "5",
-          "image": "gk5.jpg",
+          "image": "gf5.jpg",
           "question": "Grand Central Terminal in  New York is the world's?",
           "correct": 1,
           "answers": [
@@ -122,7 +122,7 @@
       },
       {
           "id": "6",
-          "image": "gk6.jpg",
+          "image": "gf6.jpg",
           "question": "What is the currency of India and Pakistan as well as a few other Asian countries?",
           "correct": 2,
           "answers": [
@@ -146,7 +146,7 @@
       },
       {
           "id": "7",
-          "image": "gk7.jpg",
+          "image": "gf7.jpg",
           "question": "In a standard deck of cards, which king is the only one to not have a moustache?",
           "correct": 4,
           "answers": [
@@ -169,172 +169,172 @@
           ]
       },
       {
-          "id": "8",
-          "image": "gkk8.jpg",
-          "question": "What is the standard taste of the water??",
-          "correct": 1,
-          "answers": [
-              {
-                  "id": "1",
-                  "answer": "Water has no taste"
-              },
-              {
-                  "id": "2",
-                  "answer": "Hint of Sweetness"
-              },
-              {
-                  "id": "3",
-                  "answer": "Kind of Salty"
-              },
-              {
-                  "id": "4",
-                  "answer": "Sour"
-              }
-          ]
-      },
-      {
-          "id": "9",
-          "image": "gkk9.jpg",
-          "question": "Which of these tourist attractions are in Egypt?",
-          "correct": 2,
-          "answers": [
-              {
-                  "id": "1",
-                  "answer": "Cubes"
-              },
-              {
-                  "id": "2",
-                  "answer": "Pyramids"
-              },
-              {
-                  "id": "3",
-                  "answer": "Rectangles"
-              },
-              {
-                  "id": "4",
-                  "answer": "Circles"
-              }
-          ]
-      },
-      {
-          "id": "10",
-          "image": "gkk10.jpg",
-          "question": "Which of these companies has a bird in their logo?",
-          "correct": 3,
-          "answers": [
-              {
-                  "id": "1",
-                  "answer": "Youtube"
-              },
-              {
-                  "id": "2",
-                  "answer": "Facebook"
-              },
-              {
-                  "id": "3",
-                  "answer": "Twitter"
-              },
-              {
-                  "id": "4",
-                  "answer": "Instagram"
-              }
-          ]
-      },
-      {
-          "id": "11",
-          "image": "gkk11.jpg",
-          "question": "What bird is able to regenerate and rise from its ashes?",
-          "correct": 2,
-          "answers": [
-              {
-                  "id": "1",
-                  "answer": "Crow"
-              },
-              {
-                  "id": "2",
-                  "answer": "Phoenix"
-              },
-              {
-                  "id": "3",
-                  "answer": "Parrot"
-              },
-              {
-                  "id": "4",
-                  "answer": "Sparrow"
-              }
-          ]
-      },
-      {
-          "id": "12",
-          "image": "gkk12.jpg",
-          "question": "Who invented the Telephone?",
-          "correct": 4,
-          "answers": [
-              {
-                  "id": "1",
-                  "answer": "Issac Newton"
-              },
-              {
-                  "id": "2",
-                  "answer": "Albert Einstein"
-              },
-              {
-                  "id": "3",
-                  "answer": "Stephan Hawking"
-              },
-              {
-                  "id": "4",
-                  "answer": "Alexander Gramham Bell"
-              }
-          ]
-      },
-      {
-          "id": "13",
-          "image": "gkk13.jpg",
-          "question": "Which planet is known as the Red Planet?",
-          "correct": 2,
-          "answers": [
-              {
-                  "id": "1",
-                  "answer": "Venus"
-              },
-              {
-                  "id": "2",
-                  "answer": "Mars"
-              },
-              {
-                  "id": "3",
-                  "answer": "Saturn"
-              },
-              {
-                  "id": "4",
-                  "answer": "Jupiter"
-              }
-          ]
-      },
-      {
-          "id": "14",
-          "image": "gkk14.jpg",
-          "question": "In which country is Mount Everest located?",
-          "correct": 4,
-          "answers": [
-              {
-                  "id": "1",
-                  "answer": "India"
-              },
-              {
-                  "id": "2",
-                  "answer": "China"
-              },
-              {
-                  "id": "3",
-                  "answer": "Russia"
-              },
-              {
-                  "id": "4",
-                  "answer": "Nepal"
-              }
-          ]
-      }
+        "id": "8",
+        "image": "gk8.jpg",
+        "question": "What is the standard taste of the water??",
+        "correct": 1,
+        "answers": [
+            {
+                "id": "1",
+                "answer": "Water has no taste"
+            },
+            {
+                "id": "2",
+                "answer": "Hint of Sweetness"
+            },
+            {
+                "id": "3",
+                "answer": "Kind of Salty"
+            },
+            {
+                "id": "4",
+                "answer": "Sour"
+            }
+        ]
+    },
+    {
+        "id": "9",
+        "image": "gk9.jpg",
+        "question": "Which of these tourist attractions are in Egypt?",
+        "correct": 2,
+        "answers": [
+            {
+                "id": "1",
+                "answer": "Cubes"
+            },
+            {
+                "id": "2",
+                "answer": "Pyramids"
+            },
+            {
+                "id": "3",
+                "answer": "Rectangles"
+            },
+            {
+                "id": "4",
+                "answer": "Circles"
+            }
+        ]
+    },
+    {
+        "id": "10",
+        "image": "gk10.jpg",
+        "question": "Which of these companies has a bird in their logo?",
+        "correct": 3,
+        "answers": [
+            {
+                "id": "1",
+                "answer": "Youtube"
+            },
+            {
+                "id": "2",
+                "answer": "Facebook"
+            },
+            {
+                "id": "3",
+                "answer": "Twitter"
+            },
+            {
+                "id": "4",
+                "answer": "Instagram"
+            }
+        ]
+    },
+    {
+        "id": "11",
+        "image": "gk11.jpg",
+        "question": "What bird is able to regenerate and rise from its ashes?",
+        "correct": 2,
+        "answers": [
+            {
+                "id": "1",
+                "answer": "Crow"
+            },
+            {
+                "id": "2",
+                "answer": "Phoenix"
+            },
+            {
+                "id": "3",
+                "answer": "Parrot"
+            },
+            {
+                "id": "4",
+                "answer": "Sparrow"
+            }
+        ]
+    },
+    {
+        "id": "12",
+        "image": "gk12.jpg",
+        "question": "Who invented the Telephone?",
+        "correct": 4,
+        "answers": [
+            {
+                "id": "1",
+                "answer": "Issac Newton"
+            },
+            {
+                "id": "2",
+                "answer": "Albert Einstein"
+            },
+            {
+                "id": "3",
+                "answer": "Stephan Hawking"
+            },
+            {
+                "id": "4",
+                "answer": "Alexander Gramham Bell"
+            }
+        ]
+    },
+    {
+        "id": "13",
+        "image": "gk13.jpg",
+        "question": "Which planet is known as the Red Planet?",
+        "correct": 2,
+        "answers": [
+            {
+                "id": "1",
+                "answer": "Venus"
+            },
+            {
+                "id": "2",
+                "answer": "Mars"
+            },
+            {
+                "id": "3",
+                "answer": "Saturn"
+            },
+            {
+                "id": "4",
+                "answer": "Jupiter"
+            }
+        ]
+    },
+    {
+        "id": "14",
+        "image": "gk14.jpg",
+        "question": "In which country is Mount Everest located?",
+        "correct": 4,
+        "answers": [
+            {
+                "id": "1",
+                "answer": "India"
+            },
+            {
+                "id": "2",
+                "answer": "China"
+            },
+            {
+                "id": "3",
+                "answer": "Russia"
+            },
+            {
+                "id": "4",
+                "answer": "Nepal"
+            }
+        ]
+    }
 
 ]

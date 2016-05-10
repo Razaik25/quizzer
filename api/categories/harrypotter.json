@@ -2,7 +2,7 @@
       {
         "id": "1",
         "question":"Which house did Severus Snape belong whilst he was studying at hogwarts?",
-        "image": "hp1.jpg",
+        "image": "hpo1.jpg",
         "correct": 4,
         "answers": [
             {
@@ -26,7 +26,7 @@
       {
           "id": "2",
           "question":"Which creatures guard Prison of Azkaban?",
-          "image": "hp2.jpg",
+          "image": "hpo2.jpg",
           "correct": 2,
           "answers": [
 
@@ -51,7 +51,7 @@
       {
           "id": "3",
           "question": "Hermione Granger was sorted into________House",
-          "image": "hp3.jpg",
+          "image": "hpo3.jpg",
           "correct": 4,
           "answers": [
               {
@@ -74,7 +74,7 @@
       },
       {
           "id": "4",
-          "image": "hp4.jpg",
+          "image": "hpo4.jpg",
           "question": "Complete the quote:'If there is one thing Voldemort cannot understand it is ____'?",
           "correct": 2,
           "answers": [
@@ -98,7 +98,7 @@
       },
       {
           "id": "5",
-          "image": "hp5.jpg",
+          "image": "hpo5.jpg",
           "question": "What is the name of Harry's Owl?",
           "correct": 1,
           "answers": [
@@ -122,7 +122,7 @@
       },
       {
           "id": "6",
-          "image": "hp6.jpg",
+          "image": "hpo6.jpg",
           "question": "Correct order of Weasley siblings by age?",
           "correct": 3,
           "answers": [
@@ -146,7 +146,7 @@
       },
       {
           "id": "7",
-          "image": "hp7.jpg",
+          "image": "hpo7.jpg",
           "question": "What does Homenum Revelio spell do?",
           "correct": 3,
           "answers": [

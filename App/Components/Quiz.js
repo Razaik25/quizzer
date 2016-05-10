@@ -14,7 +14,7 @@ import {
   Vibration,
 } from 'react-native';
 
-import Animatable from 'react-native-animatable';
+import * as Animatable from 'react-native-animatable';
 import _ from 'underscore';
 
 import Result from './Result';

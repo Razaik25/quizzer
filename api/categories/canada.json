@@ -169,7 +169,7 @@
       },
       {
           "id": "8",
-          "image": "c8.jpg",
+          "image": "can8.jpg",
           "question": "How many oceans border Canada?",
           "correct": 1,
           "answers": [
@@ -193,7 +193,7 @@
       },
       {
           "id": "9",
-          "image": "c9.jpg",
+          "image": "can9.jpg",
           "question": "What major sporting event was held in Canada in 2010?",
           "correct": 3,
           "answers": [
@@ -217,7 +217,7 @@
       },
       {
           "id": "10",
-          "image": "c10.jpg",
+          "image": "can10.jpg",
           "question": "If a Canadian says she's going to Tim's, where is she going??",
           "correct": 4,
           "answers": [
@@ -241,7 +241,7 @@
       },
       {
           "id": "11",
-          "image": "c11.jpg",
+          "image": "can11.jpg",
           "question": "What is The Bloc?",
           "correct": 2,
           "answers": [
@@ -265,7 +265,7 @@
       },
       {
           "id": "12",
-          "image": "c12.jpg",
+          "image": "can12.jpg",
           "question": "What is capital of Canada?",
           "correct": 1,
           "answers": [
@@ -289,7 +289,7 @@
       },
       {
           "id": "13",
-          "image": "c13.jpg",
+          "image": "can13.jpg",
           "question": "What food do Canadians consume more than any other country in the world?",
           "correct": 3,
           "answers": [
@@ -313,7 +313,7 @@
       },
       {
           "id": "14",
-          "image": "c14.jpg",
+          "image": "can14.jpg",
           "question": "What do Candians have more than all other countries combined?",
           "correct": 3,
           "answers": [

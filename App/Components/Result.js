@@ -17,7 +17,7 @@ import {
   Image,
 } from 'react-native';
 
-import Animatable from 'react-native-animatable';
+import * as Animatable from 'react-native-animatable';;
 import Dimensions from 'Dimensions';
 import Swiper from 'react-native-swiper';
 
