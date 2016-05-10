@@ -1,5 +1,5 @@
 
-'use strict';
+
 var React = require('react-native');
 var Dimensions = require('Dimensions');
 var Animatable = require('react-native-animatable');

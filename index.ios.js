@@ -1,14 +1,17 @@
-'use strict';
-import Main from './App/Components/Main';
+
+import Main from './app/components/Main';
 
 import React, {
-  AppRegistry,
   Component,
+} from 'react';
+
+import {
+  AppRegistry,
   StyleSheet,
   Text,
   NavigatorIOS,
   Navigator,
-  View
+  View,
 } from 'react-native';
 
 class quizzer extends Component {
