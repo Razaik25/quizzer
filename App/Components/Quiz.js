@@ -1,11 +1,10 @@
 'use strict';
-var React = require('react-native');
-var Result = require('./Result');
-var _ = require('underscore');
-var Animatable = require('react-native-animatable');
 
+import React, {
+  Component,
+} from 'react';
 
-const {
+import {
   View,
   Text,
   StyleSheet,
@@ -13,36 +12,14 @@ const {
   TouchableHighlight,
   Image,
   Vibration
-} = React;
+} from 'react-native';
 
-var styles = StyleSheet.create({
-  mainContainer: {
-    flex: 1
-  },
-  image: {
-    height: 260
-  },
-  text: {
-      color: '#fff',
-      alignSelf: 'center',
-      fontFamily: 'Futura',
-      fontSize: 16,
+import Animatable from 'react-native-animatable';
+import _ from 'underscore';
 
-  },
-  question: {
-    backgroundColor: '#4daf51',
-    fontFamily: 'Futura',
-    flexDirection: 'row',
-    alignSelf: 'stretch',
-    fontSize: 16,
-    color: '#fff',
-    flex: 1,
-    paddingLeft: 10,
-    textAlign: 'center'
-  },
+import Result from './Result';
 
-})
-class Quiz extends React.Component{
+export default class Quiz extends Component{
 
   constructor(props){
     super(props);
@@ -161,9 +138,6 @@ class Quiz extends React.Component{
     });
   }
 
-
-
-
   handleAnswers(answerid){
     // compare the answer id for to the correct answer
     var currentobj = this.state.shuffleddata[this.state.questioncount];
@@ -212,7 +186,30 @@ class Quiz extends React.Component{
 
 }
 
+const styles = StyleSheet.create({
+  mainContainer: {
+    flex: 1
+  },
+  image: {
+    height: 260
+  },
+  text: {
+      color: '#fff',
+      alignSelf: 'center',
+      fontFamily: 'Futura',
+      fontSize: 16,
 
+  },
+  question: {
+    backgroundColor: '#4daf51',
+    fontFamily: 'Futura',
+    flexDirection: 'row',
+    alignSelf: 'stretch',
+    fontSize: 16,
+    color: '#fff',
+    flex: 1,
+    paddingLeft: 10,
+    textAlign: 'center'
+  },
 
-
-module.exports = Quiz;
+});
