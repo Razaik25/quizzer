@@ -17,7 +17,6 @@ export default class Separator extends Component{
   }
 };
 
-
 const styles = StyleSheet.create({
   separator: {
     height: 1,
