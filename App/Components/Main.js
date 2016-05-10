@@ -1,7 +1,8 @@
 'use strict';
+
 import React, {
   Component,
-} from 'react'
+} from 'react';
 
 import {
   View,
@@ -12,7 +13,7 @@ import {
   TouchableHighlight,
   ActivityIndicatorIOS,
   Alert,
-} from 'react-native'
+} from 'react-native';
 
 import Dimensions from 'Dimensions';
 import Animatable from 'react-native-animatable';

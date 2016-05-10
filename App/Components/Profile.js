@@ -1,19 +1,11 @@
 
 'use strict';
-var React = require('react-native');
-var Category = require('./Category');
-var Animatable = require('react-native-animatable');
 
-var Dimensions = require('Dimensions');
-var window = Dimensions.get('window');
+import React, {
+  Component,
+} from 'react';
 
-var Video = require('react-native-video').default;
-var Separator = require('./Separator');
-var _ = require('underscore');
-
-
-
-const {
+import {
   View,
   Text,
   StyleSheet,
@@ -21,101 +13,19 @@ const {
   TouchableHighlight,
   TouchableOpacity,
   Image,
-  ScrollView
-} = React;
+  ScrollView,
+} from 'react-native';
 
-const styles = StyleSheet.create({
-  container: {
-    marginTop: 0,
-    flexDirection: 'column',
-    flex: 1,
-    backgroundColor: 'transparent'
-  },
+import Animatable from 'react-native-animatable';
+import Dimensions from 'Dimensions';
+import _ from 'underscore';
 
-  text: {
-    color: '#fff',
-    fontSize: 25,
-    marginTop: 10,
-    fontFamily: 'Futura',
+import Category from './Category';
+import Separator from './Separator';
 
-  },
+const window = Dimensions.get('window');
 
-  button: {
-    backgroundColor: '#FF3366',
-    padding: 20,
-    marginBottom: 20,
-    alignItems: 'center',
-  },
-  buttonText: {
-    color: '#FFF',
-    fontWeight: '900'
-  },
-
-  title: {
-
-    marginBottom: 30,
-    fontSize: 25,
-    textAlign: 'center',
-    color: '#fff',
-    fontFamily: 'Futura',
-  },
-
-  bg: {
-    position: 'absolute',
-    left: 0,
-    top: 0,
-    bottom: 0,
-    right: 0,
-    // resizeMode:  'stretch'
-    height: (window.height)*8
-  },
-
-  avatarimage: {
-   height: 125,
-   width: 125,
-   borderRadius: 65,
-   marginTop: 45,
-   alignSelf: 'center'
- },
-
- gamehistoryImg: {
-   height: window.height/8.335,
-   borderRadius: (window.height/8.3350)/2,
-   marginRight: 2,
-   width: window.height/8.335,
-
- },
-
- gamehistorytext: {
-   alignItems: 'center',
-   alignSelf: 'center',
-   color: 'white',
-   marginTop: -25,
-   fontWeight: '600',
-   fontSize: 14,
-   flex: 1,
-   textAlign: 'center'
- },
-
- gamehistory: {
-   flex: 1,
-   flexDirection: 'row',
-   alignSelf: 'stretch',
-   justifyContent: 'center',
-   marginLeft: 38,
-   marginBottom: 20
-
- },
-
- welcome: {
-   justifyContent: 'center',
-   alignItems: 'center',
- }
-
-
-});
-
-class Profile extends React.Component{
+export default class Profile extends Component{
 
   constructor(props){
     super(props);
@@ -125,7 +35,6 @@ class Profile extends React.Component{
   }
 
   renderRandomAvatar(){
-
     // random number between 1 and 4
     var number =  Math.floor(Math.random() * 4) + 1;
     if( number === 1){
@@ -298,4 +207,92 @@ class Profile extends React.Component{
     )
   }
 }
-module.exports = Profile;
+
+const styles = StyleSheet.create({
+  container: {
+    marginTop: 0,
+    flexDirection: 'column',
+    flex: 1,
+    backgroundColor: 'transparent'
+  },
+
+  text: {
+    color: '#fff',
+    fontSize: 25,
+    marginTop: 10,
+    fontFamily: 'Futura',
+
+  },
+
+  button: {
+    backgroundColor: '#FF3366',
+    padding: 20,
+    marginBottom: 20,
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: '#FFF',
+    fontWeight: '900'
+  },
+
+  title: {
+
+    marginBottom: 30,
+    fontSize: 25,
+    textAlign: 'center',
+    color: '#fff',
+    fontFamily: 'Futura',
+  },
+
+  bg: {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    bottom: 0,
+    right: 0,
+    // resizeMode:  'stretch'
+    height: (window.height)*8
+  },
+
+  avatarimage: {
+   height: 125,
+   width: 125,
+   borderRadius: 65,
+   marginTop: 45,
+   alignSelf: 'center'
+ },
+
+ gamehistoryImg: {
+   height: window.height/8.335,
+   borderRadius: (window.height/8.3350)/2,
+   marginRight: 2,
+   width: window.height/8.335,
+
+ },
+
+ gamehistorytext: {
+   alignItems: 'center',
+   alignSelf: 'center',
+   color: 'white',
+   marginTop: -25,
+   fontWeight: '600',
+   fontSize: 14,
+   flex: 1,
+   textAlign: 'center'
+ },
+
+ gamehistory: {
+   flex: 1,
+   flexDirection: 'row',
+   alignSelf: 'stretch',
+   justifyContent: 'center',
+   marginLeft: 38,
+   marginBottom: 20
+
+ },
+
+ welcome: {
+   justifyContent: 'center',
+   alignItems: 'center',
+ }
+});
