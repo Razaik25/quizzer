@@ -1,13 +1,10 @@
-'use strict'
+'use strict';
 
-var React = require('react-native');
-var api = require('../network/api');
-var Quiz = require('./Quiz');
-var Animatable = require('react-native-animatable');
-var Dimensions = require('Dimensions');
-var window = Dimensions.get('window');
+import React, {
+  Component,
+} from 'react';
 
-var {
+import {
   Text,
   View,
   NavigatorIOS,
@@ -15,94 +12,17 @@ var {
   StyleSheet,
   TouchableHighlight,
   ScrollView,
-} = React;
+} from 'react-native';
 
-var styles = StyleSheet.create ({
-  container: {
-    flex: 1,
-    padding: 20,
-    flexDirection: 'column',
-    justifyContent: 'center',
-    backgroundColor: '#F75D59'
-  },
-  image: {
-    height: 350,
-  },
-  buttonText: {
-    fontSize: 15,
-    color: '#111',
-    alignSelf: 'center',
-    fontFamily: 'Futura',
-    marginBottom: 5
-  },
-  title: {
-    paddingTop: 20,
-    marginBottom: 30,
-    fontSize: 25,
-    textAlign: 'center',
-    color: '#fff',
-    fontFamily: 'Futura'
-  },
-  button: {
-    height: 45,
-    flexDirection: 'row',
-    backgroundColor: 'white',
-    borderColor: 'white',
-    borderWidth: 1,
-    borderRadius: 8,
-    marginBottom: 10,
-    marginTop: 10,
-    alignSelf: 'stretch',
-    justifyContent: 'center'
-  },
-  scrollView: {
-    backgroundColor: '#6A85B1',
-    height: 300,
-  },
-  horizontalScrollView: {
-    height: 120,
-  },
-  categoryIcon: {
-    height: window.height/8.335,
-    borderRadius: 10,
-    marginRight: 2,
-    width: window.height/8.335,
-    shadowColor: '#000000',
-    shadowOpacity: 0.5,
-    backgroundColor: '#F2F2F2',
-    borderWidth: 2,
-    borderColor: '#F6CED8',
+import * as Animatable from 'react-native-animatable';
+import Dimensions from 'Dimensions';
 
-  },
-  category: {
-    flex: 1,
-    flexDirection: 'row',
-    alignSelf: 'stretch',
-    justifyContent: 'center',
-    marginLeft: 20,
-    marginRight: 20,
-    marginBottom: 30,
-    marginTop: 25,
-    paddingLeft: 10
+import api from '../network/api';
+import Quiz from './Quiz';
 
-  },
-  bg: {
-    position: 'absolute',
-    left: 0,
-    top: 0,
-    bottom: 0,
-    right: 0,
-    resizeMode:  'cover'
-  },
-  overlay: {
-    backgroundColor:'rgba(80,94,104,0.7)',
-    height: 100,
-    width: 100,
-    alignItems:'center'
-  }
-});
+const window = Dimensions.get('window');
 
-class Category extends React.Component{
+export default class Category extends Component{
   constructor(props){
     super(props);
     this.state ={
@@ -113,7 +33,7 @@ class Category extends React.Component{
 
   getCurrentRoute(){
     // getting the current category route object
-    var currentRoute  = this.props.navigator.navigationContext._currentRoute;
+    const currentRoute  = this.props.navigator.navigationContext._currentRoute;
     return currentRoute;
   }
 
@@ -149,7 +69,8 @@ class Category extends React.Component{
   }
 
   render(){
-    var username = this.props.username;
+
+    const username = this.props.username.toUpperCase();
     return (
      <ScrollView>
 
@@ -258,4 +179,88 @@ class Category extends React.Component{
 
 }
 
-module.exports = Category;
+const styles = StyleSheet.create ({
+  container: {
+    flex: 1,
+    padding: 20,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    backgroundColor: '#c43235'
+  },
+  image: {
+    height: 350,
+  },
+  buttonText: {
+    fontSize: 15,
+    color: '#111',
+    alignSelf: 'center',
+    fontFamily: 'Futura',
+    marginBottom: 5
+  },
+  title: {
+    paddingTop: 20,
+    marginBottom: 30,
+    fontSize: 25,
+    textAlign: 'center',
+    color: '#fff',
+    fontFamily: 'Futura',
+    fontWeight: 'bold'
+  },
+  button: {
+    height: 45,
+    flexDirection: 'row',
+    backgroundColor: 'white',
+    borderColor: 'white',
+    borderWidth: 1,
+    borderRadius: 8,
+    marginBottom: 10,
+    marginTop: 10,
+    alignSelf: 'stretch',
+    justifyContent: 'center'
+  },
+  scrollView: {
+    backgroundColor: '#6A85B1',
+    height: 300,
+  },
+  horizontalScrollView: {
+    height: 120,
+  },
+  categoryIcon: {
+    height: window.height/8.335,
+    borderRadius: 10,
+    marginRight: 2,
+    width: window.height/8.335,
+    shadowColor: '#000000',
+    shadowOpacity: 0.5,
+    backgroundColor: '#F2F2F2',
+    borderWidth: 2,
+    borderColor: '#F6CED8',
+
+  },
+  category: {
+    flex: 1,
+    flexDirection: 'row',
+    alignSelf: 'stretch',
+    justifyContent: 'center',
+    marginLeft: 20,
+    marginRight: 20,
+    marginBottom: 30,
+    marginTop: 25,
+    paddingLeft: 10
+
+  },
+  bg: {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    bottom: 0,
+    right: 0,
+    resizeMode:  'cover'
+  },
+  overlay: {
+    backgroundColor:'rgba(80,94,104,0.7)',
+    height: 100,
+    width: 100,
+    alignItems:'center'
+  }
+});

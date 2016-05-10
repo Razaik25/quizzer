@@ -1,170 +1,338 @@
 [
       {
         "id": "1",
-        "question":"3458 - 1458?",
-        "image": "math1.jpg",
-        "correct": 2,
+        "question":"Which one is not a shade of Red?",
+        "image": "random1.jpg",
+        "correct": 4,
         "answers": [
             {
               "id": "1",
-              "answer": "1999"
+              "answer": "Scarlet"
             },
             {
               "id": "2",
-              "answer": "2000"
+              "answer": "Sangria"
             },
             {
               "id": "3",
-              "answer": "2001"
+              "answer": "Ruby"
             },
             {
               "id": "4",
-              "answer": "2004"
+              "answer": "Fuscia"
             }
           ]
       },
       {
           "id": "2",
-          "question":"Which number when multipied by itself gives 144?",
-          "image": "matt.jpg",
-          "correct": 3,
+          "question":"How many innings does a baseball game have ?",
+          "image": "random2.jpg",
+          "correct": 4,
           "answers": [
 
               {
                   "id": "1",
-                  "answer": "15"
+                  "answer": "6"
               },
               {
                   "id": "2",
-                  "answer": "11"
-              },
-              {
-                  "id": "3",
                   "answer": "12"
               },
               {
+                  "id": "3",
+                  "answer": "8"
+              },
+              {
                   "id": "4",
-                  "answer": "14"
+                  "answer": "9"
               }
           ]
       },
       {
           "id": "3",
-          "question": "( 7 - 4 ) - ( 206 - 203) = ?",
-          "image": "maa3.jpg",
-          "correct": 4,
+          "question": "What is the name of Mickey Mouse's pet dog?",
+          "image": "random3.jpg",
+          "correct": 3,
           "answers": [
               {
                   "id": "1",
-                  "answer": "8"
+                  "answer": "Donald"
               },
               {
                   "id": "2",
-                  "answer": "4"
+                  "answer": "Goofy"
               },
               {
                   "id": "3",
-                  "answer": "7"
+                  "answer": "Pluto"
               },
               {
                   "id": "4",
-                  "answer": "0"
+                  "answer": "Pete"
               }
           ]
       },
       {
           "id": "4",
-          "image": "math4.jpg",
-          "question": "685x2 ??",
-          "correct": 3,
+          "image": "random4.jpg",
+          "question": "What is the longest river in the world?",
+          "correct": 1,
           "answers": [
               {
                   "id": "1",
-                  "answer": "1344"
+                  "answer": "Nile"
               },
               {
                   "id": "2",
-                  "answer": "1364"
+                  "answer": "Amazon"
               },
               {
                   "id": "3",
-                  "answer": "1370"
+                  "answer": "Yellow River"
               },
               {
                   "id": "4",
-                  "answer": "1342"
+                  "answer": "Congo River"
               }
           ]
       },
       {
           "id": "5",
-          "image": "ma5.jpg",
-          "question": "What is the only even prime number?",
-          "correct": 2,
+          "image": "random5.jpg",
+          "question": "Who said 'One small step for the man, gaint leap for the mankind'?",
+          "correct": 4,
           "answers": [
               {
                   "id": "1",
-                  "answer": "4"
+                  "answer": "Buzz Aldrin"
               },
               {
                   "id": "2",
-                  "answer": "2"
+                  "answer": "Buzz Lightyear"
               },
               {
                   "id": "3",
-                  "answer": "8"
+                  "answer": "Yuri Gagarin"
               },
               {
                   "id": "4",
-                  "answer": "6"
+                  "answer": "Neil Armstrong"
               }
           ]
       },
       {
           "id": "6",
-          "image": "ma6.jpg",
-          "question": "(a^5)x(b^5)?",
-          "correct": 1,
+          "image": "random6.jpg",
+          "question": "The Statue of Liberty as given to United States from which country?",
+          "correct": 2,
           "answers": [
               {
                   "id": "1",
-                  "answer": "(ab)^5"
+                  "answer": "Spain"
               },
               {
                   "id": "2",
-                  "answer": "ab^5"
+                  "answer": "France"
               },
               {
                   "id": "3",
-                  "answer": "ba^5"
+                  "answer": "Holland"
               },
               {
                   "id": "4",
-                  "answer": "(ab)^10"
+                  "answer": "Italy"
               }
           ]
       },
       {
           "id": "7",
-          "image": "math7.jpg",
-          "question": "When you have two parametric equations, what's the name of the rule you can use to work out dy/dx?",
+          "image": "random7.jpg",
+          "question": "Where was the fortune cookie actually invented?",
           "correct": 2,
           "answers": [
               {
                   "id": "1",
-                  "answer": "Use PEMDAS rule"
+                  "answer": "China"
               },
               {
                   "id": "2",
-                  "answer": "Chain Rule"
+                  "answer": "America"
               },
               {
                   "id": "3",
-                  "answer": "Substitution Rule"
+                  "answer": "Japan"
               },
               {
                   "id": "4",
-                  "answer": "I don't Know ( ._.)"
+                  "answer": "Thailand"
+              }
+          ]
+      },
+      {
+          "id": "8",
+          "image": "random8.jpg",
+          "question": "What is a cat?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "a dog"
+              },
+              {
+                  "id": "2",
+                  "answer": "a cat"
+              },
+              {
+                  "id": "3",
+                  "answer": "a bird"
+              },
+              {
+                  "id": "4",
+                  "answer": "me"
+              }
+          ]
+      },
+      {
+          "id": "9",
+          "image": "random9.jpg",
+          "question": "WOW?",
+          "correct":3,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "dont click"
+              },
+              {
+                  "id": "2",
+                  "answer": "don't click"
+              },
+              {
+                  "id": "3",
+                  "answer": "Click Me"
+              },
+              {
+                  "id": "4",
+                  "answer": "I am confused!!"
+              }
+          ]
+      },
+      {
+          "id": "10",
+          "image": "random10.jpg",
+          "question": "Which of these is not a Social Media Site?",
+          "correct": 4,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Facebook"
+              },
+              {
+                  "id": "2",
+                  "answer": "Instagram"
+              },
+              {
+                  "id": "3",
+                  "answer": "Twitter"
+              },
+              {
+                  "id": "4",
+                  "answer": "Wikipedia"
+              }
+          ]
+      },
+      {
+          "id": "11",
+          "image": "random11.jpg",
+          "question": "Pickachu is character from which show?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Dragon Ball Z"
+              },
+              {
+                  "id": "2",
+                  "answer": "Pokemon"
+              },
+              {
+                  "id": "3",
+                  "answer": "Dora"
+              },
+              {
+                  "id": "4",
+                  "answer": "Cinderalla"
+              }
+          ]
+      },
+      {
+          "id": "12",
+          "image": "random12.jpg",
+          "question": "What does xoxoxo mean?",
+          "correct": 3,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "I don't know"
+              },
+              {
+                  "id": "2",
+                  "answer": "I don't like you"
+              },
+              {
+                  "id": "3",
+                  "answer": "Hugs and Kisses"
+              },
+              {
+                  "id": "4",
+                  "answer": "You are weird"
+              }
+          ]
+      },
+      {
+          "id": "13",
+          "image": "random13.jpg",
+          "question": "What is Draco Malfoy's middle name?",
+          "correct": 1,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Lucius"
+              },
+              {
+                  "id": "2",
+                  "answer": "Harry"
+              },
+              {
+                  "id": "3",
+                  "answer": "Ron"
+              },
+              {
+                  "id": "4",
+                  "answer": "James"
+              }
+          ]
+      },
+      {
+          "id": "14",
+          "image": "random14.jpg",
+          "question": "Which of these is the only food that doesn't spoil?",
+          "correct": 3,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Apple"
+              },
+              {
+                  "id": "2",
+                  "answer": "Pizza"
+              },
+              {
+                  "id": "3",
+                  "answer": "Honey"
+              },
+              {
+                  "id": "4",
+                  "answer": "Big Mac Burger"
               }
           ]
       }

@@ -1,60 +1,39 @@
 'use strict';
-var React = require('react-native');
-var Result = require('./Result');
-var _ = require('underscore');
-var Animatable = require('react-native-animatable');
 
+import React, {
+  Component,
+} from 'react';
 
-const {
+import {
   View,
   Text,
   StyleSheet,
   TextInput,
   TouchableHighlight,
-  Image
-} = React;
+  Image,
+  Vibration,
+} from 'react-native';
 
-var styles = StyleSheet.create({
-  mainContainer: {
-    flex: 1
-  },
-  image: {
-    height: 260
-  },
-  text: {
-      color: '#fff',
-      alignSelf: 'center',
-      fontFamily: 'Futura',
-      fontSize: 16,
+import * as Animatable from 'react-native-animatable';
+import _ from 'underscore';
 
-  },
-  question: {
-    backgroundColor: '#4daf51',
-    fontFamily: 'Futura',
-    flexDirection: 'row',
-    alignSelf: 'stretch',
-    fontSize: 18,
-    color: '#fff',
-    flex: 1,
-    paddingLeft: 10,
-    textAlign: 'center'
-  },
+import Result from './Result';
 
-})
-class Quiz extends React.Component{
+export default class Quiz extends Component{
 
   constructor(props){
     super(props);
     this.state ={
       questioncount: 0,
       score: 0,
-      userAnswer: []
+      userAnswer: [],
+      shuffleddata: ''
 
     };
   }
 
   answerBackground(btn){
-    var obj = {
+    const obj = {
       flexDirection: 'row',
       alignSelf: 'stretch',
       justifyContent: 'center',
@@ -73,16 +52,28 @@ class Quiz extends React.Component{
   }
 
   hideTouchableHighlights(btn){
-    var obj = {
+    const obj = {
       display: 'none'
     }
     return obj;
   }
 
+  shuffle(){
+    const shuffleddata = _.shuffle(this.props.quizdata);
+    this.setState({
+      shuffleddata: shuffleddata
+    });
+
+  }
+
+  componentDidMount(){
+    this.shuffle();
+  }
+
   renderQuestion(){
     // loop to get the current question
-    var currentObj = this.props.quizdata[this.state.questioncount];
-    var currentQuestion;
+    const currentObj = this.state.shuffleddata[this.state.questioncount];
+    let currentQuestion;
     // using underscore .each to loop over the currentObj
     _.each(currentObj, function(value,key){
       if(key ==="question"){
@@ -93,22 +84,25 @@ class Quiz extends React.Component{
   }
 
   renderImage(){
-    var currentObj = this.props.quizdata[this.state.questioncount];
-    var currentImage;
+
+    const currentObj = this.state.shuffleddata[this.state.questioncount];
+    let currentImage;
     _.each(currentObj, function(value,key){
       if(key ==="image"){
         currentImage = value;
       }
     });
+
+    // adding heroku server
     // return  `http://localhost:3000/images/${currentImage}`;
     return  `https://quizzer-api.herokuapp.com/images/${currentImage}`;
 
   }
 
   renderAnswers(){
-    var currentObj = this.props.quizdata[this.state.questioncount];
-    var currentAnswers;
-    var that = this;
+    const currentObj = this.state.shuffleddata[this.state.questioncount];
+    let currentAnswers;
+    const that = this;
     _.each(currentObj, function(value,key){
       if(key ==="answers"){
         currentAnswers = value.map((answers,index) => {
@@ -138,39 +132,16 @@ class Quiz extends React.Component{
         category: this.props.category,
         email: this.props.email,
         startAgainRoute: this.props.startAgainRoute,
-        quizdata: this.props.quizdata,
+        quizdata: this.state.shuffleddata,
         userAnswer: this.state.userAnswer
       }
     });
   }
 
-  animateWrongAnswer(){
-    // var backgroundColor = 'red';
-    // this.setState({
-    //  backgroundColor: backgroundColor
-    // })
-    // // set the height as 0 of other TouchableHighlights
-    // return (
-    //   <TouchableHighlight  underlayColor="white"
-    //     style={{backgroundColor: this.state.backgroundColor, height:60, flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}
-    //     >
-    //   </TouchableHighlight>
-    // );
-  }
-
-  animateRighAnswer(){
-    var backgroundColor = 'green';
-    this.setState({
-     backgroundColor: backgroundColor
-    })
-  }
-
-
   handleAnswers(answerid){
     // compare the answer id for to the correct answer
-    var currentobj = this.props.quizdata[this.state.questioncount];
-
-    var userAnsArr = this.state.userAnswer;
+    const currentobj = this.state.shuffleddata[this.state.questioncount];
+    const userAnsArr = this.state.userAnswer;
     userAnsArr.push(answerid);
 
     // if the user gives correct answer
@@ -182,10 +153,12 @@ class Quiz extends React.Component{
         userAnswer: userAnsArr
       })
 
-      // animate the right answer as green and make other buttons disappear or play the right sound
+      // play the right sound
 
     } else {  // if the answer does not match, move to the next question
-      // animate the wrong answer as red and make other answers disapper or play the wrong sound
+      //  play the wrong sound
+      // vibrate
+      Vibration.vibrate();
       this.setState({
         questioncount: this.state.questioncount + 1,
         userAnswer: userAnsArr
@@ -198,7 +171,6 @@ class Quiz extends React.Component{
     if(this.state.questioncount === 7){
       this.pushResultPage();
     }
-
   }
 
   render(){
@@ -213,7 +185,30 @@ class Quiz extends React.Component{
 
 }
 
+const styles = StyleSheet.create({
+  mainContainer: {
+    flex: 1
+  },
+  image: {
+    height: 260
+  },
+  text: {
+      color: '#fff',
+      alignSelf: 'center',
+      fontFamily: 'Futura',
+      fontSize: 16,
 
+  },
+  question: {
+    backgroundColor: '#4daf51',
+    fontFamily: 'Futura',
+    flexDirection: 'row',
+    alignSelf: 'stretch',
+    fontSize: 16,
+    color: '#fff',
+    flex: 1,
+    paddingLeft: 10,
+    textAlign: 'center'
+  },
 
-
-module.exports = Quiz;
+});

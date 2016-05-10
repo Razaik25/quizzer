@@ -50,7 +50,7 @@
       },
       {
           "id": "3",
-          "question": "what does css stand for?",
+          "question": "What does css stand for?",
           "image": "coding3.jpg",
           "correct": 3,
           "answers": [
@@ -165,6 +165,174 @@
               {
                   "id": "4",
                   "answer": "<font colour='yyyy'>"
+              }
+          ]
+      },
+      {
+          "id": "8",
+          "image": "coding8.jpg",
+          "question": "What are the tags for an unordered list?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "<li></li>"
+              },
+              {
+                  "id": "2",
+                  "answer": "<ul></ul>"
+              },
+              {
+                  "id": "3",
+                  "answer": "<list></list>"
+              },
+              {
+                  "id": "4",
+                  "answer": "<p></p>"
+              }
+          ]
+      },
+      {
+          "id": "9",
+          "image": "coding9.jpg",
+          "question": "How do you change the background color?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "<background>"
+              },
+              {
+                  "id": "2",
+                  "answer": "<bgcolor>"
+              },
+              {
+                  "id": "3",
+                  "answer": "<color>"
+              },
+              {
+                  "id": "4",
+                  "answer": "<bgcolour>"
+              }
+          ]
+      },
+      {
+          "id": "10",
+          "image": "coding10.jpg",
+          "question": "Which of these is NOT a HTML attribute?",
+          "correct": 4,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "<body color='yyyy'>"
+              },
+              {
+                  "id": "2",
+                  "answer": "<font-weight='normal'>"
+              },
+              {
+                  "id": "3",
+                  "answer": "<bg color='yyy'>"
+              },
+              {
+                  "id": "4",
+                  "answer": "<font colour='yyyy'>"
+              }
+          ]
+      },
+      {
+          "id": "11",
+          "image": "coding11.jpg",
+          "question": "What is the first tag used to make a webpage?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "<body>"
+              },
+              {
+                  "id": "2",
+                  "answer": "<html>"
+              },
+              {
+                  "id": "3",
+                  "answer": "<head>"
+              },
+              {
+                  "id": "4",
+                  "answer": "<script>"
+              }
+          ]
+      },
+      {
+          "id": "12",
+          "image": "coding12.jpg",
+          "question": "How many programmers does it take to change a light bulb??",
+          "correct": 4,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "One"
+              },
+              {
+                  "id": "2",
+                  "answer": "I don't know (._.)"
+              },
+              {
+                  "id": "3",
+                  "answer": "Two"
+              },
+              {
+                  "id": "4",
+                  "answer": "None, it's a hardware problem"
+              }
+          ]
+      },
+      {
+          "id": "13",
+          "image": "coding13.jpg",
+          "question": "What is the hardware that makes WWW?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Software"
+              },
+              {
+                  "id": "2",
+                  "answer": "Internet"
+              },
+              {
+                  "id": "3",
+                  "answer": "Extranet"
+              },
+              {
+                  "id": "4",
+                  "answer": "Webpages"
+              }
+          ]
+      },
+      {
+          "id": "14",
+          "image": "coding14.jpg",
+          "question": "How many characters are there in a hexadecimal background color?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "9"
+              },
+              {
+                  "id": "2",
+                  "answer": "6"
+              },
+              {
+                  "id": "3",
+                  "answer": "12"
+              },
+              {
+                  "id": "4",
+                  "answer": "4"
               }
           ]
       }

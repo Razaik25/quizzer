@@ -2,7 +2,7 @@
       {
           "id": "1",
           "question":"You should know this one: Which island nation is popstar Rihanna from?",
-          "image": "c1.jpg",
+          "image": "cel1.jpg",
           "correct": 2,
           "answers": [
               {
@@ -26,7 +26,7 @@
       {
           "id": "2",
           "question":"Really Easy: How many Hemsworth brothers are there?",
-          "image": "c2.jpg",
+          "image": "cel2.jpg",
           "correct": 3,
           "answers": [
               {
@@ -50,7 +50,7 @@
       {
           "id": "3",
           "question": "In which year did Angelina Jolie and Brad Pitt get together?",
-          "image": "c3.jpg",
+          "image": "cel3.jpg",
           "correct": 2,
           "answers": [
               {
@@ -73,7 +73,7 @@
       },
       {
           "id": "4",
-          "image": "c4.jpg",
+          "image": "cel4.jpg",
           "question": "What is Miley Cyrus's birth name?",
           "correct": 2,
           "answers": [
@@ -97,7 +97,7 @@
       },
       {
           "id": "5",
-          "image": "c5.jpg",
+          "image": "cel5.jpg",
           "question": "What is the name of Neil Patrick Harris' husband?",
           "correct": 2,
           "answers": [
@@ -121,7 +121,7 @@
       },
       {
           "id": "6",
-          "image": "c6.jpg",
+          "image": "cel6.jpg",
           "question": "What is the name of the space movie staring Goerge Clooney and Sandra Bullock?",
           "correct": 3,
           "answers": [
@@ -145,7 +145,7 @@
       },
       {
           "id": "7",
-          "image": "c7.jpg",
+          "image": "cel7.jpg",
           "question": "Actress Jada Pinkett is married to which actor?",
           "correct": 3,
           "answers": [
@@ -156,6 +156,174 @@
               {
                   "id": "2",
                   "answer": "Chris Rock"
+              },
+              {
+                  "id": "3",
+                  "answer": "Will Smith"
+              },
+              {
+                  "id": "4",
+                  "answer": "Jamie Foxx"
+              }
+          ]
+      },
+      {
+          "id": "8",
+          "image": "cel8.jpg",
+          "question": "Which of the socialites launched a plus sized clothing line?",
+          "correct": 4,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Kirstie Alley"
+              },
+              {
+                  "id": "2",
+                  "answer": "Melissa McCarthy"
+              },
+              {
+                  "id": "3",
+                  "answer": "Ann Hathway"
+              },
+              {
+                  "id": "4",
+                  "answer": "Kelly Osbourne"
+              }
+          ]
+      },
+      {
+          "id": "9",
+          "image": "cel9.jpg",
+          "question": "Which famous rapper owns part of the Brooklyn Nets?",
+          "correct": 1,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Jay Z"
+              },
+              {
+                  "id": "2",
+                  "answer": "Snoop Dogg"
+              },
+              {
+                  "id": "3",
+                  "answer": "50 Cent"
+              },
+              {
+                  "id": "4",
+                  "answer": "Kanye West"
+              }
+          ]
+      },
+      {
+          "id": "10",
+          "image": "cel10.jpg",
+          "question": "Which famous actor voiced 'Anger' in the film 'Inside Out'?",
+          "correct": 4,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Mark Ruffalo"
+              },
+              {
+                  "id": "2",
+                  "answer": "Chris Rock"
+              },
+              {
+                  "id": "3",
+                  "answer": "Jude Law"
+              },
+              {
+                  "id": "4",
+                  "answer": "Lewis Black"
+              }
+          ]
+      },
+      {
+          "id": "11",
+          "image": "cel11.jpg",
+          "question": "Who is Ashton Kutcher married to?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Blake Lively"
+              },
+              {
+                  "id": "2",
+                  "answer": "Mila Kunis"
+              },
+              {
+                  "id": "3",
+                  "answer": "Demi Moore"
+              },
+              {
+                  "id": "4",
+                  "answer": "Scarlett Johansson"
+              }
+          ]
+      },
+      {
+          "id": "12",
+          "image": "cel12.jpg",
+          "question": "Who won Best Supporting Actress Oscar for 'Boyhood'?",
+          "correct": 4,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Jennifer Lawrence"
+              },
+              {
+                  "id": "2",
+                  "answer": "Sandra Bullock"
+              },
+              {
+                  "id": "3",
+                  "answer": "Julia Roberts"
+              },
+              {
+                  "id": "4",
+                  "answer": "Patricia Arquette"
+              }
+          ]
+      },
+      {
+          "id": "13",
+          "image": "cel13.jpg",
+          "question": "Zayn Malik left which famous Boy Band in 2015?",
+          "correct": 1,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "One Direction"
+              },
+              {
+                  "id": "2",
+                  "answer": "Jonas Brothers"
+              },
+              {
+                  "id": "3",
+                  "answer": "N Sync"
+              },
+              {
+                  "id": "4",
+                  "answer": "The Wanted"
+              }
+          ]
+      },
+      {
+          "id": "14",
+          "image": "cel14.jpg",
+          "question": "The flim 'Furious 7' was last flim of which actor?",
+          "correct": 2,
+          "answers": [
+              {
+                  "id": "1",
+                  "answer": "Chris Evans"
+              },
+              {
+                  "id": "2",
+                  "answer": "Paul Walker"
               },
               {
                   "id": "3",

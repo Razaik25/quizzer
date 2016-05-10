@@ -1,36 +1,31 @@
-var React = require('react-native');
-var Main = require('./App/Components/Main');
+'use strict';
 
-var {
-  AppRegistry,
+import React, {
   Component,
+} from 'react';
+
+import {
+  AppRegistry,
   StyleSheet,
   Text,
   NavigatorIOS,
   Navigator,
-  View
-} = React;
+  View,
+} from 'react-native';
+
+import Main from './app/components/Main';
 
 class quizzer extends Component {
 
   render() {
-    // configureScene={(route) => ({
-    //
-    //   ...Navigator.SceneConfigs.HorizontalSwipeJump
-    //
-    // })}
-
     return (
       <Navigator
         initialRoute={{ name: 'Quiz App', component: Main }}
-
-
         renderScene={(route, navigator) => {
           if (route.component) {
             return <route.component navigator={navigator} {...route.passProps} />;
           }
         }}
-
       />
     );
   }

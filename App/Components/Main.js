@@ -1,22 +1,10 @@
-
 'use strict';
-var React = require('react-native');
-var Dimensions = require('Dimensions');
-var Animatable = require('react-native-animatable');
-var windowSize = Dimensions.get('window');
 
-var Profile = require('./Profile');
-var Signup = require('./Signup');
-var api = require('../network/api');
+import React, {
+  Component,
+} from 'react';
 
-// invoking firebase
-const Firebase = require('firebase');
-// link to the database in firebase
-const ref = new Firebase('https://quizzer-raz.firebaseio.com/')
-
-// Fix errors in the page
-
-var {
+import {
   View,
   Text,
   StyleSheet,
@@ -25,94 +13,22 @@ var {
   TouchableHighlight,
   ActivityIndicatorIOS,
   Alert,
-} = React;
+} from 'react-native';
 
+import Dimensions from 'Dimensions';
+// import KeyboardSpacer from 'react-native-keyboard-spacer';
 
+import Profile from './Profile';
+import Signup from './Signup';
+import api from '../network/api';
 
-var styles = StyleSheet.create({
-    container: {
-      marginTop: 0,
-      flexDirection: 'column',
-      flex: 1,
-      backgroundColor: 'transparent'
-    },
-    bg: {
-      position: 'absolute',
-      left: 0,
-      top: 0,
-      width: windowSize.width,
-      height: windowSize.height
-    },
-    header: {
-      justifyContent: 'center',
-      alignItems: 'center',
-      flex: 0.5,
-      backgroundColor: 'transparent'
-    },
-    mark: {
-      width: 120,
-      height: 120,
-      borderRadius: 50
-    },
-    signin: {
-      backgroundColor: '#FF3366',
-      padding: 20,
-      marginBottom: 20,
-      alignItems: 'center',
-    },
-    signup: {
-      padding: 20,
-      marginBottom: 20,
-      backgroundColor: '#FF3366',
-      justifyContent: 'center',
-      alignItems: 'center',
-      flex: .15,
+const windowSize = Dimensions.get('window');
+// invoking firebase
+const Firebase = require('firebase');
+// link to the database in firebase
+const ref = new Firebase('https://quizzer-raz.firebaseio.com/')
 
-    },
-    inputs: {
-      marginTop: 10,
-      marginBottom: 10,
-      flex: .25
-    },
-    inputPassword: {
-      marginLeft: 15,
-      width: 20,
-      height: 21
-    },
-    inputUsername: {
-      marginLeft: 15,
-      width: 20,
-      height: 20,
-    },
-    inputContainer: {
-      padding: 10,
-      borderWidth: 1,
-      borderBottomColor: '#CCC',
-      borderColor: 'transparent'
-    },
-    input: {
-      position: 'absolute',
-      left: 61,
-      top: 12,
-      right: 0,
-      height: 20,
-      fontSize: 22,
-      fontWeight: 'bold'
-    },
-    whiteFont: {
-      color: '#FFF',
-      fontWeight: '900'
-    },
-    title: {
-      marginBottom: 10,
-      fontSize: 30,
-      textAlign: 'center',
-      color: '#FFF',
-      fontWeight: 'bold'
-    },
-});
-
-class Main extends React.Component{
+export default class Main extends Component{
   // es6 equivalent of get initialState
   constructor(props){
     super(props);
@@ -126,6 +42,11 @@ class Main extends React.Component{
   }
 
   PushProfilePage(data){
+    this.setState({
+      username: '',
+      email: '',
+      password: '',
+    });
     this.props.navigator.push({
       title: `Profile Page`,
       component: Profile,
@@ -175,7 +96,6 @@ class Main extends React.Component{
 
        })
        .done();
-
   }
 
   handleSignin(){
@@ -196,13 +116,9 @@ class Main extends React.Component{
         }
       }
     );
-
-
-
   }
 
   render(){
-
     return(
      <View  style={styles.container}>
        <Image style={styles.bg}
@@ -223,8 +139,10 @@ class Main extends React.Component{
           placeholder="Email"
           placeholderTextColor="#FFF"
           value={this.state.email}
+          autoFocus={true}
           onChange={this.handleEmail.bind(this)}/>
         </View>
+
 
         {/* password section*/}
         <View style={styles.inputContainer}>
@@ -235,6 +153,7 @@ class Main extends React.Component{
           placeholder="Password"
           placeholderTextColor="#FFF"
           value={this.state.password}
+          autoFocus={true}
           onChange={this.handlePassword.bind(this)}/>
         </View>
 
@@ -245,6 +164,7 @@ class Main extends React.Component{
            size="small"  />
 
       </View>
+
 
       {/* Sign In*/}
       <View>
@@ -273,4 +193,84 @@ class Main extends React.Component{
 
 }
 
-module.exports = Main;
+const styles = StyleSheet.create({
+    container: {
+      flexDirection: 'column',
+      flex: 1,
+      backgroundColor: 'transparent'
+    },
+    bg: {
+      position: 'absolute',
+      left: 0,
+      top: 0,
+      width: windowSize.width,
+      height: windowSize.height
+    },
+    header: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      flex: 0.5,
+      backgroundColor: 'transparent'
+    },
+    mark: {
+      width: 120,
+      height: 120,
+      borderRadius: 50
+    },
+    signin: {
+      backgroundColor: '#FF3366',
+      padding: 20,
+      marginBottom: 20,
+      alignItems: 'center',
+    },
+    signup: {
+      padding: 20,
+      marginBottom: 20,
+      backgroundColor: '#FF3366',
+      justifyContent: 'center',
+      alignItems: 'center',
+      flex: .5
+
+    },
+    inputs: {
+      // marginTop: 10,
+      marginBottom: 10,
+      flex: .25
+    },
+    inputPassword: {
+      marginLeft: 15,
+      width: 20,
+      height: 21
+    },
+    inputUsername: {
+      marginLeft: 15,
+      width: 20,
+      height: 20,
+    },
+    inputContainer: {
+      padding: 10,
+      borderWidth: 1,
+      borderBottomColor: '#CCC',
+      borderColor: 'transparent'
+    },
+    input: {
+      position: 'absolute',
+      left: 61,
+      top: 12,
+      right: 0,
+      height: 20,
+      fontSize: 22,
+      fontWeight: 'bold'
+    },
+    whiteFont: {
+      color: '#FFF',
+      fontWeight: '900'
+    },
+    title: {
+      marginBottom: 10,
+      fontSize: 30,
+      textAlign: 'center',
+      color: '#FFF',
+      fontWeight: 'bold'
+    },
+});

@@ -1,29 +1,185 @@
+'use strict';
 
-var React = require('react-native');
-var Dimensions = require('Dimensions');
-var Animatable = require('react-native-animatable');
-var windowSize = Dimensions.get('window');
+import React, {
+  Component,
+} from 'react';
 
-// invoking firebase
-const Firebase = require('firebase');
-// link to the database in firebase
-const ref = new Firebase('https://quizzer-raz.firebaseio.com/')
-
-var Profile = require('./Profile');
-var api = require('../network/api');
-
-
-var {
+import {
   AppRegistry,
   View,
   Text,
   StyleSheet,
   TextInput,
   Image,
-  TouchableHighlight
-} = React;
+  TouchableHighlight,
+} from 'react-native';
 
-var styles = StyleSheet.create({
+import Dimensions from 'Dimensions';
+import * as Animatable from 'react-native-animatable';
+
+import Profile from './Profile';
+import api from '../network/api';
+
+const windowSize = Dimensions.get('window');
+// invoking firebase
+const Firebase = require('firebase');
+// link to the database in firebase
+const ref = new Firebase('https://quizzer-raz.firebaseio.com/')
+
+export default class Signup extends Component{
+
+  constructor(props){
+    super(props);
+    this.state = {
+      username: '',
+      email: '',
+      password: '',
+      isLoading: false,
+      error: false,
+    }
+  }
+
+  handleName(event){
+    this.setState({
+      username: event.nativeEvent.text
+    });
+  }
+
+  handleEmail(event){
+    this.setState({
+      email: event.nativeEvent.text
+    });
+  }
+
+  handlePassword(event){
+    this.setState({
+      password: event.nativeEvent.text
+    });
+  }
+
+  PushProfilePage(data){
+    this.props.navigator.push({
+      title: 'User Profile',
+      component: Profile,
+      passProps:{userstats: data,
+                 login: false
+      }
+    });
+  }
+
+  apicall(){
+    // send a request to api for creating a user and getting the stats back for the games a user played in each category
+    const email = this.state.email;
+    const username = this.state.username;
+    api.addUser(email,username)
+    .then((res) =>{
+         console.log('in add user api',res);
+         api.getUser(email)
+           .then((data) => {
+               console.log('in appi second call',data);
+               this.PushProfilePage(data);
+            })
+       .catch((err) => {
+         console.log('inside err', err);
+         this.setState({
+           isLoading: false,
+           error: `There was an error: ${err}`
+         });
+       });
+    })
+    .done();
+
+    this.setState({
+      isLoading: true,
+    });
+
+  }
+
+  handleSignup(){
+    // adds user to firebase
+    ref.createUser({
+      email: this.state.email,
+      password: this.state.password
+    }, (error, userData) => {
+      if(error) {
+        console.log('Error creating user: ', error);
+        alert(error);
+      } else {
+        console.log("Signup Success")
+        this.apicall();
+        }
+      }
+    )
+
+  }
+
+  render(){
+    return(
+      <View  style={styles.container}>
+        {/* Background Image */}
+        <Image style={styles.bg}
+        source={{uri: 'http://www.mobileswall.com/wp-content/uploads/2015/11/901-House-On-The-Rock-Library-l.jpg'}}/>
+
+        {/* Header Check Mark */}
+        <View style={styles.header}>
+          <Image style={styles.mark}
+          source={{uri: 'https://cdn.elegantthemes.com/blog/wp-content/uploads/2015/12/quiz.png'}}/>
+        </View>
+
+        <View style={styles.inputs}>
+
+
+          {/* name section*/}
+          <View style={styles.inputContainer}>
+            <Image style={styles.inputUsername}
+            source={{uri: 'http://i40.tinypic.com/xf0zuq.jpg'}}/>
+            <TextInput style={[styles.input, styles.whiteFont]}
+            placeholder="Name"
+            placeholderTextColor="#FFF"
+            value={this.state.username}
+            onChange={this.handleName.bind(this)}/>
+          </View>
+
+            {/* email section*/}
+          <View style={styles.inputContainer}>
+            <Image style={styles.inputUsername}
+            source={{uri: 'http://i66.tinypic.com/2qltjx3.png'}}/>
+            <TextInput style={[styles.input, styles.whiteFont]}
+            placeholder="Email"
+            placeholderTextColor="#FFF"
+            value={this.state.email}
+            onChange={this.handleEmail.bind(this)}/>
+          </View>
+
+          {/* password section*/}
+          <View style={styles.inputContainer}>
+            <Image style={styles.inputPassword}
+            source={{uri: 'http://i.imgur.com/ON58SIG.png'}}/>
+            <TextInput style={[styles.input, styles.whiteFont]}
+            secureTextEntry={true}
+            placeholder="Password"
+            placeholderTextColor="#FFF"
+            value={this.state.password}
+            onChange={this.handlePassword.bind(this)}/>
+          </View>
+        </View>
+
+        {/* Sign up*/}
+        <View>
+            <TouchableHighlight
+            style={styles.signin}
+            onPress={this.handleSignup.bind(this)}
+            underlayColor="#FFC300">
+              <Text style={styles.whiteFont}> Sign Up </Text>
+            </TouchableHighlight>
+        </View>
+
+      </View>
+    )
+  }
+}
+
+const styles = StyleSheet.create({
     container: {
       marginTop: 0,
       flexDirection: 'column',
@@ -105,158 +261,3 @@ var styles = StyleSheet.create({
       fontWeight: 'bold'
     },
 });
-
-class Signup extends React.Component{
-
-  constructor(props){
-    super(props);
-    this.state = {
-      username: '',
-      email: '',
-      password: '',
-      isLoading: false,
-      error: false,
-    }
-  }
-
-  handleName(event){
-    this.setState({
-      username: event.nativeEvent.text
-    });
-  }
-
-  handleEmail(event){
-    this.setState({
-      email: event.nativeEvent.text
-    });
-  }
-
-  handlePassword(event){
-    this.setState({
-      password: event.nativeEvent.text
-    });
-  }
-
-  PushProfilePage(data){
-    this.props.navigator.push({
-      title: 'User Profile',
-      component: Profile,
-      passProps:{userstats: data,
-                 login: false
-      }
-    });
-  }
-
-
-  apicall(){
-    // send a request to api for creating a user and getting the stats back for the games a user played in each category
-    var email = this.state.email;
-    var username = this.state.username;
-    api.addUser(email,username)
-    .then((res) =>{
-         console.log('in add user api',res);
-         api.getUser(email)
-           .then((data) => {
-               console.log('in appi second call',data);
-               this.PushProfilePage(data);
-            })
-       .catch((err) => {
-         console.log('inside err', err);
-         this.setState({
-           isLoading: false,
-           error: `There was an error: ${err}`
-         });
-       });
-    })
-    .done();
-
-    this.setState({
-      isLoading: true,
-    });
-
-  }
-
-  handleSignup(){
-    // adds user to firebase
-    ref.createUser({
-      email: this.state.email,
-      password: this.state.password
-    }, (error, userData) => {
-      if(error) {
-        console.log('Error creating user: ', error);
-      } else {
-        console.log("Signup Success")
-        this.apicall();
-        }
-      }
-    )
-
-  }
-
-  render(){
-    return(
-      <View  style={styles.container}>
-        {/* Background Image */}
-        <Image style={styles.bg}
-        source={{uri: 'http://www.mobileswall.com/wp-content/uploads/2015/11/901-House-On-The-Rock-Library-l.jpg'}}/>
-
-        {/* Header Check Mark */}
-        <View style={styles.header}>
-          <Image style={styles.mark}
-          source={{uri: 'https://cdn.elegantthemes.com/blog/wp-content/uploads/2015/12/quiz.png'}}/>
-        </View>
-
-        <View style={styles.inputs}>
-
-
-          {/* name section*/}
-          <View style={styles.inputContainer}>
-            <Image style={styles.inputUsername}
-            source={{uri: 'http://i40.tinypic.com/xf0zuq.jpg'}}/>
-            <TextInput style={[styles.input, styles.whiteFont]}
-            placeholder="Name"
-            placeholderTextColor="#FFF"
-            value={this.state.username}
-            onChange={this.handleName.bind(this)}/>
-          </View>
-
-            {/* email section*/}
-          <View style={styles.inputContainer}>
-            <Image style={styles.inputUsername}
-            source={{uri: 'http://i66.tinypic.com/2qltjx3.png'}}/>
-            <TextInput style={[styles.input, styles.whiteFont]}
-            placeholder="Email"
-            placeholderTextColor="#FFF"
-            value={this.state.email}
-            onChange={this.handleEmail.bind(this)}/>
-          </View>
-
-          {/* password section*/}
-          <View style={styles.inputContainer}>
-            <Image style={styles.inputPassword}
-            source={{uri: 'http://i.imgur.com/ON58SIG.png'}}/>
-            <TextInput style={[styles.input, styles.whiteFont]}
-            secureTextEntry={true}
-            placeholder="Password"
-            placeholderTextColor="#FFF"
-            value={this.state.password}
-            onChange={this.handlePassword.bind(this)}/>
-          </View>
-        </View>
-
-        {/* Sign up*/}
-        <View>
-            <TouchableHighlight
-            style={styles.signin}
-            onPress={this.handleSignup.bind(this)}
-            underlayColor="#FFC300">
-              <Text style={styles.whiteFont}> Sign Up </Text>
-            </TouchableHighlight>
-        </View>
-
-      </View>
-    )
-  }
-}
-
-module.exports = Signup;
