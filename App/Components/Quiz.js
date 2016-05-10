@@ -11,7 +11,7 @@ import {
   TextInput,
   TouchableHighlight,
   Image,
-  Vibration
+  Vibration,
 } from 'react-native';
 
 import Animatable from 'react-native-animatable';

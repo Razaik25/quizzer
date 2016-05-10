@@ -1,15 +1,12 @@
 
 'use strict';
-var React = require('react-native');
-var Animatable = require('react-native-animatable');
-var api = require('../network/api');
-var ScoreBoard = require('./Scoreboard');
-var Swiper = require('react-native-swiper');
-var Separator = require('./Separator');
-var Dimensions = require('Dimensions');
-var windowSize = Dimensions.get('window');
 
-const {
+import React, {
+  Component,
+} from 'react';
+
+
+import {
   View,
   Text,
   StyleSheet,
@@ -19,97 +16,19 @@ const {
   Navigator,
   ScrollView,
   Image,
-} = React;
+} from 'react-native';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#dddfd4',
-    width: windowSize.width,
-    height: windowSize.height/2.2,
-    marginTop: 0,
-    flexDirection: 'column'
-  },
+import Animatable from 'react-native-animatable';
+import Dimensions from 'Dimensions';
+import Swiper from 'react-native-swiper';
 
-  playAgain:{
-    backgroundColor: '#3fb0ac',
-    padding: 20,
-    marginTop:20,
-    marginBottom: 20,
-    alignItems: 'center',
+import api from '../network/api';
+import ScoreBoard from './Scoreboard';
+import Separator from './Separator';
 
-  },
-  differentPlayer:{
-    backgroundColor: '#4AA02C',
-    padding: 20,
-    marginBottom: 20,
-    alignItems: 'center'
+const windowSize = Dimensions.get('window');
 
-  },
-  profile: {
-    backgroundColor: '#e62739',
-    padding: 20,
-    marginBottom: 20,
-    alignItems: 'center',
-  },
-  buttonText: {
-    color: '#111',
-    fontSize: 18,
-    fontFamily: 'Futura'
-  },
-  wrapper: {
-    backgroundColor: '#fae596',
-
-  },
-  slide: {
-  //  flex: 0.05,
-   marginTop: 30,
-   marginLeft:5,
-   marginRight: 5,
-   justifyContent: 'center',
-   alignItems: 'center',
-   backgroundColor: 'transparent',
-  },
-  text: {
-   color: '#111',
-   fontSize: 22,
-   fontFamily: 'Futura'
-  //  fontWeight: 'bold',
- },
- resultText: {
-
-   color: '#111',
-   fontSize: 18,
-   fontWeight: 'bold',
-   marginTop: 15
- },
- questionText: {
-   color: '#8C001A',
-   fontSize: 18,
-   fontWeight: 'bold',
-   marginTop: 15
-
- },
- categoryText: {
-   color: '#347C17',
-  //  color: '#fff',
-   fontSize: 18,
-   fontWeight: 'bold',
-   marginTop: 15,
-   marginBottom: 5
- },
- scoreText: {
-   color: '#111',
-   fontSize: 18,
-   fontWeight: 'bold',
-   marginTop: 10,
-   marginBottom: 5
- }
-
-
-});
-
-class Result extends React.Component{
+export default class Result extends Component{
 
   constructor(props){
     super(props);
@@ -117,7 +36,6 @@ class Result extends React.Component{
       goToScoreboard: false
     };
   }
-
 
   startAgain(){
     // getting the category route
@@ -227,7 +145,6 @@ renderPagination(index, total, context) {
   )
 }
 
-
   render(){
     console.log('in result',this.props.quizdata);
     return(
@@ -309,4 +226,91 @@ renderPagination(index, total, context) {
     )
   }
 }
-module.exports = Result;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#dddfd4',
+    width: windowSize.width,
+    height: windowSize.height/2.2,
+    marginTop: 0,
+    flexDirection: 'column'
+  },
+
+  playAgain:{
+    backgroundColor: '#3fb0ac',
+    padding: 20,
+    marginTop:20,
+    marginBottom: 20,
+    alignItems: 'center',
+
+  },
+  differentPlayer:{
+    backgroundColor: '#4AA02C',
+    padding: 20,
+    marginBottom: 20,
+    alignItems: 'center'
+
+  },
+  profile: {
+    backgroundColor: '#e62739',
+    padding: 20,
+    marginBottom: 20,
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: '#111',
+    fontSize: 18,
+    fontFamily: 'Futura'
+  },
+  wrapper: {
+    backgroundColor: '#fae596',
+
+  },
+  slide: {
+  //  flex: 0.05,
+   marginTop: 30,
+   marginLeft:5,
+   marginRight: 5,
+   justifyContent: 'center',
+   alignItems: 'center',
+   backgroundColor: 'transparent',
+  },
+  text: {
+   color: '#111',
+   fontSize: 22,
+   fontFamily: 'Futura'
+  //  fontWeight: 'bold',
+ },
+ resultText: {
+
+   color: '#111',
+   fontSize: 18,
+   fontWeight: 'bold',
+   marginTop: 15
+ },
+ questionText: {
+   color: '#8C001A',
+   fontSize: 18,
+   fontWeight: 'bold',
+   marginTop: 15
+
+ },
+ categoryText: {
+   color: '#347C17',
+  //  color: '#fff',
+   fontSize: 18,
+   fontWeight: 'bold',
+   marginTop: 15,
+   marginBottom: 5
+ },
+ scoreText: {
+   color: '#111',
+   fontSize: 18,
+   fontWeight: 'bold',
+   marginTop: 10,
+   marginBottom: 5
+ }
+
+
+});
