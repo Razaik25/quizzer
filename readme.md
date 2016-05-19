@@ -1,4 +1,3 @@
-
 ### Quizzer
 
 ![](https://cdn.elegantthemes.com/blog/wp-content/uploads/2015/12/quiz.png)
@@ -16,6 +15,10 @@ It's a fun way to relax and unwind.
 
 ### App Preview:
 ![alt tag](./preview/rec1.gif)
+
+![alt tag](./preview/rec2.gif)
+
+![alt tag](./preview/rec3.gif)
 
 ---
 
@@ -109,5 +112,19 @@ API will be manually seeded with questions and images for different categories.B
 ---
 
 ### Installation Instructions:
+#### Clone & install
+
+* Clone this repo `git clone git@github.com:Razaik25/quizzer.git`
+* `cd quizzer`
+* run `npm install`
+
+#### iOS
+
+* Open `quizzer.xcodeproj` in `XCode`
+* Press `cmd+r` to build it
 
 ### Future Implementations:
+* Implement Redux to store the state of the application
+* Make Android version of the application
+* Allow the users to see leaderboard with high scores of other users
+* Let the users earn badges as based on their score
