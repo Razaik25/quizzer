@@ -134,7 +134,7 @@ renderPagination(index, total, context) {
       right: 10
 
     }}>
-      <Text style={{color: '#111',  fontSize: 15, fontWeight: 'bold',marginBottom: 40}}>Question: <Text style={{
+      <Text style={{color: '#111',  fontSize: 15, fontWeight: 'bold',marginBottom: 40}}><Text style={{
         color: '#008080',
         fontSize: 15,
         fontWeight: 'bold'
