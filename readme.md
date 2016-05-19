@@ -123,6 +123,8 @@ API will be manually seeded with questions and images for different categories.B
 * Open `quizzer.xcodeproj` in `XCode`
 * Press `cmd+r` to build it
 
+---
+
 ### Future Implementations:
 * Implement Redux to store the state of the application
 * Make Android version of the application
