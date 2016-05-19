@@ -129,4 +129,4 @@ API will be manually seeded with questions and images for different categories.B
 * Implement Redux to store the state of the application
 * Make Android version of the application
 * Allow the users to see leaderboard with high scores of other users
-* Let the users earn badges as based on their score
+* Let the users earn badges based on their score
