@@ -34,13 +34,8 @@ var api = {
     category = category.toLowerCase().trim();
     console.log(email,category,score);
     // commenting out the localhost connection and adding heroku server
-    var url = `http://localhost:3000/users/update/${email}`;
-    // var url = `https://quizzer-api.herokuapp.com/users/update/${email}`;
-    var data = {
-      email: email,
-      category: category,
-      score: score.toString()
-    };
+    // var url = `http://localhost:3000/users/update/${email}`;
+    var url = `https://quizzer-api.herokuapp.com/users/update/${email}`;
     return fetch(url, {
       method: 'post',
       headers: {
