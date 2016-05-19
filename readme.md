@@ -1,26 +1,27 @@
+
 ### Quizzer
 
-#![](https://cdn.elegantthemes.com/blog/wp-content/uploads/2015/12/quiz.png)
+![](https://cdn.elegantthemes.com/blog/wp-content/uploads/2015/12/quiz.png)
 
 ### Mission Statement
-Quizzer is a free trivia game for you to explore your knowledge in different categories
+Quizzer is a trivia game for you to explore your knowledge in different categories
 
+---
 ### Introduction
 Quizzer is quiz trivia game for iOS devices, made with react-native.
 On the homepage you can choose from different categories and it will render the questions related to that category. The categories include celebrities, coding, general knowledge, trivia, maths and so on.
-It's a fun way to relax and unwind after a long day.
+It's a fun way to relax and unwind.
 
 ---
 
-### Technologies Used(To be updated):
-* JavaScript
+### Technologies Used:
+* React
+* React native
+* JavaScript ES6, JSX
 * Node.js
 * Express.js
-* React native
-
----
-
-### Installation Instructions(To be Added):
+* PostgreSQL
+* Firebase
 
 ---
 
@@ -84,25 +85,20 @@ API will be manually seeded with questions and images for different categories.B
       },
 
 ```
-### Entity Relationship Diagram(To be Added):
+---
 
-
-### Wireframes version 1(To be Added):
-
-#### Landing view
-#![](./wireframes/landing_page.png)
-
-#### Gameview view
-#![](./wireframes/gameview.png)
-
-#### Quiz view
-#![](./wireframes/quizview.png)
-
-#### End Game view
-#![](./wireframes/end.png)
-
+### Wireframes:
+<p align="center">
+  <p>Landing Page <img align="middle" hspace="20" src="./wireframes/landing_page.png" width="200"/></p>
+  <p>Gameview <img align="middle" hspace="45" src="./wireframes/gameview.png" width="200"/></p>
+  <p>Quizview <img align="middle" hspace="55" src="./wireframes/quizview.png" width="200"/></p>
+  <p>End Game <img align="middle" hspace="45" src="./wireframes/end.png" width="200"/></p>
+</p>
 
 ---
 
+### App Preview:
+
+### Installation Instructions(To be Added):
 
 ### Future Implementations(To be Added):
