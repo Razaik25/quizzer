@@ -14,6 +14,11 @@ It's a fun way to relax and unwind.
 
 ---
 
+### App Preview:
+![alt tag](./preview/rec1.gif)
+
+---
+
 ### Technologies Used:
 * React
 * React native
@@ -22,6 +27,12 @@ It's a fun way to relax and unwind.
 * Express.js
 * PostgreSQL
 * Firebase
+* pg-promise
+* Underscore Library
+
+#### Plugins Used:
+* react-native-animatable - Simple module for animations/transitions in react-native
+* react-native-swiper - Swiper Component for react-native
 
 ---
 
@@ -97,8 +108,6 @@ API will be manually seeded with questions and images for different categories.B
 
 ---
 
-### App Preview:
+### Installation Instructions:
 
-### Installation Instructions(To be Added):
-
-### Future Implementations(To be Added):
+### Future Implementations:
